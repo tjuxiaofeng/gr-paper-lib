@@ -596,20 +596,15 @@ HTML = '''<!DOCTYPE html>
   </div>
 
   <div class="grid three">
-    <div class="card"><h3>分类分布</h3>__C_CAT__</div>
-    <div class="card"><h3>年份分布</h3>__C_YEAR__</div>
-    <div class="card"><h3>分类占比</h3>__C_DONUT__</div>
-  </div>
-
-  <div class="grid three">
     <div class="card"><h3>任务 × 年份</h3>__C_CY_TASK__</div>
     <div class="card"><h3>学术 / 工业 × 年份</h3>__C_CY_TYPE__</div>
     <div class="card"><h3>分类 × 年份</h3>__C_CY__</div>
   </div>
 
-  <div class="grid">
+  <div class="grid three">
     <div class="card"><h3>机构 Top 12</h3>__C_ORG__</div>
     <div class="card"><h3>任务 · 学术 / 工业 分布</h3>__C_TT__</div>
+    <div class="card"><h3>分类占比</h3>__C_DONUT__</div>
   </div>
 
   <div class="filters">
