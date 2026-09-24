@@ -220,8 +220,14 @@ def count_by(key):
 
 cat_count = count_by('cat')
 year_count = count_by('year')
-org_count = count_by('org')
-org_count.pop('未标注', None)
+# 机构按「独立单位」拆分：多机构("新加坡国立 / USTC")拆成可单独筛选/搜索的单位
+for p in papers:
+    p['orgUnits'] = [u for u in (x.strip() for x in re.split(r'\s*/\s*', p['org']))
+                     if u and u != '未标注']
+org_count = {}
+for p in papers:
+    for u in set(p['orgUnits']):
+        org_count[u] = org_count.get(u, 0) + 1
 task_count = count_by('task')
 type_count = count_by('type')
 
@@ -451,6 +457,7 @@ def row_html(p):
     arx = (' · <a href="%s" target="_blank" rel="noopener">arXiv</a>' % esc(p['arxiv'])) if p['arxiv'] else ''
     blob = (p['title'] + ' ' + p['note'] + ' ' + p['org'] + ' ' + p['cat'] + ' '
             + p['task'] + ' ' + p['type']).lower()
+    orgkey = '|' + '|'.join(p['orgUnits']) + '|'
     tc = TASK_COLOR.get(p['task'], '#8a8f9e')
     yc = TYPE_COLOR.get(p['type'], '#8a8f9e')
     cc = CAT_COLOR.get(p['cat'], '#4f7cf3')
@@ -464,7 +471,7 @@ def row_html(p):
             '<td class="note">%s</td>'
             '<td class="nowrap"><a href="%s" target="_blank" rel="noopener">PDF</a>%s</td>'
             '</tr>'
-            % (esc(p['cat']), esc(p['org']), esc(p['year']), esc(p['task']), esc(p['type']), esc(blob),
+            % (esc(p['cat']), esc(orgkey), esc(p['year']), esc(p['task']), esc(p['type']), esc(blob),
                esc(p['title']), esc(p['org']), esc(p['year']),
                tc, tc, esc(p['task']),
                yc, yc, esc(p['type']),
@@ -666,7 +673,7 @@ HTML = '''<!DOCTYPE html>
             && (!tk || tr.getAttribute('data-task') === tk)
             && (!ty || tr.getAttribute('data-type') === ty)
             && (!c || tr.getAttribute('data-cat') === c)
-            && (!o || tr.getAttribute('data-org') === o)
+            && (!o || (tr.getAttribute('data-org') || '').indexOf('|' + o + '|') !== -1)
             && (!y || tr.getAttribute('data-year') === y);
       tr.classList.remove('open');
       if (ok){ tr.classList.remove('hide'); n++; } else { tr.classList.add('hide'); }
