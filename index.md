@@ -240,6 +240,7 @@
 | `DualGR: Generative Retrieval with Long and Short-Term Interests Modeling.pdf` | USTC / 快手 | 2025 | 推荐 | 工业 | generative retrieval, long-short term interests, semantic ID decoding, exposure-aware next-token prediction, dual-branch routing |
 | `SIGMA: A Semantic-Grounded Instruction-Driven Generative Multi-Task Recommender at AliExpress.pdf` | 阿里国际 | 2026 | 推荐 | 工业 | generative recommendation, instruction-following, multi-task recommendation, item tokenization, semantic grounding |
 | `Beyond Item IDs: Scaling Short-Form-Video Recommendation via Semantic-Native Long Sequence Modeling.pdf` | Google | 2026 | 推荐 | 工业 | semantic ID, long sequence modeling, short-form video recommendation, Global-Aware Compression Transformer, cold-start |
+| `From Modularity to Unity: Towards Industrial-Scale Generative Recommendation.pdf` | 京东 | 2026 | 推荐 | 工业 | generative recommendation, unified ranking framework, causal behavior multi-task attention, gradient interference, dual-encoder tokenization |
 
 ## 7. 多模态推荐
 
