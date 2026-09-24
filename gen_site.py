@@ -518,7 +518,7 @@ HTML = '''<!DOCTYPE html>
        background:#f4f6fa;color:#1f2a44;-webkit-font-smoothing:antialiased}
   a{color:#2f6fed;text-decoration:none}
   a:hover{text-decoration:underline}
-  .wrap{max-width:1180px;margin:0 auto;padding:22px 20px 60px}
+  .wrap{max-width:1320px;margin:0 auto;padding:22px 20px 60px}
   .hero{background:#2b3a67;background:-webkit-linear-gradient(135deg,#2b3a67,#3f5aa6);
         background:linear-gradient(135deg,#2b3a67,#3f5aa6);color:#fff;border-radius:14px;padding:26px 28px}
   .hero h1{margin:0 0 6px;font-size:26px;font-weight:700}
@@ -623,8 +623,8 @@ HTML = '''<!DOCTYPE html>
 
   <table>
     <colgroup>
-      <col style="width:25%"><col style="width:9%"><col style="width:6%"><col style="width:7%">
-      <col style="width:8%"><col style="width:16%"><col style="width:22%"><col style="width:7%">
+      <col style="width:25%"><col style="width:8%"><col style="width:5%"><col style="width:6%">
+      <col style="width:7%"><col style="width:15%"><col style="width:25%"><col style="width:9%">
     </colgroup>
     <thead><tr><th>标题</th><th>机构</th><th>年份</th><th>任务</th><th>学术/工业</th><th>分类</th><th>说明</th><th>链接</th></tr></thead>
     <tbody id="tb">__ROWS__</tbody>
@@ -726,7 +726,7 @@ elif MODE in ('cy', 'org', 'cat', 'donut'):
     b = HTML.index('<div class="filters">')
     card = '<div class="card"><h3>%s</h3>%s</div>' % body
     HTML = (HTML[:a] + '<div class="grid">' + card + '</div>' + HTML[b:])
-    HTML = HTML.replace('max-width:1180px', 'max-width:560px')
+    HTML = HTML.replace('max-width:1320px', 'max-width:560px')
 elif MODE == 'paths':
     st = HTML[HTML.index('<style>') + len('<style>'):HTML.index('</style>')]
     HTML = ('<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">'
