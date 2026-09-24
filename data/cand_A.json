@@ -1,0 +1,386 @@
+[
+ {
+  "arxiv_id": "2608.01315",
+  "title": "Collaborative Memory Augmentation for Generative Recommendation",
+  "venue": "KDD 2026",
+  "venue_evidence": "Accepted by KDD 2026 Research Track",
+  "year": "2026",
+  "why": "用协同记忆增强生成式推荐，缓解长行为序列下的记忆瓶颈"
+ },
+ {
+  "arxiv_id": "2608.00750",
+  "title": "Hierarchical Residual Policy Optimization for Generative Recommendations",
+  "venue": "KDD 2026",
+  "venue_evidence": "Accepted at KDD 2026 Research Track",
+  "year": "2026",
+  "why": "分层残差策略优化做生成式推荐的强化学习对齐"
+ },
+ {
+  "arxiv_id": "2607.08365",
+  "title": "DaV-Gen: End-to-End Generative Retrieval via Draft-and-Verify",
+  "venue": "IJCAI 2026",
+  "venue_evidence": "Accepted by IJCAI'26",
+  "year": "2026",
+  "why": "端到端生成式检索的 Draft-and-Verify 解码框架"
+ },
+ {
+  "arxiv_id": "2606.07317",
+  "title": "Gated Bidirectional Linear Attention for Generative Retrieval",
+  "venue": "SIGIR 2026",
+  "venue_evidence": "Accepted at SIGIR 2026",
+  "year": "2026",
+  "why": "门控双向线性注意力做生成式检索骨干，降低复杂度"
+ },
+ {
+  "arxiv_id": "2604.14878",
+  "title": "GenRec: A Preference-Oriented Generative Framework for Large-Scale Recommendation",
+  "venue": "SIGIR 2026",
+  "venue_evidence": "SIGIR 2026 Camera-Ready version",
+  "year": "2026",
+  "why": "面向大规模推荐、偏好导向的生成式框架"
+ },
+ {
+  "arxiv_id": "2602.22647",
+  "title": "Vectorizing the Trie: Efficient Constrained Decoding for LLM-based Generative Retrieval on Accelerators",
+  "venue": "KDD 2026",
+  "venue_evidence": "KDD 2026 camera-ready",
+  "year": "2026",
+  "why": "把 Trie 向量化，实现 LLM 生成式检索的高效约束解码"
+ },
+ {
+  "arxiv_id": "2511.12518",
+  "title": "DualGR: Generative Retrieval with Long and Short-Term Interests Modeling",
+  "venue": "WWW 2026",
+  "venue_evidence": "Accepted by WWW 2026. Winner of the Best Short Paper Award",
+  "year": "2026",
+  "why": "长短时兴趣建模的生成式检索 DualGR"
+ },
+ {
+  "arxiv_id": "2509.20904",
+  "title": "FORGE: Forming Semantic Identifiers for Generative Retrieval in Industrial Datasets",
+  "venue": "KDD 2026",
+  "venue_evidence": "Accepted by KDD 2026",
+  "year": "2026",
+  "why": "工业数据集上 Semantic ID 的构造方法 FORGE"
+ },
+ {
+  "arxiv_id": "2406.14017",
+  "title": "EAGER: Two-Stream Generative Recommender with Behavior-Semantic Collaboration",
+  "venue": "KDD 2024",
+  "venue_evidence": "Accepted by KDD 2024",
+  "year": "2024",
+  "why": "行为-语义双流协同的生成式推荐 EAGER"
+ },
+ {
+  "arxiv_id": "2406.10450",
+  "title": "TokenRec: Learning to Tokenize ID for LLM-based Generative Recommendation",
+  "venue": "IEEE TKDE",
+  "venue_evidence": "Accepted by IEEE TKDE",
+  "year": "2024",
+  "why": "可学习 ID tokenization 的 LLM 生成式推荐 TokenRec"
+ },
+ {
+  "arxiv_id": "2607.28997",
+  "title": "Think2Go: Generative Next POI Recommendation with LLM Reasoning",
+  "venue": "KDD 2026",
+  "venue_evidence": "Accepted by KDD 2026 Research Track Cycle 1 (Oral presentation)",
+  "year": "2026",
+  "why": "LLM 推理驱动的生成式下一 POI 推荐"
+ },
+ {
+  "arxiv_id": "2511.16943",
+  "title": "RASTP: Representation-Aware Semantic Token Pruning for Generative Recommendation with Semantic Identifiers",
+  "venue": "WWW 2026",
+  "venue_evidence": "WWW 2026 short paper",
+  "year": "2026",
+  "why": "表示感知的语义 token 剪枝，加速生成式推荐"
+ },
+ {
+  "arxiv_id": "2511.15122",
+  "title": "Multi-Aspect Cross-modal Quantization for Generative Recommendation",
+  "venue": "AAAI 2026",
+  "venue_evidence": "Accepted by AAAI 2026 (Oral)",
+  "year": "2026",
+  "why": "多视角跨模态量化用于生成式推荐"
+ },
+ {
+  "arxiv_id": "2510.16925",
+  "title": "Towards Context-aware Reasoning-enhanced Generative Searching in E-commerce",
+  "venue": "WWW 2026",
+  "venue_evidence": "Accepted by WWW'26",
+  "year": "2026",
+  "why": "电商场景上下文感知、推理增强的生成式搜索"
+ },
+ {
+  "arxiv_id": "2603.23183",
+  "title": "Reasoning over Semantic IDs Enhances Generative Recommendation",
+  "venue": "KDD 2026",
+  "venue_evidence": "Accepted by KDD 2026",
+  "year": "2026",
+  "why": "在语义 ID 上做推理以增强生成式推荐"
+ },
+ {
+  "arxiv_id": "2602.22913",
+  "title": "SIGMA: A Semantic-Grounded Instruction-Driven Generative Multi-Task Recommender at AliExpress",
+  "venue": "SIGIR 2026 (Industry Track)",
+  "venue_evidence": "Accepted by SIGIR 2026 Industry Track",
+  "year": "2026",
+  "why": "AliExpress 语义指令驱动的多任务生成式推荐 SIGMA"
+ },
+ {
+  "arxiv_id": "2511.12922",
+  "title": "Tokenize Once, Recommend Anywhere: Unified Item Tokenization for Multi-domain LLM-based Recommendation",
+  "venue": "AAAI 2026",
+  "venue_evidence": "AAAI-26",
+  "year": "2026",
+  "why": "面向多域 LLM 推荐的统一 item tokenization"
+ },
+ {
+  "arxiv_id": "2510.21242",
+  "title": "Bi-Level Optimization for Generative Recommendation: Bridging Tokenization and Generation",
+  "venue": "SIGIR 2026",
+  "venue_evidence": "Accepted by SIGIR'26",
+  "year": "2026",
+  "why": "双层优化联合 tokenization 与生成，弥合二者鸿沟"
+ },
+ {
+  "arxiv_id": "2511.08006",
+  "title": "From IDs to Semantics: A Generative Framework for Cross-Domain Recommendation with Adaptive Semantic Tokenization",
+  "venue": "AAAI 2026",
+  "venue_evidence": "Accepted by AAAI 2026",
+  "year": "2026",
+  "why": "跨域推荐的自适应语义 tokenization 生成框架"
+ },
+ {
+  "arxiv_id": "2504.09935",
+  "title": "Constrained Auto-Regressive Decoding Constrains Generative Retrieval",
+  "venue": "SIGIR 2025",
+  "venue_evidence": "accepted by SIGIR 2025",
+  "year": "2025",
+  "why": "分析约束自回归解码对生成式检索的限制"
+ },
+ {
+  "arxiv_id": "2305.15115",
+  "title": "Semantic-Enhanced Differentiable Search Index Inspired by Learning Strategies",
+  "venue": "KDD 2023",
+  "venue_evidence": "Accepted by KDD 2023",
+  "year": "2023",
+  "why": "语义增强的可微搜索索引，DSI 改进工作"
+ },
+ {
+  "arxiv_id": "2202.06991",
+  "title": "Transformer Memory as a Differentiable Search Index",
+  "venue": "NeurIPS 2022",
+  "venue_evidence": "NeurIPS 2022",
+  "year": "2022",
+  "why": "DSI 奠基工作：把检索建模为 seq2seq 生成"
+ },
+ {
+  "arxiv_id": "2306.11134",
+  "title": "OpenP5: An Open-Source Platform for Developing, Training, and Evaluating LLM-based Recommender Systems",
+  "venue": "SIGIR 2024 (Resource Track)",
+  "venue_evidence": "In SIGIR 2024 Resource & Reproducibility Track",
+  "year": "2024",
+  "why": "LLM 推荐的开源开发/训练/评测平台 OpenP5"
+ },
+ {
+  "arxiv_id": "2504.19218",
+  "title": "AlphaFuse: Learn ID Embeddings for Sequential Recommendation in Null Space of Language Embeddings",
+  "venue": "SIGIR 2025",
+  "venue_evidence": "Accepted by SIGIR'25",
+  "year": "2025",
+  "why": "在语言嵌入零空间中学习序推 ID 嵌入 AlphaFuse"
+ },
+ {
+  "arxiv_id": "2410.13117",
+  "title": "Preference Diffusion for Recommendation",
+  "venue": "ICLR 2025",
+  "venue_evidence": "Accepted by ICLR 2025",
+  "year": "2025",
+  "why": "基于扩散模型的生成式推荐偏好建模"
+ },
+ {
+  "arxiv_id": "2604.23396",
+  "title": "Lost in Decoding? Reproducing and Stress-Testing the Look-Ahead Prior in Generative Retrieval",
+  "venue": "SIGIR 2026",
+  "venue_evidence": "accepted to the 49th International ACM SIGIR Conference",
+  "year": "2026",
+  "why": "复现并压力测试生成式检索的 look-ahead 先验"
+ },
+ {
+  "arxiv_id": "2604.23388",
+  "title": "A Parametric Memory Head for Continual Generative Retrieval",
+  "venue": "SIGIR 2026",
+  "venue_evidence": "accepted to the 49th International ACM SIGIR Conference",
+  "year": "2026",
+  "why": "持续生成式检索的参数化记忆头"
+ },
+ {
+  "arxiv_id": "2603.02773",
+  "title": "Model Editing for New Document Integration in Generative Information Retrieval",
+  "venue": "WWW 2026",
+  "venue_evidence": "Accepted to The Web Conference (WWW) 2026",
+  "year": "2026",
+  "why": "生成式信息检索中新文档接入的模型编辑"
+ },
+ {
+  "arxiv_id": "2510.10419",
+  "title": "ZeroGR: A Generalizable and Scalable Framework for Zero-Shot Generative Retrieval",
+  "venue": "ICLR 2026",
+  "venue_evidence": "ICLR 2026",
+  "year": "2026",
+  "why": "零样本生成式检索的可泛化、可扩展框架 ZeroGR"
+ },
+ {
+  "arxiv_id": "2504.05181",
+  "title": "Lightweight and Direct Document Relevance Optimization for Generative Information Retrieval",
+  "venue": "SIGIR 2025",
+  "venue_evidence": "SIGIR '25",
+  "year": "2025",
+  "why": "轻量、直接的文档相关性优化用于生成式检索"
+ },
+ {
+  "arxiv_id": "2409.18409",
+  "title": "Generative Retrieval Meets Multi-Graded Relevance",
+  "venue": "NeurIPS 2024",
+  "venue_evidence": "Accepted by the NeurIPS 2024 (Spotlight)",
+  "year": "2024",
+  "why": "生成式检索的多级相关性建模"
+ },
+ {
+  "arxiv_id": "2404.14600",
+  "title": "Planning Ahead in Generative Retrieval: Guiding Autoregressive Generation through Simultaneous Decoding",
+  "venue": "SIGIR 2024",
+  "venue_evidence": "Accepted to SIGIR 2024",
+  "year": "2024",
+  "why": "同时解码/前瞻引导的自回归生成式检索"
+ },
+ {
+  "arxiv_id": "2305.11161",
+  "title": "TOME: A Two-stage Approach for Model-based Retrieval",
+  "venue": "ACL 2023",
+  "venue_evidence": "ACL 2023",
+  "year": "2023",
+  "why": "两阶段模型式检索 TOME，生成式检索早期代表"
+ },
+ {
+  "arxiv_id": "2604.13273",
+  "title": "Mitigating Collaborative Semantic ID Staleness in Generative Retrieval",
+  "venue": "SIGIR 2026",
+  "venue_evidence": "Accepted at SIGIR 2026",
+  "year": "2026",
+  "why": "缓解生成式检索中协同 Semantic ID 的陈旧问题"
+ },
+ {
+  "arxiv_id": "2605.25749",
+  "title": "DeGRe: Dense-supervised Generative Reranking for Recommendation",
+  "venue": "KDD 2026 (ADS Track)",
+  "venue_evidence": "Accepted to KDD 2026 (ADS Track)",
+  "year": "2026",
+  "why": "密集监督的生成式重排 DeGRe"
+ },
+ {
+  "arxiv_id": "2601.18664",
+  "title": "S$^2$GR: Stepwise Semantic-Guided Reasoning in Latent Space for Generative Recommendation",
+  "venue": "KDD 2026",
+  "venue_evidence": "Accepted by KDD 2026",
+  "year": "2026",
+  "why": "潜空间逐步语义引导推理的生成式推荐 S2GR"
+ },
+ {
+  "arxiv_id": "2604.03949",
+  "title": "Semantic IDs for Recommender Systems at Snapchat: Use Cases, Technical Challenges, and Design Choices",
+  "venue": "SIGIR 2026 (Industry Track)",
+  "venue_evidence": "Accepted to the Industry Track of SIGIR 2026",
+  "year": "2026",
+  "why": "Snapchat 语义 ID 的工业用例、挑战与设计取舍"
+ },
+ {
+  "arxiv_id": "2509.25522",
+  "title": "Understanding Generative Recommendation with Semantic IDs from a Model-scaling View",
+  "venue": "KDD 2026",
+  "venue_evidence": "Accepted by KDD 2026",
+  "year": "2026",
+  "why": "从模型 scaling 视角理解语义 ID 生成式推荐"
+ },
+ {
+  "arxiv_id": "2603.00980",
+  "title": "Beyond the Flat Sequence: Hierarchical and Preference-Aware Generative Recommendations",
+  "venue": "WWW 2026",
+  "venue_evidence": "Accepted to the ACM Web Conference 2026",
+  "year": "2026",
+  "why": "分层且偏好感知的生成式推荐，突破扁平序列假设"
+ },
+ {
+  "arxiv_id": "2504.17519",
+  "title": "Replication and Exploration of Generative Retrieval over Dynamic Corpora",
+  "venue": "SIGIR 2025",
+  "venue_evidence": "Accepted at SIGIR 2025",
+  "year": "2025",
+  "why": "动态语料下生成式检索的复现与探索"
+ },
+ {
+  "arxiv_id": "2506.01375",
+  "title": "Generative Next POI Recommendation with Semantic ID",
+  "venue": "KDD 2025",
+  "venue_evidence": "the paper has been accepted by KDD 2025",
+  "year": "2025",
+  "why": "基于语义 ID 的生成式下一 POI 推荐"
+ },
+ {
+  "arxiv_id": "2510.21805",
+  "title": "DiffGRM: Diffusion-based Generative Recommendation Model",
+  "venue": "WWW 2026",
+  "venue_evidence": "Accepted at The ACM Web Conference 2026",
+  "year": "2026",
+  "why": "扩散式生成推荐模型 DiffGRM"
+ },
+ {
+  "arxiv_id": "2503.12183",
+  "title": "Bridging Textual-Collaborative Gap through Semantic Codes for Sequential Recommendation",
+  "venue": "KDD 2025",
+  "venue_evidence": "Accepted by KDD 2025 Research Track",
+  "year": "2025",
+  "why": "用语义码弥合序推中文本与协同信号的鸿沟"
+ },
+ {
+  "arxiv_id": "2502.13581",
+  "title": "ActionPiece: Contextually Tokenizing Action Sequences for Generative Recommendation",
+  "venue": "ICML 2025",
+  "venue_evidence": "ICML 2025 (Spotlight)",
+  "year": "2025",
+  "why": "为生成式推荐做上下文相关的动作序列 tokenization"
+ },
+ {
+  "arxiv_id": "2605.07613",
+  "title": "Intent-Driven Semantic ID Generation for Grounded Conversational News Recommendation",
+  "venue": "ACL 2026 (Industry Track)",
+  "venue_evidence": "Accepted at ACL 2026 Industry Track (Oral)",
+  "year": "2026",
+  "why": "意图驱动的 Semantic ID 生成用于对话式新闻推荐"
+ },
+ {
+  "arxiv_id": "2510.22049",
+  "title": "Massive Memorization with Hundreds of Trillions of Parameters for Sequential Transducer Generative Recommenders",
+  "venue": "ICLR 2026",
+  "venue_evidence": "ICLR 2026",
+  "year": "2026",
+  "why": "面向序推生成式推荐器的超大规模参数化记忆"
+ },
+ {
+  "arxiv_id": "2505.16994",
+  "title": "R$^2$ec: Towards Large Recommender Models with Reasoning",
+  "venue": "NeurIPS 2025",
+  "venue_evidence": "Accepted by NeurIPS 2025",
+  "year": "2025",
+  "why": "具备推理能力的大规模推荐模型 R2ec"
+ },
+ {
+  "arxiv_id": "2412.17593",
+  "title": "Leveraging Memory Retrieval to Enhance LLM-based Generative Recommendation",
+  "venue": "WWW 2025",
+  "venue_evidence": "Accepted by WWW'2025",
+  "year": "2025",
+  "why": "记忆检索增强的 LLM 生成式推荐"
+ }
+]

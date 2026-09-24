@@ -1,0 +1,896 @@
+[
+ {
+  "fn": "Collaborative Memory Augmentation for Generative Recommendation.pdf",
+  "title": "Collaborative Memory Augmentation for Generative Recommendation",
+  "year": "2026",
+  "abs_short": "Generative Recommendation (GR) has exhibited great potential by modeling item transitions as a sequence-to-sequence task. Despite the success of GR, existing frameworks primarily focus on modeling individual user sequences within a constrained internal parametric space, failing to explicitly leverage cross-user collaborative signals. To address this issue, we propose \\textbf{OMEGA}, a cOllaborative MEmory augmentation framework for Generative recommendAtion. OMEGA bridges the gap between implicit parametric knowledge and explicit collaborative signals. We first introduce a latent context compr"
+ },
+ {
+  "fn": "Hierarchical Residual Policy Optimization for Generative Recommendations.pdf",
+  "title": "Hierarchical Residual Policy Optimization for Generative Recommendations",
+  "year": "2026",
+  "abs_short": "Generative recommenders select items by autoregressively decoding semantic identifiers (SIDs), whose token positions induce a coarse-to-fine hierarchy over the item space. In practice, SID decoders are trained via supervised next-token prediction, which imitates logged trajectories rather than directly optimizing downstream utility. This motivates post-training with outcome feedback to guide decoding toward higher utility. However, logged feedback is only observed for the final exposed item, causing most post-training methods to operate at the item level and broadcast the same terminal signal "
+ },
+ {
+  "fn": "DaV-Gen: End-to-End Generative Retrieval via Draft-and-Verify.pdf",
+  "title": "DaV-Gen: End-to-End Generative Retrieval via Draft-and-Verify",
+  "year": "2026",
+  "abs_short": "Mainstream industrial information retrieval systems (e.g., search and recommendation) are usually built upon Multi-Stage Cascade Architectures (MCAs), which balance effectiveness and efficiency through a coarse-to-fine ``retrieval-ranking'' pipeline. However, the optimization objectives across different stages are substantially inconsistent, propagating or even amplifying the early-stage errors that ultimately degrade the quality of final results. While emerging end-to-end generative models offer a potential solution by unifying the pipeline, their online serving performance is severely hinder"
+ },
+ {
+  "fn": "Gated Bidirectional Linear Attention for Generative Retrieval.pdf",
+  "title": "Gated Bidirectional Linear Attention for Generative Retrieval",
+  "year": "2026",
+  "abs_short": "In recommender systems, generative retrieval typically uses an encoder-decoder setup: an encoder processes a user interaction history, and an autoregressive decoder then generates recommended items. In large-scale streaming services, active users accumulate very long histories over time. As histories grow, the encoder becomes a major latency bottleneck because softmax attention scales quadratically with sequence length. In our experiments, using bidirectional attention in the encoder substantially improves quality. However, most sub-quadratic attention methods focus on causal attention. We pro"
+ },
+ {
+  "fn": "GenRec: A Preference-Oriented Generative Framework for Large-Scale Recommendation.pdf",
+  "title": "GenRec: A Preference-Oriented Generative Framework for Large-Scale Recommendation",
+  "year": "2026",
+  "abs_short": "Generative Retrieval (GR) offers a promising paradigm for recommendation through next-token prediction (NTP). However, scaling it to large-scale industrial systems introduces three challenges: (i) within a single request, the identical model inputs may produce inconsistent outputs due to the pagination request mechanism; (ii) the prohibitive cost of encoding long user behavior sequences with multi-token item representations based on semantic IDs, and (iii) aligning the generative policy with nuanced user preference signals. We present GenRec, a preference-oriented generative framework deployed"
+ },
+ {
+  "fn": "Vectorizing the Trie: Efficient Constrained Decoding for LLM-based Generative Retrieval on Accelerators.pdf",
+  "title": "Vectorizing the Trie: Efficient Constrained Decoding for LLM-based Generative Retrieval on Accelerators",
+  "year": "2026",
+  "abs_short": "Generative retrieval has emerged as a powerful paradigm for LLM-based recommendation. However, industrial recommender systems often benefit from restricting the output space to a constrained subset of items based on business logic (e.g. enforcing content freshness or product category), which standard autoregressive decoding cannot natively support. Moreover, existing constrained decoding methods that make use of prefix trees (Tries) incur severe latency penalties on hardware accelerators (TPUs/GPUs). In this work, we introduce STATIC (Sparse Transition Matrix-Accelerated Trie Index for Constra"
+ },
+ {
+  "fn": "DualGR: Generative Retrieval with Long and Short-Term Interests Modeling.pdf",
+  "title": "DualGR: Generative Retrieval with Long and Short-Term Interests Modeling",
+  "year": "2025",
+  "abs_short": "In large-scale industrial recommendation systems, retrieval must produce high-quality candidates from massive corpora under strict latency. Recently, Generative Retrieval (GR) has emerged as a viable alternative to Embedding-Based Retrieval (EBR), which quantizes items into a finite token space and decodes candidates autoregressively, providing a scalable path that explicitly models target-history interactions via cross-attention. However, deploying GR in short-video feeds remains challenged by long-short interest interference, context-induced noise in hierarchical SID generation, and the lack"
+ },
+ {
+  "fn": "FORGE: Forming Semantic Identifiers for Generative Retrieval in Industrial Datasets.pdf",
+  "title": "FORGE: Forming Semantic Identifiers for Generative Retrieval in Industrial Datasets",
+  "year": "2025",
+  "abs_short": "Semantic identifiers (SIDs) have gained increasing attention in generative retrieval (GR) for recommendation due to their meaningful semantic discriminability. However, current studies in this field primarily (1) offer limited investigation into the construction strategies for better SIDs, and (2) their SID assessment typically relies on costly GR training. To address these challenges, we propose FORGE, a comprehensive benchmark for FOrming semantic identifieRs for Generative rEtrieval. Specifically, FORGE provides a taxonomy of the SID construction process from several perspectives and valida"
+ },
+ {
+  "fn": "EAGER: Two-Stream Generative Recommender with Behavior-Semantic Collaboration.pdf",
+  "title": "EAGER: Two-Stream Generative Recommender with Behavior-Semantic Collaboration",
+  "year": "2024",
+  "abs_short": "Generative retrieval has recently emerged as a promising approach to sequential recommendation, framing candidate item retrieval as an autoregressive sequence generation problem. However, existing generative methods typically focus solely on either behavioral or semantic aspects of item information, neglecting their complementary nature and thus resulting in limited effectiveness. To address this limitation, we introduce EAGER, a novel generative recommendation framework that seamlessly integrates both behavioral and semantic information. Specifically, we identify three key challenges in combi"
+ },
+ {
+  "fn": "TokenRec: Learning to Tokenize ID for LLM-based Generative Recommendation.pdf",
+  "title": "TokenRec: Learning to Tokenize ID for LLM-based Generative Recommendation",
+  "year": "2024",
+  "abs_short": "There is a growing interest in utilizing large-scale language models (LLMs) to advance next-generation Recommender Systems (RecSys), driven by their outstanding language understanding and in-context learning capabilities. In this scenario, tokenizing (i.e., indexing) users and items becomes essential for ensuring a seamless alignment of LLMs with recommendations. While several studies have made progress in representing users and items through textual contents or latent representations, challenges remain in efficiently capturing high-order collaborative knowledge into discrete tokens that are c"
+ },
+ {
+  "fn": "Think2Go: Generative Next POI Recommendation with LLM Reasoning.pdf",
+  "title": "Think2Go: Generative Next POI Recommendation with LLM Reasoning",
+  "year": "2026",
+  "abs_short": "Next Point-of-Interest (POI) recommendation task focuses on mining user behavioral preference patterns from historical check-ins to provide personalized suggestions for the next destination. Existing methods primarily rely on shallow contextual information and handcrafted feature interactions to predict the next POI. However, the inherent sparsity and complexity of user mobility patterns limit the computational capacity of non-reasoning models to capture deep intent, while large language models (LLMs) perform suboptimally because they lack a deep understanding of semantic IDs (SIDs) when SIDs "
+ },
+ {
+  "fn": "RASTP: Representation-Aware Semantic Token Pruning for Generative Recommendation with Semantic Identifiers.pdf",
+  "title": "RASTP: Representation-Aware Semantic Token Pruning for Generative Recommendation with Semantic Identifiers",
+  "year": "2025",
+  "abs_short": "Generative recommendation systems typically leverage Semantic Identifiers (SIDs), which represent each item as a sequence of tokens that encode semantic information. However, representing item ID with multiple SIDs significantly increases input sequence length, which is a major determinant of computational complexity and memory consumption. While existing efforts primarily focus on optimizing attention computation and KV cache, we propose RASTP (Representation-Aware Semantic Token Pruning), which directly prunes less informative tokens in the input sequence. Specifically, RASTP evaluates token"
+ },
+ {
+  "fn": "Multi-Aspect Cross-modal Quantization for Generative Recommendation.pdf",
+  "title": "Multi-Aspect Cross-modal Quantization for Generative Recommendation",
+  "year": "2025",
+  "abs_short": "Generative Recommendation (GR) has emerged as a new paradigm in recommender systems. This approach relies on quantized representations to discretize item features, modeling users' historical interactions as sequences of discrete tokens. Based on these tokenized sequences, GR predicts the next item by employing next-token prediction methods. The challenges of GR lie in constructing high-quality semantic identifiers (IDs) that are hierarchically organized, minimally conflicting, and conducive to effective generative model training. However, current approaches remain limited in their ability to h"
+ },
+ {
+  "fn": "Towards Context-aware Reasoning-enhanced Generative Searching in E-commerce.pdf",
+  "title": "Towards Context-aware Reasoning-enhanced Generative Searching in E-commerce",
+  "year": "2025",
+  "abs_short": "Search-based recommendation is one of the most critical application scenarios in e-commerce platforms. Users' complex search contexts--such as spatiotemporal factors, historical interactions, and current query's information--constitute an essential part of their decision-making, reflecting implicit preferences that complement explicit query terms. Modeling such rich contextual signals and their intricate associations with candidate items remains a key challenge. Although numerous efforts have been devoted to building more effective search methods, existing approaches still show limitations in "
+ },
+ {
+  "fn": "Reasoning over Semantic IDs Enhances Generative Recommendation.pdf",
+  "title": "Reasoning over Semantic IDs Enhances Generative Recommendation",
+  "year": "2026",
+  "abs_short": "Recent advances in generative recommendation have leveraged pretrained LLMs by formulating sequential recommendation as autoregressive generation over a unified token space comprising language tokens and itemic identifiers, where each item is represented by a compact sequence of discrete tokens, namely Semantic IDs (SIDs). This SID-based formulation enables efficient decoding over large-scale item corpora and provides a natural interface for LLM-based recommenders to leverage rich world knowledge. Meanwhile, breakthroughs in LLM reasoning motivate reasoning-enhanced recommendation, yet effecti"
+ },
+ {
+  "fn": "SIGMA: A Semantic-Grounded Instruction-Driven Generative Multi-Task Recommender at AliExpress.pdf",
+  "title": "SIGMA: A Semantic-Grounded Instruction-Driven Generative Multi-Task Recommender at AliExpress",
+  "year": "2026",
+  "abs_short": "With the rapid evolution of Large Language Models (LLMs), generative recommendation is gradually reshaping the paradigm of recommender systems. However, most existing methods remain confined to the interaction-driven next-item prediction paradigm, struggling to keep pace with the latest evolving trends or address the diverse recommendation tasks along with business-specific requirements in real-world scenarios. To this end, we present SIGMA, a Semantic-Grounded Instruction-Driven Generative Multi-Task Recommender deployed at AliExpress. Specifically, we first ground item entities in a unified "
+ },
+ {
+  "fn": "Tokenize Once, Recommend Anywhere: Unified Item Tokenization for Multi-domain LLM-based Recommendation.pdf",
+  "title": "Tokenize Once, Recommend Anywhere: Unified Item Tokenization for Multi-domain LLM-based Recommendation",
+  "year": "2025",
+  "abs_short": "Large language model (LLM)-based recommender systems have achieved high-quality performance by bridging the discrepancy between the item space and the language space through item tokenization. However, existing item tokenization methods typically require training separate models for each item domain, limiting generalization. Moreover, the diverse distributions and semantics across item domains make it difficult to construct a unified tokenization that preserves domain-specific information. To address these challenges, we propose UniTok, a Unified item Tokenization framework that integrates our"
+ },
+ {
+  "fn": "Bi-Level Optimization for Generative Recommendation: Bridging Tokenization and Generation.pdf",
+  "title": "Bi-Level Optimization for Generative Recommendation: Bridging Tokenization and Generation",
+  "year": "2025",
+  "abs_short": "Generative recommendation is emerging as a transformative paradigm by directly generating recommended items, rather than relying on matching. Building such a system typically involves two key components: (1) optimizing the tokenizer to derive suitable item identifiers, and (2) training the recommender based on those identifiers. Existing approaches often treat these components separately--either sequentially or in alternation--overlooking their interdependence. This separation can lead to misalignment: the tokenizer is trained without direct guidance from the recommendation objective, potentia"
+ },
+ {
+  "fn": "From IDs to Semantics: A Generative Framework for Cross-Domain Recommendation with Adaptive Semantic Tokenization.pdf",
+  "title": "From IDs to Semantics: A Generative Framework for Cross-Domain Recommendation with Adaptive Semantic Tokenization",
+  "year": "2025",
+  "abs_short": "Cross-domain recommendation (CDR) is crucial for improving recommendation accuracy and generalization, yet traditional methods are often hindered by the reliance on shared user/item IDs, which are unavailable in most real-world scenarios. Consequently, many efforts have focused on learning disentangled representations through multi-domain joint training to bridge the domain gaps. Recent Large Language Model (LLM)-based approaches show promise, they still face critical challenges, including: (1) the \\textbf{item ID tokenization dilemma}, which leads to vocabulary explosion and fails to capture "
+ },
+ {
+  "fn": "Constrained Auto-Regressive Decoding Constrains Generative Retrieval.pdf",
+  "title": "Constrained Auto-Regressive Decoding Constrains Generative Retrieval",
+  "year": "2025",
+  "abs_short": "Generative retrieval seeks to replace traditional search index data structures with a single large-scale neural network, offering the potential for improved efficiency and seamless integration with generative large language models. As an end-to-end paradigm, generative retrieval adopts a learned differentiable search index to conduct retrieval by directly generating document identifiers through corpus-specific constrained decoding. The generalization capabilities of generative retrieval on out-of-distribution corpora have gathered significant attention. In this paper, we examine the inherent l"
+ },
+ {
+  "fn": "Semantic-Enhanced Differentiable Search Index Inspired by Learning Strategies.pdf",
+  "title": "Semantic-Enhanced Differentiable Search Index Inspired by Learning Strategies",
+  "year": "2023",
+  "abs_short": "Recently, a new paradigm called Differentiable Search Index (DSI) has been proposed for document retrieval, wherein a sequence-to-sequence model is learned to directly map queries to relevant document identifiers. The key idea behind DSI is to fully parameterize traditional ``index-retrieve'' pipelines within a single neural model, by encoding all documents in the corpus into the model parameters. In essence, DSI needs to resolve two major questions: (1) how to assign an identifier to each document, and (2) how to learn the associations between a document and its identifier. In this work, we p"
+ },
+ {
+  "fn": "Transformer Memory as a Differentiable Search Index.pdf",
+  "title": "Transformer Memory as a Differentiable Search Index",
+  "year": "2022",
+  "abs_short": "In this paper, we demonstrate that information retrieval can be accomplished with a single Transformer, in which all information about the corpus is encoded in the parameters of the model. To this end, we introduce the Differentiable Search Index (DSI), a new paradigm that learns a text-to-text model that maps string queries directly to relevant docids; in other words, a DSI model answers queries directly using only its parameters, dramatically simplifying the whole retrieval process. We study variations in how documents and their identifiers are represented, variations in training procedures,"
+ },
+ {
+  "fn": "OpenP5: An Open-Source Platform for Developing, Training, and Evaluating LLM-based Recommender Systems.pdf",
+  "title": "OpenP5: An Open-Source Platform for Developing, Training, and Evaluating LLM-based Recommender Systems",
+  "year": "2023",
+  "abs_short": "In recent years, the integration of Large Language Models (LLMs) into recommender systems has garnered interest among both practitioners and researchers. Despite this interest, the field is still emerging, and the lack of open-source R&D platforms may impede the exploration of LLM-based recommendations. This paper introduces OpenP5, an open-source platform designed as a resource to facilitate the development, training, and evaluation of LLM-based generative recommender systems for research purposes. The platform is implemented using encoder-decoder LLMs (e.g., T5) and decoder-only LLMs (e.g., "
+ },
+ {
+  "fn": "AlphaFuse: Learn ID Embeddings for Sequential Recommendation in Null Space of Language Embeddings.pdf",
+  "title": "AlphaFuse: Learn ID Embeddings for Sequential Recommendation in Null Space of Language Embeddings",
+  "year": "2025",
+  "abs_short": "Recent advancements in sequential recommendation have underscored the potential of Large Language Models (LLMs) for enhancing item embeddings. However, existing approaches face three key limitations: 1) the degradation of the semantic space when high-dimensional language embeddings are mapped to lower-dimensional ID embeddings, 2) the underutilization of language embeddings, and 3) the reliance on additional trainable parameters, such as an adapter, to bridge the gap between the semantic and behavior spaces. In this paper, we introduce AlphaFuse, a simple but effective language-guided learning"
+ },
+ {
+  "fn": "Preference Diffusion for Recommendation.pdf",
+  "title": "Preference Diffusion for Recommendation",
+  "year": "2024",
+  "abs_short": "Recommender systems predict personalized item rankings based on user preference distributions derived from historical behavior data. Recently, diffusion models (DMs) have gained attention in recommendation for their ability to model complex distributions, yet current DM-based recommenders often rely on traditional objectives like mean squared error (MSE) or recommendation objectives, which are not optimized for personalized ranking tasks or fail to fully leverage DM's generative potential. To address this, we propose PreferDiff, a tailored optimization objective for DM-based recommenders. Pref"
+ },
+ {
+  "fn": "Lost in Decoding? Reproducing and Stress-Testing the Look-Ahead Prior in Generative Retrieval.pdf",
+  "title": "Lost in Decoding? Reproducing and Stress-Testing the Look-Ahead Prior in Generative Retrieval",
+  "year": "2026",
+  "abs_short": "Generative retrieval (GR) ranks documents by autoregressively generating document identifiers. Because many GR methods rely on trie-constrained beam search, they are vulnerable to early pruning of relevant prefixes under finite-beam decoding. Planning Ahead in Generative Retrieval (PAG) mitigates this failure mode by using simultaneous decoding to compute a document-level look-ahead prior that guides subsequent sequential decoding. We reproduce PAG at inference time and stress-test its decoding behavior. Using the authors' released checkpoint and identifier/trie artifacts under the reported de"
+ },
+ {
+  "fn": "A Parametric Memory Head for Continual Generative Retrieval.pdf",
+  "title": "A Parametric Memory Head for Continual Generative Retrieval",
+  "year": "2026",
+  "abs_short": "Generative information retrieval (GenIR) consolidates retrieval into a single neural model that decodes document identifiers (docids) directly from queries. While this model-as-index paradigm offers architectural simplicity, it is poorly suited to dynamic document collections. Unlike modular systems, where indexes are easily updated, GenIR's knowledge is parametrically encoded in its weights; consequently, standard adaptation methods such as full and parameter-efficient fine-tuning can induce catastrophic forgetting. We show that sequential adaptation improves retrieval on newly added document"
+ },
+ {
+  "fn": "Model Editing for New Document Integration in Generative Information Retrieval.pdf",
+  "title": "Model Editing for New Document Integration in Generative Information Retrieval",
+  "year": "2026",
+  "abs_short": "Generative retrieval (GR) reformulates the Information Retrieval (IR) task as the generation of document identifiers (docIDs). Despite its promise, existing GR models exhibit poor generalization to newly added documents, often failing to generate the correct docIDs. While incremental training offers a straightforward remedy, it is computationally expensive, resource-intensive, and prone to catastrophic forgetting, thereby limiting the scalability and practicality of GR. In this paper, we identify the core bottleneck as the decoder's ability to map hidden states to the correct docIDs of newly a"
+ },
+ {
+  "fn": "ZeroGR: A Generalizable and Scalable Framework for Zero-Shot Generative Retrieval.pdf",
+  "title": "ZeroGR: A Generalizable and Scalable Framework for Zero-Shot Generative Retrieval",
+  "year": "2025",
+  "abs_short": "Generative retrieval (GR) reformulates information retrieval (IR) by framing it as the generation of document identifiers (docids), thereby enabling end-to-end optimization and seamless integration with generative language models (LMs). Despite notable progress under supervised training, GR still struggles to generalize to zero-shot IR scenarios, which are prevalent in real-world applications. To tackle this challenge, we propose ZeroGR, a zero-shot generative retrieval framework that uses natural language instructions to extend GR across a wide range of IR tasks. Specifically, ZeroGR is compo"
+ },
+ {
+  "fn": "Lightweight and Direct Document Relevance Optimization for Generative Information Retrieval.pdf",
+  "title": "Lightweight and Direct Document Relevance Optimization for Generative Information Retrieval",
+  "year": "2025",
+  "abs_short": "Generative information retrieval (GenIR) is a promising neural retrieval paradigm that formulates document retrieval as a document identifier (docid) generation task, allowing for end-to-end optimization toward a unified global retrieval objective. However, existing GenIR models suffer from token-level misalignment, where models trained to predict the next token often fail to capture document-level relevance effectively. While reinforcement learning-based methods, such as reinforcement learning from relevance feedback (RLRF), aim to address this misalignment through reward modeling, they intro"
+ },
+ {
+  "fn": "Generative Retrieval Meets Multi-Graded Relevance.pdf",
+  "title": "Generative Retrieval Meets Multi-Graded Relevance",
+  "year": "2024",
+  "abs_short": "Generative retrieval represents a novel approach to information retrieval. It uses an encoder-decoder architecture to directly produce relevant document identifiers (docids) for queries. While this method offers benefits, current approaches are limited to scenarios with binary relevance data, overlooking the potential for documents to have multi-graded relevance. Extending generative retrieval to accommodate multi-graded relevance poses challenges, including the need to reconcile likelihood probabilities for docid pairs and the possibility of multiple relevant documents sharing the same identi"
+ },
+ {
+  "fn": "Planning Ahead in Generative Retrieval: Guiding Autoregressive Generation through Simultaneous Decoding.pdf",
+  "title": "Planning Ahead in Generative Retrieval: Guiding Autoregressive Generation through Simultaneous Decoding",
+  "year": "2024",
+  "abs_short": "This paper introduces PAG-a novel optimization and decoding approach that guides autoregressive generation of document identifiers in generative retrieval models through simultaneous decoding. To this aim, PAG constructs a set-based and sequential identifier for each document. Motivated by the bag-of-words assumption in information retrieval, the set-based identifier is built on lexical tokens. The sequential identifier, on the other hand, is obtained via quantizing relevance-based representations of documents. Extensive experiments on MSMARCO and TREC Deep Learning Track data reveal that PAG "
+ },
+ {
+  "fn": "TOME: A Two-stage Approach for Model-based Retrieval.pdf",
+  "title": "TOME: A Two-stage Approach for Model-based Retrieval",
+  "year": "2023",
+  "abs_short": "Recently, model-based retrieval has emerged as a new paradigm in text retrieval that discards the index in the traditional retrieval model and instead memorizes the candidate corpora using model parameters. This design employs a sequence-to-sequence paradigm to generate document identifiers, which enables the complete capture of the relevance between queries and documents and simplifies the classic indexretrieval-rerank pipeline. Despite its attractive qualities, there remain several major challenges in model-based retrieval, including the discrepancy between pre-training and fine-tuning, and "
+ },
+ {
+  "fn": "Mitigating Collaborative Semantic ID Staleness in Generative Retrieval.pdf",
+  "title": "Mitigating Collaborative Semantic ID Staleness in Generative Retrieval",
+  "year": "2026",
+  "abs_short": "Generative retrieval with Semantic IDs (SIDs) assigns each item a discrete identifier and treats retrieval as a sequence generation problem rather than a nearest-neighbor search. While content-only SIDs are stable, they do not take into account user-item interaction patterns, so recent systems construct interaction-informed SIDs. However, as interaction patterns drift over time, these identifiers become stale, i.e., their collaborative semantics no longer match recent logs. Prior work typically assumes a fixed SID vocabulary during fine-tuning, or treats SID refresh as a full rebuild that requ"
+ },
+ {
+  "fn": "DeGRe: Dense-supervised Generative Reranking for Recommendation.pdf",
+  "title": "DeGRe: Dense-supervised Generative Reranking for Recommendation",
+  "year": "2026",
+  "abs_short": "In multi-stage recommender systems, reranking optimizes overall utility by capturing intra-list contextual dependencies, yet its central challenge lies in exploring optimal sequences within an exponentially large permutation space. Recent studies have shifted towards end-to-end generative frameworks, which typically leverage list-wise rewards or preference alignment to guide generator training. However, these methods still face two critical issues. First is the heuristic label bias. Existing methods often construct training targets based on simple rules, such as promoting clicked items to the "
+ },
+ {
+  "fn": "S$^2$GR: Stepwise Semantic-Guided Reasoning in Latent Space for Generative Recommendation.pdf",
+  "title": "S$^2$GR: Stepwise Semantic-Guided Reasoning in Latent Space for Generative Recommendation",
+  "year": "2026",
+  "abs_short": "Generative Recommendation (GR) has emerged as a transformative paradigm with its end-to-end generation advantages. However, existing GR methods primarily focus on direct Semantic ID (SID) generation from interaction sequences, failing to activate deeper reasoning capabilities analogous to those in large language models and thus limiting performance potential. We identify two critical limitations in current reasoning-enhanced GR approaches: (1) Strict sequential separation between reasoning and generation steps creates imbalanced computational focus across hierarchical SID codes, degrading qual"
+ },
+ {
+  "fn": "Semantic IDs for Recommender Systems at Snapchat: Use Cases, Technical Challenges, and Design Choices.pdf",
+  "title": "Semantic IDs for Recommender Systems at Snapchat: Use Cases, Technical Challenges, and Design Choices",
+  "year": "2026",
+  "abs_short": "Effective item identifiers (IDs) are an important component for recommender systems (RecSys) in practice, and are commonly adopted in many use cases such as retrieval and ranking. IDs can encode collaborative filtering signals within training data, such that RecSys models can extrapolate during the inference and personalize the prediction based on users' behavioral histories. Recently, Semantic IDs (SIDs) have become a trending paradigm for RecSys. In comparison to the conventional atomic ID, an SID is an ordered list of codes, derived from tokenizers such as residual quantization, applied to "
+ },
+ {
+  "fn": "Understanding Generative Recommendation with Semantic IDs from a Model-scaling View.pdf",
+  "title": "Understanding Generative Recommendation with Semantic IDs from a Model-scaling View",
+  "year": "2025",
+  "abs_short": "Recent advancements in generative models have allowed the emergence of a promising paradigm for recommender systems (RS), known as Generative Recommendation (GR), which tries to unify rich item semantics and collaborative filtering signals. One popular modern approach is to use semantic IDs (SIDs), which are discrete codes quantized from the embeddings of modality encoders (e.g., large language or vision models), to represent items in an autoregressive user interaction sequence modeling setup (henceforth, SID-based GR). While generative models in other domains exhibit well-established scaling "
+ },
+ {
+  "fn": "Beyond the Flat Sequence: Hierarchical and Preference-Aware Generative Recommendations.pdf",
+  "title": "Beyond the Flat Sequence: Hierarchical and Preference-Aware Generative Recommendations",
+  "year": "2026",
+  "abs_short": "Generative Recommenders (GRs), exemplified by the Hierarchical Sequential Transduction Unit (HSTU), have emerged as a powerful paradigm for modeling long user interaction sequences. However, we observe that their \"flat-sequence\" assumption overlooks the rich, intrinsic structure of user behavior. This leads to two key limitations: a failure to capture the temporal hierarchy of session-based engagement, and computational inefficiency, as dense attention introduces significant noise that obscures true preference signals within semantically sparse histories, which deteriorates the quality of the "
+ },
+ {
+  "fn": "Replication and Exploration of Generative Retrieval over Dynamic Corpora.pdf",
+  "title": "Replication and Exploration of Generative Retrieval over Dynamic Corpora",
+  "year": "2025",
+  "abs_short": "Generative retrieval (GR) has emerged as a promising paradigm in information retrieval (IR). However, most existing GR models are developed and evaluated using a static document collection, and their performance in dynamic corpora where document collections evolve continuously is rarely studied. In this paper, we first reproduce and systematically evaluate various representative GR approaches over dynamic corpora. Through extensive experiments, we reveal that existing GR models with \\textit{text-based} docids show superior generalization to unseen documents. We observe that the more fine-grain"
+ },
+ {
+  "fn": "Generative Next POI Recommendation with Semantic ID.pdf",
+  "title": "Generative Next POI Recommendation with Semantic ID",
+  "year": "2025",
+  "abs_short": "Point-of-interest (POI) recommendation systems aim to predict the next destinations of user based on their preferences and historical check-ins. Existing generative POI recommendation methods usually employ random numeric IDs for POIs, limiting the ability to model semantic relationships between similar locations. In this paper, we propose Generative Next POI Recommendation with Semantic ID (GNPR-SID), an LLM-based POI recommendation model with a novel semantic POI ID (SID) representation method that enhances the semantic understanding of POI modeling. There are two key components in our GNPR-"
+ },
+ {
+  "fn": "DiffGRM: Diffusion-based Generative Recommendation Model.pdf",
+  "title": "DiffGRM: Diffusion-based Generative Recommendation Model",
+  "year": "2025",
+  "abs_short": "Generative recommendation (GR) is an emerging paradigm that represents each item via a tokenizer as an n-digit semantic ID (SID) and predicts the next item by autoregressively generating its SID conditioned on the user's history. However, two structural properties of SIDs make ARMs ill-suited. First, intra-item consistency: the n digits jointly specify one item, yet the left-to-right causality trains each digit only under its prefix and blocks bidirectional cross-digit evidence, collapsing supervision to a single causal path. Second, inter-digit heterogeneity: digits differ in semantic granula"
+ },
+ {
+  "fn": "Bridging Textual-Collaborative Gap through Semantic Codes for Sequential Recommendation.pdf",
+  "title": "Bridging Textual-Collaborative Gap through Semantic Codes for Sequential Recommendation",
+  "year": "2025",
+  "abs_short": "In recent years, substantial research efforts have been devoted to enhancing sequential recommender systems by integrating abundant side information with ID-based collaborative information. This study specifically focuses on leveraging the textual metadata (e.g., titles and brands) associated with items. While existing methods have achieved notable success by combining text and ID representations, they often struggle to strike a balance between textual information embedded in text representations and collaborative information from sequential patterns of user behavior. In light of this, we prop"
+ },
+ {
+  "fn": "ActionPiece: Contextually Tokenizing Action Sequences for Generative Recommendation.pdf",
+  "title": "ActionPiece: Contextually Tokenizing Action Sequences for Generative Recommendation",
+  "year": "2025",
+  "abs_short": "Generative recommendation (GR) is an emerging paradigm where user actions are tokenized into discrete token patterns and autoregressively generated as predictions. However, existing GR models tokenize each action independently, assigning the same fixed tokens to identical actions across all sequences without considering contextual relationships. This lack of context-awareness can lead to suboptimal performance, as the same action may hold different meanings depending on its surrounding context. To address this issue, we propose ActionPiece to explicitly incorporate context when tokenizing acti"
+ },
+ {
+  "fn": "Intent-Driven Semantic ID Generation for Grounded Conversational News Recommendation.pdf",
+  "title": "Intent-Driven Semantic ID Generation for Grounded Conversational News Recommendation",
+  "year": "2026",
+  "abs_short": "Conversational news recommendation requires grounding each suggestion in a rapidly evolving article corpus while addressing implicit user intents that lack explicit retrievable keywords. To characterize this scenario, we identify 6 intent types from production dialogues: five are implicit and pose fundamental challenges to standard RAG pipelines, forming a critical retrieve-first bottleneck. To address these issues, we introduce intent-driven Semantic ID (SID) generation under a Generate-then-Match paradigm. With two-stage training that consists of multi-task SID alignment and GPT-4 Chain-of-T"
+ },
+ {
+  "fn": "Massive Memorization with Hundreds of Trillions of Parameters for Sequential Transducer Generative Recommenders.pdf",
+  "title": "Massive Memorization with Hundreds of Trillions of Parameters for Sequential Transducer Generative Recommenders",
+  "year": "2025",
+  "abs_short": "Modern large-scale recommendation systems rely heavily on user interaction history sequences to enhance the model performance. The advent of large language models and sequential modeling techniques, particularly transformer-like architectures, has led to significant advancements recently (e.g., HSTU, SIM, and TWIN models). While scaling to ultra-long user histories (10k to 100k items) generally improves model performance, it also creates significant challenges on latency, queries per second (QPS) and GPU cost in industry-scale recommendation systems. Existing models do not adequately address t"
+ },
+ {
+  "fn": "R$^2$ec: Towards Large Recommender Models with Reasoning.pdf",
+  "title": "R$^2$ec: Towards Large Recommender Models with Reasoning",
+  "year": "2025",
+  "abs_short": "Large recommender models have extended LLMs as powerful recommenders via encoding or item generation, and recent breakthroughs in LLM reasoning synchronously motivate the exploration of reasoning in recommendation. In this work, we propose R$^2$ec, a unified large recommender model with intrinsic reasoning capability. R$^2$ec introduces a dual-head architecture that supports both reasoning chain generation and efficient item prediction in a single model, significantly reducing inference latency. To overcome the lack of annotated reasoning data, we design RecPO, a reinforcement learning framewo"
+ },
+ {
+  "fn": "Leveraging Memory Retrieval to Enhance LLM-based Generative Recommendation.pdf",
+  "title": "Leveraging Memory Retrieval to Enhance LLM-based Generative Recommendation",
+  "year": "2024",
+  "abs_short": "Leveraging Large Language Models (LLMs) to harness user-item interaction histories for item generation has emerged as a promising paradigm in generative recommendation. However, the limited context window of LLMs often restricts them to focusing on recent user interactions only, leading to the neglect of long-term interests involved in the longer histories. To address this challenge, we propose a novel Automatic Memory-Retrieval framework (AutoMR), which is capable of storing long-term interests in the memory and extracting relevant information from it for next-item generation within LLMs. Ext"
+ },
+ {
+  "fn": "Generative Archetype-Grounded Item Representations for Sequential Recommendation.pdf",
+  "title": "Generative Archetype-Grounded Item Representations for Sequential Recommendation",
+  "year": "2026",
+  "abs_short": "Sequential recommendation aims to predict users' next interaction with items by analyzing their historical behavior. However, the limited quality of item representations remains a critical bottleneck. While pre-trained large language models (LLMs) can provide rich semantic representations, existing approaches only rely on static encoding of fixed attributes, overlooking the crucial role of target audiences in defining item identity. Moreover, the semantic space struggles to reflect actual user behavior, resulting in a significant gap between semantic representations and behavioral patterns. To"
+ },
+ {
+  "fn": "RAIE: Region-Aware Incremental Preference Editing with LoRA for LLM-based Recommendation.pdf",
+  "title": "RAIE: Region-Aware Incremental Preference Editing with LoRA for LLM-based Recommendation",
+  "year": "2026",
+  "abs_short": "Large language models (LLMs) are increasingly adopted as the backbone of recommender systems. However, user-item interactions in real-world scenarios are non-stationary, making preference drift over time inevitable. Existing model update strategies mainly rely on global fine-tuning or pointwise editing, but they face two fundamental challenges: (i) imbalanced update granularity, where global updates perturb behaviors unrelated to the target while pointwise edits fail to capture broader preference shifts; (ii) unstable incremental updates, where repeated edits interfere with prior adaptations, "
+ },
+ {
+  "fn": "FeDecider: An LLM-Based Framework for Federated Cross-Domain Recommendation.pdf",
+  "title": "FeDecider: An LLM-Based Framework for Federated Cross-Domain Recommendation",
+  "year": "2026",
+  "abs_short": "Federated cross-domain recommendation (Federated CDR) aims to collaboratively learn personalized recommendation models across heterogeneous domains while preserving data privacy. Recently, large language model (LLM)-based recommendation models have demonstrated impressive performance by leveraging LLMs' strong reasoning capabilities and broad knowledge. However, adopting LLM-based recommendation models in Federated CDR scenarios introduces new challenges. First, there exists a risk of overfitting with domain-specific local adapters. The magnitudes of locally optimized parameter updates often v"
+ },
+ {
+  "fn": "Token-level Collaborative Alignment for LLM-based Generative Recommendation.pdf",
+  "title": "Token-level Collaborative Alignment for LLM-based Generative Recommendation",
+  "year": "2026",
+  "abs_short": "Large Language Models (LLMs) have demonstrated strong potential for generative recommendation by leveraging rich semantic knowledge. However, existing LLM-based recommender systems struggle to effectively incorporate collaborative filtering (CF) signals, due to a fundamental mismatch between item-level preference modeling in CF and token-level next-token prediction (NTP) optimization in LLMs. Prior approaches typically treat CF as contextual hints or representation bias, and resort to multi-stage training to reduce behavioral semantic space discrepancies, leaving CF unable to explicitly regula"
+ },
+ {
+  "fn": "LLM Reasoning for Cold-Start Item Recommendation.pdf",
+  "title": "LLM Reasoning for Cold-Start Item Recommendation",
+  "year": "2025",
+  "abs_short": "Large Language Models (LLMs) have shown significant potential for improving recommendation systems through their inherent reasoning capabilities and extensive knowledge base. Yet, existing studies predominantly address warm-start scenarios with abundant user-item interaction data, leaving the more challenging cold-start scenarios, where sparse interactions hinder traditional collaborative filtering methods, underexplored. To address this limitation, we propose novel reasoning strategies designed for cold-start item recommendations within the Netflix domain. Our method utilizes the advanced rea"
+ },
+ {
+  "fn": "AgentDR: Dynamic Recommendation with Implicit Item-Item Relations via LLM-based Agents.pdf",
+  "title": "AgentDR: Dynamic Recommendation with Implicit Item-Item Relations via LLM-based Agents",
+  "year": "2025",
+  "abs_short": "Recent agent-based recommendation frameworks aim to simulate user behaviors by incorporating memory mechanisms and prompting strategies, but they struggle with hallucinating non-existent items and full-catalog ranking. Besides, a largely underexplored opportunity lies in leveraging LLMs'commonsense reasoning to capture user intent through substitute and complement relationships between items, which are usually implicit in datasets and difficult for traditional ID-based recommenders to capture. In this work, we propose a novel LLM-agent framework, AgenDR, which bridges LLM reasoning with scalab"
+ },
+ {
+  "fn": "Diffusion Generative Recommendation with Continuous Tokens.pdf",
+  "title": "Diffusion Generative Recommendation with Continuous Tokens",
+  "year": "2025",
+  "abs_short": "Recent advances in generative artificial intelligence, particularly large language models (LLMs), have opened new opportunities for enhancing recommender systems (RecSys). Most existing LLM-based RecSys approaches operate in a discrete space, using vector-quantized tokenizers to align with the inherent discrete nature of language models. However, these quantization methods often result in lossy tokenization and suboptimal learning, primarily due to inaccurate gradient propagation caused by the non-differentiable argmin operation in standard vector quantization. Inspired by the emerging trend o"
+ },
+ {
+  "fn": "Every Preference Has Its Strength: Injecting Ordinal Semantics into LLM-Based Recommenders.pdf",
+  "title": "Every Preference Has Its Strength: Injecting Ordinal Semantics into LLM-Based Recommenders",
+  "year": "2026",
+  "abs_short": "Recent work has shown that large language models (LLMs) can enhance recommender systems by integrating collaborative filtering (CF) signals through hybrid prompting. However, most existing CF-LLM frameworks collapse explicit ratings into implicit or positive-only feedback, discarding the ordinal structure that conveys fine-grained preference strength. As a result, these models struggle to exploit graded semantics and nuanced preference distinctions. We propose Ordinal Semantic Anchoring (OSA), a hybrid CF-LLM framework that explicitly incorporates preference strength by modeling interaction-le"
+ },
+ {
+  "fn": "Beyond Static Best-of-N: Bayesian List-wise Alignment for LLM-based Recommendation.pdf",
+  "title": "Beyond Static Best-of-N: Bayesian List-wise Alignment for LLM-based Recommendation",
+  "year": "2026",
+  "abs_short": "Large Language Models have revolutionized recommender systems (LLM4Rec) by leveraging their generative capabilities to model complex user preferences. However, existing LLM4Rec methods primarily rely on token-level objectives, making it difficult to optimize list-level and non-differentiable metrics (e.g., NDCG, fairness) that define actual recommendation quality. While Best-of-N (BoN) directly optimizes these metrics during inference, its high computational cost hinders real-world deployment. To address this, BoN Alignment aims to distill the search capability into the model itself, yet curre"
+ },
+ {
+  "fn": "One Pass, Any Order: Position-Invariant Listwise Reranking for LLM-Based Recommendation.pdf",
+  "title": "One Pass, Any Order: Position-Invariant Listwise Reranking for LLM-Based Recommendation",
+  "year": "2026",
+  "abs_short": "Large language models (LLMs) are increasingly used for recommendation reranking, but their listwise predictions can depend on the order in which candidates are presented. This creates a mismatch between the set-based nature of recommendation and the sequence-based computation of decoder-only LLMs, where permuting an otherwise identical candidate set can change item scores and final rankings. Such order sensitivity makes LLM-based rerankers difficult to rely on, since rankings may reflect prompt serialization rather than user preference. We propose InvariRank, a permutation-invariant listwise r"
+ },
+ {
+  "fn": "ProMax: Exploring the Potential of LLM-derived Profiles with Distribution Shaping for Recommender Systems.pdf",
+  "title": "ProMax: Exploring the Potential of LLM-derived Profiles with Distribution Shaping for Recommender Systems",
+  "year": "2026",
+  "abs_short": "The remarkable text understanding and generation capabilities of large language models (LLMs) have revitalized the field of general recommendation based on implicit user feedback. Rather than deploying LLMs directly as recommendation models, a more flexible paradigm leverages their ability to interpret users' historical interactions and semantic contexts to extract structured profiles that characterize user preferences. These profiles can be further transformed into actionable high-dimensional representations, serving as powerful signals to augment and strengthen recommendation models. However"
+ },
+ {
+  "fn": "Filling the Gaps: Selective Knowledge Augmentation for LLM Recommenders.pdf",
+  "title": "Filling the Gaps: Selective Knowledge Augmentation for LLM Recommenders",
+  "year": "2026",
+  "abs_short": "Large language models (LLMs) have recently emerged as powerful training-free recommenders. However, their knowledge of individual items is inevitably uneven due to imbalanced information exposure during pretraining, a phenomenon we refer to as knowledge gap problem. To address this, most prior methods have employed a naive uniform augmentation that appends external information for every item in the input prompt. However, this approach not only wastes limited context budget on redundant augmentation for well-known items but can also hinder the model's effective reasoning. To this end, we propos"
+ },
+ {
+  "fn": "Multimodal Large Language Models with Adaptive Preference Optimization for Sequential Recommendation.pdf",
+  "title": "Multimodal Large Language Models with Adaptive Preference Optimization for Sequential Recommendation",
+  "year": "2025",
+  "abs_short": "Recent advances in Large Language Models (LLMs) have opened new avenues for sequential recommendation by enabling natural language reasoning over user behavior sequences. A common approach formulates recommendation as a language modeling task, where interaction histories are transformed into prompts and user preferences are learned via supervised fine-tuning. However, these methods operate solely in the textual modality and often miss users' fine-grained interests, especially when shaped by rich visual signals such as product images or movie posters. Multimodal Large Language Models (MLLMs) of"
+ },
+ {
+  "fn": "ItemRAG: Item-Based Retrieval-Augmented Generation for LLM-Based Recommendation.pdf",
+  "title": "ItemRAG: Item-Based Retrieval-Augmented Generation for LLM-Based Recommendation",
+  "year": "2025",
+  "abs_short": "Recently, large language models (LLMs) have been widely used as recommender systems, owing to their reasoning capability and effectiveness in handling cold-start items. A common approach prompts an LLM with a target user's purchase history to recommend items from a candidate set, often enhanced with retrieval-augmented generation (RAG). Most existing RAG approaches retrieve purchase histories of users similar to the target user; however, these histories often contain noisy or weakly relevant information and provide little or no useful information for candidate items. To address these limitatio"
+ },
+ {
+  "fn": "SPRINT: Scalable and Predictive Intent Refinement for LLM-Enhanced Session-based Recommendation.pdf",
+  "title": "SPRINT: Scalable and Predictive Intent Refinement for LLM-Enhanced Session-based Recommendation",
+  "year": "2025",
+  "abs_short": "Large language models (LLMs) have enhanced conventional recommendation models via user profiling, which generates representative textual profiles from users' historical interactions. However, their direct application to session-based recommendation (SBR) remains challenging due to severe session context scarcity and poor scalability. In this paper, we propose SPRINT, a scalable SBR framework that incorporates reliable and informative intents while ensuring high efficiency in both training and inference. SPRINT constrains LLM-based profiling with a global intent pool and validates inferred inte"
+ },
+ {
+  "fn": "Mixture-of-Experts Knowledge Graph Retrieval-Augmented Generation for Multi-Agent LLM-based Recommendation.pdf",
+  "title": "Mixture-of-Experts Knowledge Graph Retrieval-Augmented Generation for Multi-Agent LLM-based Recommendation",
+  "year": "2026",
+  "abs_short": "Large language models (LLMs) have recently been adopted for recommendations due to their ability to understand user intent and item semantics. However, LLM-based recommender systems often rely on parametric knowledge and suffer from outdated knowledge, motivating knowledge graph retrieval-augmented generation (KG-RAG) to ground recommendations on structured, up-to-date KGs. Despite this promise, effective KG-RAG in recommendations faces great challenges. First, users' queries vary in complexity and require KG knowledge at different granularities, whereas existing methods adopt a one-size-fits-"
+ },
+ {
+  "fn": "Enriching Semantic Profiles into Knowledge Graph for Recommender Systems Using Large Language Models.pdf",
+  "title": "Enriching Semantic Profiles into Knowledge Graph for Recommender Systems Using Large Language Models",
+  "year": "2026",
+  "abs_short": "Rich and informative profiling to capture user preferences is essential for improving recommendation quality. However, there is still no consensus on how best to construct and utilize such profiles. To address this, we revisit recent profiling-based approaches in recommender systems along four dimensions: 1) knowledge base, 2) preference indicator, 3) impact range, and 4) subject. We argue that large language models (LLMs) are effective at extracting compressed rationales from diverse knowledge sources, while knowledge graphs (KGs) are better suited for propagating these profiles to extend the"
+ },
+ {
+  "fn": "Token-Efficient Item Representation via Images for LLM Recommender Systems.pdf",
+  "title": "Token-Efficient Item Representation via Images for LLM Recommender Systems",
+  "year": "2025",
+  "abs_short": "Large Language Models (LLMs) have recently emerged as a powerful backbone for recommender systems. Existing LLM-based recommender systems take two different approaches for representing items in natural language, i.e., Attribute-based Representation and Description-based Representation. In this work, we aim to address the trade-off between efficiency and effectiveness that these two approaches encounter, when representing items consumed by users. Based on our interesting observation that there is a significant information overlap between images and descriptions associated with items, we propose"
+ },
+ {
+  "fn": "ReRec: Reasoning-Augmented LLM-based Recommendation Assistant via Reinforcement Fine-tuning.pdf",
+  "title": "ReRec: Reasoning-Augmented LLM-based Recommendation Assistant via Reinforcement Fine-tuning",
+  "year": "2026",
+  "abs_short": "With the rise of LLMs, there is an increasing need for intelligent recommendation assistants that can handle complex queries and provide personalized, reasoning-driven recommendations. LLM-based recommenders show potential but face challenges in multi-step reasoning, underscoring the need for reasoning-augmented systems. To address this gap, we propose ReRec, a novel reinforcement fine-tuning (RFT) framework designed to improve LLM reasoning in complex recommendation tasks. Our framework introduces three key components: (1) Dual-Graph Enhanced Reward Shaping, integrating recommendation metrics"
+ },
+ {
+  "fn": "Mirroring Users: Towards Building Preference-aligned User Simulator with User Feedback in Recommendation.pdf",
+  "title": "Mirroring Users: Towards Building Preference-aligned User Simulator with User Feedback in Recommendation",
+  "year": "2025",
+  "abs_short": "User simulation is increasingly vital to develop and evaluate recommender systems (RSs). While Large Language Models (LLMs) offer promising avenues to simulate user behavior, they often struggle with the absence of specific task alignment required for RSs and the efficiency demands of large-scale simulation. A vast yet underutilized resource for enhancing this alignment is the extensive user feedback inherent in RSs, but leveraging it is challenging due to its ambiguity, noise and massive volume, which hinders efficient preference alignment. To overcome these hurdles, we introduce a novel data"
+ },
+ {
+  "fn": "What Makes LLMs Effective Sequential Recommenders? A Study on Preference Intensity and Temporal Context.pdf",
+  "title": "What Makes LLMs Effective Sequential Recommenders? A Study on Preference Intensity and Temporal Context",
+  "year": "2025",
+  "abs_short": "What enables large language models (LLMs) to effectively model user preferences in sequential recommendation? Our investigation reveals that existing preference-alignment approaches largely rely on binary pairwise comparisons, overlooking two critical factors: preference intensity (the structured strength of affinity or aversion) and temporal context (the extent to which recent interactions better reflect a user's current intent). Through controlled experiments, we show that leveraging comprehensive feedback with structured preference signals substantially improves recommendation performance, "
+ },
+ {
+  "fn": "AgentSociety Challenge: Designing LLM Agents for User Modeling and Recommendation on Web Platforms.pdf",
+  "title": "AgentSociety Challenge: Designing LLM Agents for User Modeling and Recommendation on Web Platforms",
+  "year": "2025",
+  "abs_short": "The AgentSociety Challenge is the first competition in the Web Conference that aims to explore the potential of Large Language Model (LLM) agents in modeling user behavior and enhancing recommender systems on web platforms. The Challenge consists of two tracks: the User Modeling Track and the Recommendation Track. Participants are tasked to utilize a combined dataset from Yelp, Amazon, and Goodreads, along with an interactive environment simulator, to develop innovative LLM agents. The Challenge has attracted 295 teams across the globe and received over 1,400 submissions in total over the cour"
+ },
+ {
+  "fn": "Uncertainty Quantification and Decomposition for LLM-based Recommendation.pdf",
+  "title": "Uncertainty Quantification and Decomposition for LLM-based Recommendation",
+  "year": "2025",
+  "abs_short": "Despite the widespread adoption of large language models (LLMs) for recommendation, we demonstrate that LLMs often exhibit uncertainty in their recommendations. To ensure the trustworthy use of LLMs in generating recommendations, we emphasize the importance of assessing the reliability of recommendations generated by LLMs. We start by introducing a novel framework for estimating the predictive uncertainty to quantitatively measure the reliability of LLM-based recommendations. We further propose to decompose the predictive uncertainty into recommendation uncertainty and prompt uncertainty, enab"
+ },
+ {
+  "fn": "SPRec: Self-Play to Debias LLM-based Recommendation.pdf",
+  "title": "SPRec: Self-Play to Debias LLM-based Recommendation",
+  "year": "2024",
+  "abs_short": "Large language models (LLMs) have attracted significant attention in recommendation systems. Current work primarily applies supervised fine-tuning (SFT) to adapt the model for recommendation tasks. However, SFT on positive examples only limits the model's ability to align with user preference. To address this, researchers recently introduced Direct Preference Optimization (DPO), which explicitly aligns LLMs with user preferences using offline preference ranking data. However, we found that DPO inherently biases the model towards a few items, exacerbating the filter bubble issue and ultimately "
+ },
+ {
+  "fn": "Beyond Utility: Evaluating LLM as Recommender.pdf",
+  "title": "Beyond Utility: Evaluating LLM as Recommender",
+  "year": "2024",
+  "abs_short": "With the rapid development of Large Language Models (LLMs), recent studies employed LLMs as recommenders to provide personalized information services for distinct users. Despite efforts to improve the accuracy of LLM-based recommendation models, relatively little attention is paid to beyond-utility dimensions. Moreover, there are unique evaluation aspects of LLM-based recommendation models, which have been largely ignored. To bridge this gap, we explore four new evaluation dimensions and propose a multidimensional evaluation framework. The new evaluation dimensions include: 1) history length s"
+ },
+ {
+  "fn": "Reason4Rec: Deliberative User Preference Alignment of Large Language Models for Recommendation.pdf",
+  "title": "Reason4Rec: Deliberative User Preference Alignment of Large Language Models for Recommendation",
+  "year": "2025",
+  "abs_short": "Aligning Large Language Models (LLMs) with recommendation tasks represents an emerging paradigm in recommendation domain, exhibiting promising performance overall. However, these aligned recommendation LLMs often struggle with complex scenarios due to limitations in the current alignment task formulation, which optimizes LLMs to directly generate user feedback without deliberation. To develop more reliable recommendation LLMs, we introduce a new \\textit{Deliberative Recommendation} task, which enforces explicit reasoning about user preferences as an additional alignment objective. To address t"
+ },
+ {
+  "fn": "CoLLM: Integrating Collaborative Embeddings into Large Language Models for Recommendation.pdf",
+  "title": "CoLLM: Integrating Collaborative Embeddings into Large Language Models for Recommendation",
+  "year": "2023",
+  "abs_short": "Leveraging Large Language Models as Recommenders (LLMRec) has gained significant attention and introduced fresh perspectives in user preference modeling. Existing LLMRec approaches prioritize text semantics, usually neglecting the valuable collaborative information from user-item interactions in recommendations. While these text-emphasizing approaches excel in cold-start scenarios, they may yield sub-optimal performance in warm-start situations. In pursuit of superior recommendations for both cold and warm start scenarios, we introduce CoLLM, an innovative LLMRec methodology that seamlessly in"
+ },
+ {
+  "fn": "X-Cross: Dynamic Integration of Language Models for Cross-Domain Sequential Recommendation.pdf",
+  "title": "X-Cross: Dynamic Integration of Language Models for Cross-Domain Sequential Recommendation",
+  "year": "2025",
+  "abs_short": "As new products are emerging daily, recommendation systems are required to quickly adapt to possible new domains without needing extensive retraining. This work presents ``X-Cross'' -- a novel cross-domain sequential-recommendation model that recommends products in new domains by integrating several domain-specific language models; each model is fine-tuned with low-rank adapters (LoRA). Given a recommendation prompt, operating layer by layer, X-Cross dynamically refines the representation of each source language model by integrating knowledge from all other models. These refined representation"
+ },
+ {
+  "fn": "Bridge the Domains: Large Language Models Enhanced Cross-domain Sequential Recommendation.pdf",
+  "title": "Bridge the Domains: Large Language Models Enhanced Cross-domain Sequential Recommendation",
+  "year": "2025",
+  "abs_short": "Cross-domain Sequential Recommendation (CDSR) aims to extract the preference from the user's historical interactions across various domains. Despite some progress in CDSR, two problems set the barrier for further advancements, i.e., overlap dilemma and transition complexity. The former means existing CDSR methods severely rely on users who own interactions on all domains to learn cross-domain item relationships, compromising the practicability. The latter refers to the difficulties in learning the complex transition patterns from the mixed behavior sequences. With powerful representation and r"
+ },
+ {
+  "fn": "Process-Supervised LLM Recommenders via Flow-guided Tuning.pdf",
+  "title": "Process-Supervised LLM Recommenders via Flow-guided Tuning",
+  "year": "2025",
+  "abs_short": "While large language models (LLMs) are increasingly adapted for recommendation systems via supervised fine-tuning (SFT), this approach amplifies popularity bias due to its likelihood maximization objective, compromising recommendation diversity and fairness. To address this, we present Flow-guided fine-tuning recommender (Flower), which replaces SFT with a Generative Flow Network (GFlowNet) framework that enacts process supervision through token-level reward propagation. Flower's key innovation lies in decomposing item-level rewards into constituent token rewards, enabling direct alignment bet"
+ },
+ {
+  "fn": "Pre-train, Align, and Disentangle: Empowering Sequential Recommendation with Large Language Models.pdf",
+  "title": "Pre-train, Align, and Disentangle: Empowering Sequential Recommendation with Large Language Models",
+  "year": "2024",
+  "abs_short": "Sequential Recommendation (SR) aims to leverage the sequential patterns in users' historical interactions to accurately track their preferences. However, the primary reliance of existing SR methods on collaborative data results in challenges such as the cold-start problem and sub-optimal performance. Concurrently, despite the proven effectiveness of large language models (LLMs), their integration into commercial recommender systems is impeded by issues such as high inference latency, incomplete capture of all distribution statistics, and catastrophic forgetting. To address these issues, we int"
+ },
+ {
+  "fn": "Review-driven Personalized Preference Reasoning with Large Language Models for Recommendation.pdf",
+  "title": "Review-driven Personalized Preference Reasoning with Large Language Models for Recommendation",
+  "year": "2024",
+  "abs_short": "Recent advancements in Large Language Models (LLMs) have demonstrated exceptional performance across a wide range of tasks, generating significant interest in their application to recommendation systems. However, existing methods have not fully capitalized on the potential of LLMs, often constrained by limited input information or failing to fully utilize their advanced reasoning capabilities. To address these limitations, we introduce EXP3RT, a novel LLM-based recommender designed to leverage rich preference information contained in user and item reviews. EXP3RT is basically fine-tuned throug"
+ },
+ {
+  "fn": "Efficiency Unleashed: Inference Acceleration for LLM-based Recommender Systems with Speculative Decoding.pdf",
+  "title": "Efficiency Unleashed: Inference Acceleration for LLM-based Recommender Systems with Speculative Decoding",
+  "year": "2024",
+  "abs_short": "The past few years have witnessed a growing interest in LLM-based recommender systems (RSs), although their industrial deployment remains in a preliminary stage. Most existing deployments leverage LLMs offline as feature enhancers, generating augmented knowledge for downstream tasks. However, in recommendation scenarios with numerous users and items, even offline knowledge generation with LLMs demands significant time and computational resources. This inefficiency arises from the autoregressive nature of LLMs. A promising solution is speculative decoding, a Draft-Then-Verify approach that incr"
+ },
+ {
+  "fn": "Can LLMs Outshine Conventional Recommenders? A Comparative Evaluation.pdf",
+  "title": "Can LLMs Outshine Conventional Recommenders? A Comparative Evaluation",
+  "year": "2025",
+  "abs_short": "In recent years, integrating large language models (LLMs) into recommender systems has created new opportunities for improving recommendation quality. However, a comprehensive benchmark is needed to thoroughly evaluate and compare the recommendation capabilities of LLMs with traditional recommender systems. In this paper, we introduce RecBench, which systematically investigates various item representation forms (including unique identifier, text, semantic embedding, and semantic identifier) and evaluates two primary recommendation tasks, i.e., click-through rate prediction (CTR) and sequential"
+ },
+ {
+  "fn": "LLM2Rec: Large Language Models Are Powerful Embedding Models for Sequential Recommendation.pdf",
+  "title": "LLM2Rec: Large Language Models Are Powerful Embedding Models for Sequential Recommendation",
+  "year": "2025",
+  "abs_short": "Sequential recommendation aims to predict users' future interactions by modeling collaborative filtering (CF) signals from historical behaviors of similar users or items. Traditional sequential recommenders predominantly rely on ID-based embeddings, which capture CF signals through high-order co-occurrence patterns. However, these embeddings depend solely on past interactions, lacking transferable knowledge to generalize to unseen domains. Recent advances in large language models (LLMs) have motivated text-based recommendation approaches that derive item representations from textual descriptio"
+ },
+ {
+  "fn": "GORACS: Group-level Optimal Transport-guided Coreset Selection for LLM-based Recommender Systems.pdf",
+  "title": "GORACS: Group-level Optimal Transport-guided Coreset Selection for LLM-based Recommender Systems",
+  "year": "2025",
+  "abs_short": "Although large language models (LLMs) have shown great potential in recommender systems, the prohibitive computational costs for fine-tuning LLMs on entire datasets hinder their successful deployment in real-world scenarios. To develop affordable and effective LLM-based recommender systems, we focus on the task of coreset selection which identifies a small subset of fine-tuning data to optimize the test loss, thereby facilitating efficient LLMs' fine-tuning. Although there exist some intuitive solutions of subset selection, including distribution-based and importance-based approaches, they oft"
+ },
+ {
+  "fn": "Lost in Sequence: Do Large Language Models Understand Sequential Recommendation?.pdf",
+  "title": "Lost in Sequence: Do Large Language Models Understand Sequential Recommendation?",
+  "year": "2025",
+  "abs_short": "Large Language Models (LLMs) have recently emerged as promising tools for recommendation thanks to their advanced textual understanding ability and context-awareness. Despite the current practice of training and evaluating LLM-based recommendation (LLM4Rec) models under a sequential recommendation scenario, we found that whether these models understand the sequential information inherent in users' item interaction sequences has been largely overlooked. In this paper, we first demonstrate through a series of experiments that existing LLM4Rec models do not fully capture sequential information bo"
+ },
+ {
+  "fn": "Knowledge Graph Retrieval-Augmented Generation for LLM-based Recommendation.pdf",
+  "title": "Knowledge Graph Retrieval-Augmented Generation for LLM-based Recommendation",
+  "year": "2025",
+  "abs_short": "Recommender systems have become increasingly vital in our daily lives, helping to alleviate the problem of information overload across various user-oriented online services. The emergence of Large Language Models (LLMs) has yielded remarkable achievements, demonstrating their potential for the development of next-generation recommender systems. Despite these advancements, LLM-based recommender systems face inherent limitations stemming from their LLM backbones, particularly issues of hallucinations and the lack of up-to-date and domain-specific knowledge. Recently, Retrieval-Augmented Generati"
+ },
+ {
+  "fn": "RecLM: Recommendation Instruction Tuning.pdf",
+  "title": "RecLM: Recommendation Instruction Tuning",
+  "year": "2024",
+  "abs_short": "Modern recommender systems aim to deeply understand users' complex preferences through their past interactions. While deep collaborative filtering approaches using Graph Neural Networks (GNNs) excel at capturing user-item relationships, their effectiveness is limited when handling sparse data or zero-shot scenarios, primarily due to constraints in ID-based embedding functions. To address these challenges, we propose a model-agnostic recommendation instruction-tuning paradigm that seamlessly integrates large language models with collaborative filtering. Our proposed $\\underline{Rec}$ommendation"
+ },
+ {
+  "fn": "LLMEmb: Large Language Model Can Be a Good Embedding Generator for Sequential Recommendation.pdf",
+  "title": "LLMEmb: Large Language Model Can Be a Good Embedding Generator for Sequential Recommendation",
+  "year": "2024",
+  "abs_short": "Sequential Recommender Systems (SRS), which model a user's interaction history to predict the next item of interest, are widely used in various applications. However, existing SRS often struggle with low-popularity items, a challenge known as the long-tail problem. This issue leads to reduced serendipity for users and diminished profits for sellers, ultimately harming the overall system. Large Language Model (LLM) has the ability to capture semantic relationships between items, independent of their popularity, making it a promising solution to this problem. In this paper, we introduce LLMEmb, "
+ },
+ {
+  "fn": "Can Small Language Models be Good Reasoners for Sequential Recommendation?.pdf",
+  "title": "Can Small Language Models be Good Reasoners for Sequential Recommendation?",
+  "year": "2024",
+  "abs_short": "Large language models (LLMs) open up new horizons for sequential recommendations, owing to their remarkable language comprehension and generation capabilities. However, there are still numerous challenges that should be addressed to successfully implement sequential recommendations empowered by LLMs. Firstly, user behavior patterns are often complex, and relying solely on one-step reasoning from LLMs may lead to incorrect or task-irrelevant responses. Secondly, the prohibitively resource requirements of LLM (e.g., ChatGPT-175B) are overwhelmingly high and impractical for real sequential recomm"
+ },
+ {
+  "fn": "Multi-Layer Ranking with Large Language Models for News Source Recommendation.pdf",
+  "title": "Multi-Layer Ranking with Large Language Models for News Source Recommendation",
+  "year": "2024",
+  "abs_short": "To seek reliable information sources for news events, we introduce a novel task of expert recommendation, which aims to identify trustworthy sources based on their previously quoted statements. To achieve this, we built a novel dataset, called NewsQuote, consisting of 23,571 quote-speaker pairs sourced from a collection of news articles. We formulate the recommendation task as the retrieval of experts based on their likelihood of being associated with a given query. We also propose a multi-layer ranking framework employing Large Language Models to improve the recommendation performance. Our re"
+ },
+ {
+  "fn": "Sequential Recommendation with Latent Relations based on Large Language Model.pdf",
+  "title": "Sequential Recommendation with Latent Relations based on Large Language Model",
+  "year": "2024",
+  "abs_short": "Sequential recommender systems predict items that may interest users by modeling their preferences based on historical interactions. Traditional sequential recommendation methods rely on capturing implicit collaborative filtering signals among items. Recent relation-aware sequential recommendation models have achieved promising performance by explicitly incorporating item relations into the modeling of user historical sequences, where most relations are extracted from knowledge graphs. However, existing methods rely on manually predefined relations and suffer the sparsity issue, limiting the g"
+ },
+ {
+  "fn": "Data-efficient Fine-tuning for LLM-based Recommendation.pdf",
+  "title": "Data-efficient Fine-tuning for LLM-based Recommendation",
+  "year": "2024",
+  "abs_short": "Leveraging Large Language Models (LLMs) for recommendation has recently garnered considerable attention, where fine-tuning plays a key role in LLMs' adaptation. However, the cost of fine-tuning LLMs on rapidly expanding recommendation data limits their practical application. To address this challenge, few-shot fine-tuning offers a promising approach to quickly adapt LLMs to new recommendation data. We propose the task of data pruning for efficient LLM-based recommendation, aimed at identifying representative samples tailored for LLMs' few-shot fine-tuning. While coreset selection is closely re"
+ },
+ {
+  "fn": "On Generative Agents in Recommendation.pdf",
+  "title": "On Generative Agents in Recommendation",
+  "year": "2023",
+  "abs_short": "Recommender systems are the cornerstone of today's information dissemination, yet a disconnect between offline metrics and online performance greatly hinders their development. Addressing this challenge, we envision a recommendation simulator, capitalizing on recent breakthroughs in human-level intelligence exhibited by Large Language Models (LLMs). We propose Agent4Rec, a user simulator in recommendation, leveraging LLM-empowered generative agents equipped with user profile, memory, and actions modules specifically tailored for the recommender system. In particular, these agents' profile modu"
+ },
+ {
+  "fn": "Large Language Models meet Collaborative Filtering: An Efficient All-round LLM-based Recommender System.pdf",
+  "title": "Large Language Models meet Collaborative Filtering: An Efficient All-round LLM-based Recommender System",
+  "year": "2024",
+  "abs_short": "Collaborative filtering recommender systems (CF-RecSys) have shown successive results in enhancing the user experience on social media and e-commerce platforms. However, as CF-RecSys struggles under cold scenarios with sparse user-item interactions, recent strategies have focused on leveraging modality information of user/items (e.g., text or images) based on pre-trained modality encoders and Large Language Models (LLMs). Despite their effectiveness under cold scenarios, we observe that they underperform simple traditional collaborative filtering models under warm scenarios due to the lack of "
+ },
+ {
+  "fn": "Leveraging LLM Reasoning Enhances Personalized Recommender Systems.pdf",
+  "title": "Leveraging LLM Reasoning Enhances Personalized Recommender Systems",
+  "year": "2024",
+  "abs_short": "Recent advancements have showcased the potential of Large Language Models (LLMs) in executing reasoning tasks, particularly facilitated by Chain-of-Thought (CoT) prompting. While tasks like arithmetic reasoning involve clear, definitive answers and logical chains of thought, the application of LLM reasoning in recommendation systems (RecSys) presents a distinct challenge. RecSys tasks revolve around subjectivity and personalized preferences, an under-explored domain in utilizing LLMs' reasoning capabilities. Our study explores several aspects to better understand reasoning for RecSys and demon"
+ },
+ {
+  "fn": "Stealthy Attack on Large Language Model based Recommendation.pdf",
+  "title": "Stealthy Attack on Large Language Model based Recommendation",
+  "year": "2024",
+  "abs_short": "Recently, the powerful large language models (LLMs) have been instrumental in propelling the progress of recommender systems (RS). However, while these systems have flourished, their susceptibility to security threats has been largely overlooked. In this work, we reveal that the introduction of LLMs into recommendation models presents new security vulnerabilities due to their emphasis on the textual content of items. We demonstrate that attackers can significantly boost an item's exposure by merely altering its textual content during the testing phase, without requiring direct interference wit"
+ },
+ {
+  "fn": "MVIGER: Multi-View Variational Integration of Complementary Knowledge for Generative Recommender.pdf",
+  "title": "MVIGER: Multi-View Variational Integration of Complementary Knowledge for Generative Recommender",
+  "year": "2024",
+  "abs_short": "Language Models (LMs) have been widely used in recommender systems to incorporate textual information of items into item IDs, leveraging their advanced language understanding and generation capabilities. Recently, generative recommender systems have utilized the reasoning abilities of LMs to directly generate index tokens for potential items of interest based on the user's interaction history. To inject diverse item knowledge into LMs, prompt templates with detailed task descriptions and various indexing techniques derived from diverse item information have been explored. This paper focuses on"
+ },
+ {
+  "fn": "Inductive Generative Recommendation via Retrieval-based Speculation.pdf",
+  "title": "Inductive Generative Recommendation via Retrieval-based Speculation",
+  "year": "2024",
+  "abs_short": "Generative recommendation (GR) is an emerging paradigm that tokenizes items into discrete tokens and learns to autoregressively generate the next tokens as predictions. While this token-generation paradigm is expected to surpass traditional transductive methods, potentially generating new items directly based on semantics, we empirically show that GR models predominantly generate items seen during training and struggle to recommend unseen items. In this paper, we propose SpecGR, a plug-and-play framework that enables GR models to recommend new items in an inductive setting. SpecGR uses a draft"
+ },
+ {
+  "fn": "ReasonRank: Empowering Passage Ranking with Strong Reasoning Ability.pdf",
+  "title": "ReasonRank: Empowering Passage Ranking with Strong Reasoning Ability",
+  "year": "2025",
+  "abs_short": "Large Language Model (LLM) based listwise ranking has shown superior performance in many passage ranking tasks. With the development of Large Reasoning Models (LRMs), many studies have demonstrated that step-by-step reasoning during test-time helps improve listwise ranking performance. However, due to the scarcity of reasoning-intensive training data, existing rerankers perform poorly in many complex ranking scenarios, and the ranking ability of reasoning-intensive rerankers remains largely underdeveloped. In this paper, we first propose an automated reasoning-intensive training data synthesis"
+ },
+ {
+  "fn": "Equip Pre-ranking with Target Attention by Residual Quantization.pdf",
+  "title": "Equip Pre-ranking with Target Attention by Residual Quantization",
+  "year": "2025",
+  "abs_short": "The pre-ranking stage in industrial recommendation systems faces a fundamental conflict between efficiency and effectiveness. While powerful models like Target Attention (TA) excel at capturing complex feature interactions in the ranking stage, their high computational cost makes them infeasible for pre-ranking, which often relies on simplistic vector-product models. This disparity creates a significant performance bottleneck for the entire system. To bridge this gap, we propose TARQ, a novel pre-ranking framework. Inspired by generative models, TARQ's key innovation is to equip pre-ranking wi"
+ },
+ {
+  "fn": "GoalRank: Group-Relative Optimization for a Large Ranking Model.pdf",
+  "title": "GoalRank: Group-Relative Optimization for a Large Ranking Model",
+  "year": "2025",
+  "abs_short": "Mainstream ranking approaches typically follow a Generator-Evaluator two-stage paradigm, where a generator produces candidate lists and an evaluator selects the best one. Recent work has attempted to enhance performance by expanding the number of candidate lists, for example, through multi-generator settings. However, ranking involves selecting a recommendation list from a combinatorially large space. Simply enlarging the candidate set remains ineffective, and performance gains quickly saturate. At the same time, recent advances in large recommendation models have shown that end-to-end one-sta"
+ },
+ {
+  "fn": "OneTrans: Unified Feature Interaction and Sequence Modeling with One Transformer in Industrial Recommender.pdf",
+  "title": "OneTrans: Unified Feature Interaction and Sequence Modeling with One Transformer in Industrial Recommender",
+  "year": "2025",
+  "abs_short": "In recommendation systems, scaling up feature-interaction modules (e.g., Wukong, RankMixer) or user-behavior sequence modules (e.g., LONGER) has achieved notable success. However, these efforts typically proceed on separate tracks, which not only hinders bidirectional information exchange but also prevents unified optimization and scaling. In this paper, we propose OneTrans, a unified Transformer backbone that simultaneously performs user-behavior sequence modeling and feature interaction. OneTrans employs a unified tokenizer to convert both sequential and non-sequential attributes into a sing"
+ },
+ {
+  "fn": "From Scaling to Structured Expressivity: Rethinking Transformers for CTR Prediction.pdf",
+  "title": "From Scaling to Structured Expressivity: Rethinking Transformers for CTR Prediction",
+  "year": "2025",
+  "abs_short": "Despite massive investments in scale, deep models for click-through rate (CTR) prediction often exhibit rapidly diminishing returns -- a stark contrast to the {predictable scaling laws} seen in large language models (LLMs). We identify the root cause as a {fundamental} \\textit{structural misalignment}: {standard} Transformers assume sequential compositionality, whereas CTR data demand combinatorial reasoning over {heterogeneous} fields. To restore alignment, we introduce the \\textbf{Field-Aware Transformer (FAT)}. {By reconstructing the standard Transformer block with field-centric parameters,"
+ },
+ {
+  "fn": "FuXi-$γ$: Efficient Sequential Recommendation with Exponential-Power Temporal Encoder and Diagonal-Sparse Positional Mechanism.pdf",
+  "title": "FuXi-$γ$: Efficient Sequential Recommendation with Exponential-Power Temporal Encoder and Diagonal-Sparse Positional Mechanism",
+  "year": "2025",
+  "abs_short": "Sequential recommendation aims to model users' evolving preferences based on their historical interactions. Recent advances leverage Transformer-based architectures to capture global dependencies, but existing methods often suffer from high computational overhead, primarily due to discontinuous memory access in temporal encoding and dense attention over long sequences. To address these limitations, we propose FuXi-$γ$, a novel sequential recommendation framework that improves both effectiveness and efficiency through principled architectural design. FuXi-$γ$ adopts a decoder-only Transformer s"
+ },
+ {
+  "fn": "BlossomRec: Block-level Fused Sparse Attention Mechanism for Sequential Recommendations.pdf",
+  "title": "BlossomRec: Block-level Fused Sparse Attention Mechanism for Sequential Recommendations",
+  "year": "2025",
+  "abs_short": "Transformer structures have been widely used in sequential recommender systems (SRS). However, as user interaction histories increase, computational time and memory requirements also grow. This is mainly caused by the standard attention mechanism. Although there exist many methods employing efficient attention and SSM-based models, these approaches struggle to effectively model long sequences and may exhibit unstable performance on short sequences. To address these challenges, we design a sparse attention mechanism, BlossomRec, which models both long-term and short-term user interests through "
+ },
+ {
+  "fn": "Unleashing the Potential of Sparse Attention on Long-term Behaviors for CTR Prediction.pdf",
+  "title": "Unleashing the Potential of Sparse Attention on Long-term Behaviors for CTR Prediction",
+  "year": "2026",
+  "abs_short": "In recent years, the success of large language models (LLMs) has driven the exploration of scaling laws in recommender systems. However, models that demonstrate scaling laws are actually challenging to deploy in industrial settings for modeling long sequences of user behaviors, due to the high computational complexity of the standard self-attention mechanism. Despite various sparse self-attention mechanisms proposed in other fields, they are not fully suited for recommendation scenarios. This is because user behaviors exhibit personalization and temporal characteristics: different users have d"
+ },
+ {
+  "fn": "CollectiveKV: Decoupling and Sharing Collaborative Information in Sequential Recommendation.pdf",
+  "title": "CollectiveKV: Decoupling and Sharing Collaborative Information in Sequential Recommendation",
+  "year": "2026",
+  "abs_short": "Sequential recommendation models are widely used in applications, yet they face stringent latency requirements. Mainstream models leverage the Transformer attention mechanism to improve performance, but its computational complexity grows with the sequence length, leading to a latency challenge for long sequences. Consequently, KV cache technology has recently been explored in sequential recommendation systems to reduce inference latency. However, KV cache introduces substantial storage overhead in sequential recommendation systems, which often have a large user base with potentially very long "
+ },
+ {
+  "fn": "Differentiable Semantic ID for Generative Recommendation.pdf",
+  "title": "Differentiable Semantic ID for Generative Recommendation",
+  "year": "2026",
+  "abs_short": "Generative recommendation provides a novel paradigm in which each item is represented by a discrete semantic ID (SID) learned from rich content. Most existing methods treat SIDs as predefined and train recommenders under static indexing. In practice, SIDs are typically optimized only for content reconstruction rather than recommendation accuracy. This leads to an objective mismatch: the system optimizes an indexing loss to learn the SID and a recommendation loss for interaction prediction, but because the tokenizer is trained independently, the recommendation loss cannot update it. A natural a"
+ },
+ {
+  "fn": "Principled Synthetic Data Enables the First Scaling Laws for LLMs in Recommendation.pdf",
+  "title": "Principled Synthetic Data Enables the First Scaling Laws for LLMs in Recommendation",
+  "year": "2026",
+  "abs_short": "Large Language Models (LLMs) represent a promising frontier for recommender systems, yet their development has been impeded by the absence of predictable scaling laws, which are crucial for guiding research and optimizing resource allocation. We hypothesize that this may be attributed to the inherent noise, bias, and incompleteness of raw user interaction data in prior continual pre-training (CPT) efforts. This paper introduces a novel, layered framework for generating high-quality synthetic data that circumvents such issues by creating a curated, pedagogical curriculum for the LLM. We provide"
+ },
+ {
+  "fn": "Uncertainty-aware Generative Recommendation.pdf",
+  "title": "Uncertainty-aware Generative Recommendation",
+  "year": "2026",
+  "abs_short": "Generative Recommendation has emerged as a transformative paradigm, reformulating recommendation as an end-to-end autoregressive sequence generation task. Despite its promise, existing preference optimization methods typically rely on binary outcome correctness, suffering from a systemic limitation we term uncertainty blindness. This issue manifests in the neglect of the model's intrinsic generation confidence, the variation in sample learning difficulty, and the lack of explicit confidence expression, directly leading to unstable training dynamics and unquantifiable decision risks. In this pa"
+ },
+ {
+  "fn": "MixFormer: Co-Scaling Up Dense and Sequence in Industrial Recommenders.pdf",
+  "title": "MixFormer: Co-Scaling Up Dense and Sequence in Industrial Recommenders",
+  "year": "2026",
+  "abs_short": "As industrial recommender systems enter a scaling-driven regime, Transformer architectures have become increasingly attractive for scaling models towards larger capacity and longer sequence. However, existing Transformer-based recommendation models remain structurally fragmented, where sequence modeling and feature interaction are implemented as separate modules with independent parameterization. Such designs introduce a fundamental co-scaling challenge, as model capacity must be suboptimally allocated between dense feature interaction and sequence modeling under a limited computational budget"
+ },
+ {
+  "fn": "APAO: Bridging the Training-Inference Gap in Generative Recommendation via Adaptive Prefix-Aware Optimization.pdf",
+  "title": "APAO: Bridging the Training-Inference Gap in Generative Recommendation via Adaptive Prefix-Aware Optimization",
+  "year": "2026",
+  "abs_short": "Generative recommendation has recently emerged as a promising paradigm for sequential recommendation. It formulates the task as an autoregressive generation process, predicting tokens of the next item conditioned on user interaction histories. Existing generative recommendation models are typically trained with token-level likelihood objectives such as cross-entropy loss, while employing beam search during inference to generate ranked candidates. However, this leads to a fundamental training-inference inconsistency: standard training assumes ground-truth tokens are always available, while beam"
+ },
+ {
+  "fn": "Hyena Operator for Fast Sequential Recommendation.pdf",
+  "title": "Hyena Operator for Fast Sequential Recommendation",
+  "year": "2026",
+  "abs_short": "Sequential recommendation models, particularly those based on attention, achieve strong accuracy but incur quadratic complexity, making long user histories prohibitively expensive. Sub-quadratic operators such as Hyena provide efficient alternatives in language modeling, but their potential in recommendation remains underexplored. We argue that Hyena faces challenges in recommendation due to limited representation capacity on sparse, long user sequences. To address these challenges, we propose HyenaRec, a novel sequential recommender that integrates polynomial-based kernel parameterization wit"
+ },
+ {
+  "fn": "Learning from Emptiness: De-biasing Listwise Rerankers with Content-Agnostic Probability Calibration.pdf",
+  "title": "Learning from Emptiness: De-biasing Listwise Rerankers with Content-Agnostic Probability Calibration",
+  "year": "2026",
+  "abs_short": "Generative listwise reranking leverages global context for superior retrieval but is plagued by intrinsic position bias, where models exhibit structural sensitivity to input order independent of relevance. Existing mitigations present a dilemma: inference-time aggregation incurs prohibitive latency, while training-based methods often fail to eradicate ingrained priors, particularly in compact models. To resolve this dilemma, we propose CapCal (Content-Agnostic Probability Calibration), a training-free framework that mechanically decouples positional bias from ranking decisions. By estimating t"
+ },
+ {
+  "fn": "From Relevance to Authority: Authority-aware Generative Retrieval in Web Search Engines.pdf",
+  "title": "From Relevance to Authority: Authority-aware Generative Retrieval in Web Search Engines",
+  "year": "2026",
+  "abs_short": "Generative information retrieval (GenIR) formulates the retrieval process as a text-to-text generation task, leveraging the vast knowledge of large language models. However, existing works primarily optimize for relevance while often overlooking document trustworthiness. This is critical in high-stakes domains like healthcare and finance, where relying solely on semantic relevance risks retrieving unreliable information. To address this, we propose an Authority-aware Generative Retriever (AuthGR), the first framework that incorporates authority into GenIR. AuthGR consists of three key componen"
+ },
+ {
+  "fn": "Mixture of Sequence: Theme-Aware Mixture-of-Experts for Long-Sequence Recommendation.pdf",
+  "title": "Mixture of Sequence: Theme-Aware Mixture-of-Experts for Long-Sequence Recommendation",
+  "year": "2026",
+  "abs_short": "Sequential recommendation has rapidly advanced in click-through rate prediction due to its ability to model dynamic user interests. A key challenge, however, lies in modeling long sequences: users often exhibit significant interest shifts, introducing substantial irrelevant or misleading information. Our empirical analysis corroborates this challenge and uncovers a recurring behavioral pattern in long sequences (\\textit{session hopping}): user interests remain stable within short temporal spans (\\textit{sessions}) but shift drastically across sessions and may reappear after multiple sessions. "
+ },
+ {
+  "fn": "How Generative AI Disrupts Search: An Empirical Study of Google Search, Gemini, and AI Overviews.pdf",
+  "title": "How Generative AI Disrupts Search: An Empirical Study of Google Search, Gemini, and AI Overviews",
+  "year": "2026",
+  "abs_short": "Generative AI is being increasingly integrated into web search for the convenience it provides users. In this work, we aim to understand how generative AI disrupts web search by retrieving and presenting the information and sources differently from traditional search engines. We introduce a public benchmark dataset of 11,500 user queries to support our study and future research of generative search. We compare the search results returned by Google's search engine, the accompanying AI Overview (AIO), and Gemini Flash 2.5 for each query. We have made several key findings. First, we find that for"
+ },
+ {
+  "fn": "Personalized Deep Research: A User-Centric Framework, Dataset, and Hybrid Evaluation for Knowledge Discovery.pdf",
+  "title": "Personalized Deep Research: A User-Centric Framework, Dataset, and Hybrid Evaluation for Knowledge Discovery",
+  "year": "2026",
+  "abs_short": "Deep Research agents driven by LLMs have automated the scholarly discovery pipeline, from planning and query formulation to iterative web exploration. Yet they remain constrained by a static, ``one-size-fits-all'' retrieval paradigm. Current systems fail to adaptively adjust the depth and breadth of exploration based on the user's existing expertise or latent interests, frequently resulting in reports that are either redundant for experts or overly dense for novices. To address this, we introduce Personalized Deep Research (PDR), a framework that integrates dynamic user context into the core r"
+ },
+ {
+  "fn": "Very Efficient Listwise Multimodal Reranking for Long Documents.pdf",
+  "title": "Very Efficient Listwise Multimodal Reranking for Long Documents",
+  "year": "2026",
+  "abs_short": "Listwise reranking is a key yet computationally expensive component in vision-centric retrieval and multimodal retrieval-augmented generation (M-RAG) over long documents. While recent VLM-based rerankers achieve strong accuracy, their practicality is often limited by long visual-token sequences and multi-step autoregressive decoding. We propose ZipRerank, a highly efficient listwise multimodal reranker that directly addresses both bottlenecks. It reduces input length via a lightweight query-image early interaction mechanism and eliminates autoregressive decoding by scoring all candidates in a "
+ },
+ {
+  "fn": "SynGR: Unleashing the Potential of Cross-Modal Synergy for Generative Recommendation.pdf",
+  "title": "SynGR: Unleashing the Potential of Cross-Modal Synergy for Generative Recommendation",
+  "year": "2026",
+  "abs_short": "Generative Recommendation (GR) has emerged as a promising paradigm by formulating item recommendation as a sequence-to-sequence generation task over item identifiers. Recent studies have incorporated multimodal signals to provide richer token-level evidence for generation. However, existing approaches largely rely on alignment-centric fusion and underexplore synergistic information across modalities. In practice, synergistic information plays a critical role in capturing emergent item properties that cannot be inferred from any single modality alone. Such properties encode intrinsic item seman"
+ },
+ {
+  "fn": "Layer-wise Token Compression for Efficient Document Reranking.pdf",
+  "title": "Layer-wise Token Compression for Efficient Document Reranking",
+  "year": "2026",
+  "abs_short": "Transformer-based document cross-encoder rerankers are a central component of modern information retrieval systems. Despite their success, these models suffer from high computational costs due to processing long query-document sequences at inference time. A known approach to improve efficiency is token compression, which consists of aggregating groups of tokens together in the initial embedding layer, reducing the effective number of tokens, and making the computation faster. While token compression has proven to be successful for bi-encoder retrievers, we empirically observed that this approa"
+ },
+ {
+  "fn": "Beyond Item IDs: Scaling Short-Form-Video Recommendation via Semantic-Native Long Sequence Modeling.pdf",
+  "title": "Beyond Item IDs: Scaling Short-Form-Video Recommendation via Semantic-Native Long Sequence Modeling",
+  "year": "2026",
+  "abs_short": "Capturing user interests across extensive watch histories is critical for short-form video recommendation, yet scaling sequence length is limited by two bottlenecks: the semantic sparsity of atomic Video IDs and the quadratic computational complexity of Transformers. Traditional orthogonal Video IDs fail to capture content relationships and demand large embedding tables, while the quadratic complexity of self-attention restricts the maximum sequence length under strict industrial latency and resource constraints. In this work, we present a production-deployed framework for modeling ultra-long "
+ },
+ {
+  "fn": "Generative Retrieval for Unsupervised Text-Based Person Search.pdf",
+  "title": "Generative Retrieval for Unsupervised Text-Based Person Search",
+  "year": "2026",
+  "abs_short": "Text-based person search (TBPS) aims to retrieve images of a target person from a large image gallery based on a given natural language description. Most existing methods rely on supervised learning with manually annotated image-text pairs. In this paper, we explore unsupervised TBPS, with only unlabeled images. We propose GTR+, a two-stage generation-then-retrieval framework. In the generation stage, we introduce a tiered description generation framework designed to produce fine-grained and stylistically diverse textual descriptions through a three-tier sequential process. The base tier lever"
+ },
+ {
+  "fn": "Long-Sequence Recommendation Models Need Decoupled Embeddings.pdf",
+  "title": "Long-Sequence Recommendation Models Need Decoupled Embeddings",
+  "year": "2024",
+  "abs_short": "Lifelong user behavior sequences are crucial for capturing user interests and predicting user responses in modern recommendation systems. A two-stage paradigm is typically adopted to handle these long sequences: a subset of relevant behaviors is first searched from the original long sequences via an attention mechanism in the first stage and then aggregated with the target item to construct a discriminative representation for prediction in the second stage. In this work, we identify and characterize, for the first time, a neglected deficiency in existing long-sequence recommendation models: a "
+ },
+ {
+  "fn": "Efficient Inference for Large Language Model-based Generative Recommendation.pdf",
+  "title": "Efficient Inference for Large Language Model-based Generative Recommendation",
+  "year": "2024",
+  "abs_short": "Large Language Model (LLM)-based generative recommendation has achieved notable success, yet its practical deployment is costly particularly due to excessive inference latency caused by autoregressive decoding. For lossless LLM decoding acceleration, Speculative Decoding (SD) has emerged as a promising solution. However, applying SD to generative recommendation presents unique challenges due to the requirement of generating top-K items (i.e., K distinct token sequences) as a recommendation list by beam search. This leads to more stringent verification in SD, where all the top-K sequences from "
+ },
+ {
+  "fn": "Pre-train and Fine-tune: Recommenders as Large Models.pdf",
+  "title": "Pre-train and Fine-tune: Recommenders as Large Models",
+  "year": "2025",
+  "abs_short": "In reality, users have different interests in different periods, regions, scenes, etc. Such changes in interest are so drastic that they are difficult to be captured by recommenders. Existing multi-domain learning can alleviate this problem. However, the structure of the industrial recommendation system is complex, the amount of data is huge, and the training cost is extremely high, so it is difficult to modify the structure of the industrial recommender and re-train it. To fill this gap, we consider recommenders as large pre-trained models and fine-tune them. We first propose the theory of th"
+ },
+ {
+  "fn": "Hierarchical Time-Aware Mixture of Experts for Multi-Modal Sequential Recommendation.pdf",
+  "title": "Hierarchical Time-Aware Mixture of Experts for Multi-Modal Sequential Recommendation",
+  "year": "2025",
+  "abs_short": "Multi-modal sequential recommendation (SR) leverages multi-modal data to learn more comprehensive item features and user preferences than traditional SR methods, which has become a critical topic in both academia and industry. Existing methods typically focus on enhancing multi-modal information utility through adaptive modality fusion to capture the evolving of user preference from user-item interaction sequences. However, most of them overlook the interference caused by redundant interest-irrelevant information contained in rich multi-modal data. Additionally, they primarily rely on implicit"
+ },
+ {
+  "fn": "FuXi-$α$: Scaling Recommendation Model with Feature Interaction Enhanced Transformer.pdf",
+  "title": "FuXi-$α$: Scaling Recommendation Model with Feature Interaction Enhanced Transformer",
+  "year": "2025",
+  "abs_short": "Inspired by scaling laws and large language models, research on large-scale recommendation models has gained significant attention. Recent advancements have shown that expanding sequential recommendation models to large-scale recommendation models can be an effective strategy. Current state-of-the-art sequential recommendation models primarily use self-attention mechanisms for explicit feature interactions among items, while implicit interactions are managed through Feed-Forward Networks (FFNs). However, these models often inadequately integrate temporal and positional information, either by a"
+ },
+ {
+  "fn": "UNGER: Generative Recommendation with A Unified Code via Semantic and Collaborative Integration.pdf",
+  "title": "UNGER: Generative Recommendation with A Unified Code via Semantic and Collaborative Integration",
+  "year": "2025",
+  "abs_short": "With the rise of generative paradigms, generative recommendation has garnered increasing attention. The core component is the item code, generally derived by quantizing collaborative or semantic representations to serve as candidate items identifiers in the context. However, existing methods typically construct separate codes for each modality, leading to higher computational and storage costs and hindering the integration of their complementary strengths. Considering this limitation, we seek to integrate two different modalities into a unified code, fully unleashing the potential of complemen"
+ },
+ {
+  "fn": "ESANS: Effective and Semantic-Aware Negative Sampling for Large-Scale Retrieval Systems.pdf",
+  "title": "ESANS: Effective and Semantic-Aware Negative Sampling for Large-Scale Retrieval Systems",
+  "year": "2025",
+  "abs_short": "Industrial recommendation systems typically involve a two-stage process: retrieval and ranking, which aims to match users with millions of items. In the retrieval stage, classic embedding-based retrieval (EBR) methods depend on effective negative sampling techniques to enhance both performance and efficiency. However, existing techniques often suffer from false negatives, high cost for ensuring sampling quality and semantic information deficiency. To address these limitations, we propose Effective and Semantic-Aware Negative Sampling (ESANS), which integrates two key components: Effective Dens"
+ },
+ {
+  "fn": "Exploring Training and Inference Scaling Laws in Generative Retrieval.pdf",
+  "title": "Exploring Training and Inference Scaling Laws in Generative Retrieval",
+  "year": "2025",
+  "abs_short": "Generative retrieval reformulates retrieval as an autoregressive generation task, where large language models (LLMs) generate target documents directly from a query. As a novel paradigm, the mechanisms that underpin its performance and scalability remain largely unexplored. We systematically investigate training and inference scaling laws in generative retrieval, exploring how model size, training data scale, and inference-time compute jointly influence performance. We propose a novel evaluation metric inspired by contrastive entropy and generation loss, providing a continuous performance sign"
+ },
+ {
+  "fn": "Alleviating LLM-based Generative Retrieval Hallucination in Alipay Search.pdf",
+  "title": "Alleviating LLM-based Generative Retrieval Hallucination in Alipay Search",
+  "year": "2025",
+  "abs_short": "Generative retrieval (GR) has revolutionized document retrieval with the advent of large language models (LLMs), and LLM-based GR is gradually being adopted by the industry. Despite its remarkable advantages and potential, LLM-based GR suffers from hallucination and generates documents that are irrelevant to the query in some instances, severely challenging its credibility in practical applications. We thereby propose an optimized GR framework designed to alleviate retrieval hallucination, which integrates knowledge distillation reasoning in model training and incorporate decision agent to fur"
+ },
+ {
+  "fn": "Generative Retrieval and Alignment Model: A New Paradigm for E-commerce Retrieval.pdf",
+  "title": "Generative Retrieval and Alignment Model: A New Paradigm for E-commerce Retrieval",
+  "year": "2025",
+  "abs_short": "Traditional sparse and dense retrieval methods struggle to leverage general world knowledge and often fail to capture the nuanced features of queries and products. With the advent of large language models (LLMs), industrial search systems have started to employ LLMs to generate identifiers for product retrieval. Commonly used identifiers include (1) static/semantic IDs and (2) product term sets. The first approach requires creating a product ID system from scratch, missing out on the world knowledge embedded within LLMs. While the second approach leverages this general knowledge, the significa"
+ },
+ {
+  "fn": "Towards Distribution Matching between Collaborative and Language Spaces for Generative Recommendation.pdf",
+  "title": "Towards Distribution Matching between Collaborative and Language Spaces for Generative Recommendation",
+  "year": "2025",
+  "abs_short": "Generative recommendation aims to learn the underlying generative process over the entire item set to produce recommendations for users. Although it leverages non-linear probabilistic models to surpass the limited modeling capacity of linear factor models, it is often constrained by a trade-off between representation ability and tractability. With the rise of a new generation of generative methods based on pre-trained language models (LMs), incorporating LMs into general recommendation with implicit feedback has gained considerable attention. However, adapting them to generative recommendation"
+ },
+ {
+  "fn": "Killing Two Birds with One Stone: Unifying Retrieval and Ranking with a Single Generative Recommendation Model.pdf",
+  "title": "Killing Two Birds with One Stone: Unifying Retrieval and Ranking with a Single Generative Recommendation Model",
+  "year": "2025",
+  "abs_short": "In recommendation systems, the traditional multi-stage paradigm, which includes retrieval and ranking, often suffers from information loss between stages and diminishes performance. Recent advances in generative models, inspired by natural language processing, suggest the potential for unifying these stages to mitigate such loss. This paper presents the Unified Generative Recommendation Framework (UniGRF), a novel approach that integrates retrieval and ranking into a single generative model. By treating both stages as sequence generation tasks, UniGRF enables sufficient information sharing wit"
+ },
+ {
+  "fn": "STAR-Rec: Making Peace with Length Variance and Pattern Diversity in Sequential Recommendation.pdf",
+  "title": "STAR-Rec: Making Peace with Length Variance and Pattern Diversity in Sequential Recommendation",
+  "year": "2025",
+  "abs_short": "Recent deep sequential recommendation models often struggle to effectively model key characteristics of user behaviors, particularly in handling sequence length variations and capturing diverse interaction patterns. We propose STAR-Rec, a novel architecture that synergistically combines preference-aware attention and state-space modeling through a sequence-level mixture-of-experts framework. STAR-Rec addresses these challenges by: (1) employing preference-aware attention to capture both inherently similar item relationships and diverse preferences, (2) utilizing state-space modeling to efficie"
+ },
+ {
+  "fn": "AcuRank: Uncertainty-Aware Adaptive Computation for Listwise Reranking.pdf",
+  "title": "AcuRank: Uncertainty-Aware Adaptive Computation for Listwise Reranking",
+  "year": "2025",
+  "abs_short": "Listwise reranking with large language models (LLMs) enhances top-ranked results in retrieval-based applications. Due to the limit in context size and high inference cost of long context, reranking is typically performed over a fixed size of small subsets, with the final ranking aggregated from these partial results. This fixed computation disregards query difficulty and document distribution, leading to inefficiencies. We propose AcuRank, an adaptive reranking framework that dynamically adjusts both the amount and target of computation based on uncertainty estimates over document relevance. U"
+ },
+ {
+  "fn": "GRAM: Generative Recommendation via Semantic-aware Multi-granular Late Fusion.pdf",
+  "title": "GRAM: Generative Recommendation via Semantic-aware Multi-granular Late Fusion",
+  "year": "2025",
+  "abs_short": "Generative recommendation is an emerging paradigm that leverages the extensive knowledge of large language models by formulating recommendations into a text-to-text generation task. However, existing studies face two key limitations in (i) incorporating implicit item relationships and (ii) utilizing rich yet lengthy item information. To address these challenges, we propose a Generative Recommender via semantic-Aware Multi-granular late fusion (GRAM), introducing two synergistic innovations. First, we design semantic-to-lexical translation to encode implicit hierarchical and collaborative item "
+ },
+ {
+  "fn": "FindRec: Stein-Guided Entropic Flow for Multi-Modal Sequential Recommendation.pdf",
+  "title": "FindRec: Stein-Guided Entropic Flow for Multi-Modal Sequential Recommendation",
+  "year": "2025",
+  "abs_short": "Modern recommendation systems face significant challenges in processing multimodal sequential data, particularly in temporal dynamics modeling and information flow coordination. Traditional approaches struggle with distribution discrepancies between heterogeneous features and noise interference in multimodal signals. We propose \\textbf{FindRec}~ (\\textbf{F}lexible unified \\textbf{in}formation \\textbf{d}isentanglement for multi-modal sequential \\textbf{Rec}ommendation), introducing a novel \"information flow-control-output\" paradigm. The framework features two key innovations: (1) A Stein kernel"
+ },
+ {
+  "fn": "Evaluating Generative Ad Hoc Information Retrieval.pdf",
+  "title": "Evaluating Generative Ad Hoc Information Retrieval",
+  "year": "2023",
+  "abs_short": "Recent advances in large language models have enabled the development of viable generative retrieval systems. Instead of a traditional document ranking, generative retrieval systems often directly return a grounded generated text as a response to a query. Quantifying the utility of the textual responses is essential for appropriately evaluating such generative ad hoc retrieval. Yet, the established evaluation methodology for ranking-based ad hoc retrieval is not suited for the reliable and reproducible evaluation of generated responses. To lay a foundation for developing new evaluation methods"
+ },
+ {
+  "fn": "ListT5: Listwise Reranking with Fusion-in-Decoder Improves Zero-shot Retrieval.pdf",
+  "title": "ListT5: Listwise Reranking with Fusion-in-Decoder Improves Zero-shot Retrieval",
+  "year": "2024",
+  "abs_short": "We propose ListT5, a novel reranking approach based on Fusion-in-Decoder (FiD) that handles multiple candidate passages at both train and inference time. We also introduce an efficient inference framework for listwise ranking based on m-ary tournament sort with output caching. We evaluate and compare our model on the BEIR benchmark for zero-shot retrieval task, demonstrating that ListT5 (1) outperforms the state-of-the-art RankT5 baseline with a notable +1.3 gain in the average NDCG@10 score, (2) has an efficiency comparable to pointwise ranking models and surpasses the efficiency of previous "
+ },
+ {
+  "fn": "Listwise Generative Retrieval Models via a Sequential Learning Process.pdf",
+  "title": "Listwise Generative Retrieval Models via a Sequential Learning Process",
+  "year": "2024",
+  "abs_short": "Recently, a novel generative retrieval (GR) paradigm has been proposed, where a single sequence-to-sequence model is learned to directly generate a list of relevant document identifiers (docids) given a query. Existing GR models commonly employ maximum likelihood estimation (MLE) for optimization: this involves maximizing the likelihood of a single relevant docid given an input query, with the assumption that the likelihood for each docid is independent of the other docids in the list. We refer to these models as the pointwise approach in this paper. While the pointwise approach has been shown"
+ },
+ {
+  "fn": "Context-based Fast Recommendation Strategy for Long User Behavior Sequence in Meituan Waimai.pdf",
+  "title": "Context-based Fast Recommendation Strategy for Long User Behavior Sequence in Meituan Waimai",
+  "year": "2024",
+  "abs_short": "In the recommender system of Meituan Waimai, we are dealing with ever-lengthening user behavior sequences, which pose an increasing challenge to modeling user preference effectively. Existing sequential recommendation models often fail to capture long-term dependencies or are too complex, complicating the fulfillment of Meituan Waimai's unique business needs. To better model user interests, we consider selecting relevant sub-sequences from users' extensive historical behaviors based on their preferences. In this specific scenario, we've noticed that the contexts in which users interact have a "
+ },
+ {
+  "fn": "Event GDR: Event-Centric Generative Document Retrieval.pdf",
+  "title": "Event GDR: Event-Centric Generative Document Retrieval",
+  "year": "2024",
+  "abs_short": "Generative document retrieval, an emerging paradigm in information retrieval, learns to build connections between documents and identifiers within a single model, garnering significant attention. However, there are still two challenges: (1) neglecting inner-content correlation during document representation; (2) lacking explicit semantic structure during identifier construction. Nonetheless, events have enriched relations and well-defined taxonomy, which could facilitate addressing the above two challenges. Inspired by this, we propose Event GDR, an event-centric generative document retrieval "
+ },
+ {
+  "fn": "Bottleneck-Minimal Indexing for Generative Document Retrieval.pdf",
+  "title": "Bottleneck-Minimal Indexing for Generative Document Retrieval",
+  "year": "2024",
+  "abs_short": "We apply an information-theoretic perspective to reconsider generative document retrieval (GDR), in which a document $x \\in X$ is indexed by $t \\in T$, and a neural autoregressive model is trained to map queries $Q$ to $T$. GDR can be considered to involve information transmission from documents $X$ to queries $Q$, with the requirement to transmit more bits via the indexes $T$. By applying Shannon's rate-distortion theory, the optimality of indexing can be analyzed in terms of the mutual information, and the design of the indexes $T$ can then be regarded as a {\\em bottleneck} in GDR. After ref"
+ },
+ {
+  "fn": "T2Ranking: A large-scale Chinese Benchmark for Passage Ranking.pdf",
+  "title": "T2Ranking: A large-scale Chinese Benchmark for Passage Ranking",
+  "year": "2023",
+  "abs_short": "Passage ranking involves two stages: passage retrieval and passage re-ranking, which are important and challenging topics for both academics and industries in the area of Information Retrieval (IR). However, the commonly-used datasets for passage ranking usually focus on the English language. For non-English scenarios, such as Chinese, the existing datasets are limited in terms of data scale, fine-grained relevance annotation and false negative issues. To address this problem, we introduce T2Ranking, a large-scale Chinese benchmark for passage ranking. T2Ranking comprises more than 300K querie"
+ },
+ {
+  "fn": "A Unified Generative Retriever for Knowledge-Intensive Language Tasks via Prompt Learning.pdf",
+  "title": "A Unified Generative Retriever for Knowledge-Intensive Language Tasks via Prompt Learning",
+  "year": "2023",
+  "abs_short": "Knowledge-intensive language tasks (KILTs) benefit from retrieving high-quality relevant contexts from large external knowledge corpora. Learning task-specific retrievers that return relevant contexts at an appropriate level of semantic granularity, such as a document retriever, passage retriever, sentence retriever, and entity retriever, may help to achieve better performance on the end-to-end task. But a task-specific retriever usually has poor generalization ability to new domains and tasks, and it may be costly to deploy a variety of specialised retrievers in practice. We propose a unified"
+ },
+ {
+  "fn": "Multiview Identifiers Enhanced Generative Retrieval.pdf",
+  "title": "Multiview Identifiers Enhanced Generative Retrieval",
+  "year": "2023",
+  "abs_short": "Instead of simply matching a query to pre-existing passages, generative retrieval generates identifier strings of passages as the retrieval target. At a cost, the identifier must be distinctive enough to represent a passage. Current approaches use either a numeric ID or a text piece (such as a title or substrings) as the identifier. However, these identifiers cannot cover a passage's content well. As such, we are motivated to propose a new type of identifier, synthetic identifiers, that are generated based on the content of a passage and could integrate contextualized information that text pie"
+ },
+ {
+  "fn": "One Model for All: Large Language Models are Domain-Agnostic Recommendation Systems.pdf",
+  "title": "One Model for All: Large Language Models are Domain-Agnostic Recommendation Systems",
+  "year": "2023",
+  "abs_short": "Sequential recommendation systems aim to predict users' next likely interaction based on their history. However, these systems face data sparsity and cold-start problems. Utilizing data from other domains, known as multi-domain methods, is useful for alleviating these problems. However, traditional multi-domain methods rely on meaningless ID-based item representation, which makes it difficult to align items with similar meanings from different domains, yielding sup-optimal knowledge transfer. This paper introduces LLM-Rec, a framework that utilizes pre-trained large language models (LLMs) for "
+ }
+]

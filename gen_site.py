@@ -147,6 +147,15 @@ for p in papers:
             p['arxiv'] = url
             break
 
+# 2026-09 扩充批次的 arxiv 链接（按文件名直接映射）
+try:
+    _na = json.load(open(os.path.join(DATA, 'new_arxiv.json'), encoding='utf-8'))
+except Exception:
+    _na = {}
+for p in papers:
+    if not p.get('arxiv') and p['file'] in _na:
+        p['arxiv'] = _na[p['file']]
+
 # 去重(按 file, 保留首次出现 = 更靠前的分类)
 seen = {}
 for p in papers:

@@ -1,0 +1,470 @@
+[
+ {
+  "arxiv_id": "2606.11023",
+  "title": "Generative Archetype-Grounded Item Representations for Sequential Recommendation",
+  "venue": "WWW 2026",
+  "venue_evidence": "Accepted by WWW 2026 (Oral)",
+  "year": "2026",
+  "why": "用 LLM 语义做原型化 item 表示，提升序列推荐表征质量",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2603.00638",
+  "title": "RAIE: Region-Aware Incremental Preference Editing with LoRA for LLM-based Recommendation",
+  "venue": "WWW 2026",
+  "venue_evidence": "Published on WWW'26: In Proceedings of the ACM Web Conference 2026",
+  "year": "2026",
+  "why": "LoRA 区域感知的增量偏好编辑，用于 LLM 推荐",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2602.16034",
+  "title": "FeDecider: An LLM-Based Framework for Federated Cross-Domain Recommendation",
+  "venue": "WWW 2026",
+  "venue_evidence": "Accepted to The Web Conference (WWW) 2026",
+  "year": "2026",
+  "why": "LLM 驱动的联邦跨域推荐框架",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2601.18457",
+  "title": "Token-level Collaborative Alignment for LLM-based Generative Recommendation",
+  "venue": "WWW 2026",
+  "venue_evidence": "11 pages, 2 figures, 7 tables, WWW 2026",
+  "year": "2026",
+  "why": "token 级协同对齐，用于 LLM 生成式推荐",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2511.18261",
+  "title": "LLM Reasoning for Cold-Start Item Recommendation",
+  "venue": "WWW 2026",
+  "venue_evidence": "Published on Proceedings of the ACM on Web Conference 2026 (WWW 2026)",
+  "year": "2026",
+  "why": "用 LLM 推理解决冷启动物品推荐",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2510.05598",
+  "title": "AgentDR: Dynamic Recommendation with Implicit Item-Item Relations via LLM-based Agents",
+  "venue": "WWW 2026",
+  "venue_evidence": "12 pages, accepted by WWW'26 as long paper",
+  "year": "2026",
+  "why": "LLM Agent 建模物品间隐式关系做动态推荐",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2504.12007",
+  "title": "Diffusion Generative Recommendation with Continuous Tokens",
+  "venue": "WWW 2026",
+  "venue_evidence": "Accepted by The ACM Web Conference (WWW 2026)",
+  "year": "2026",
+  "why": "连续 token 上的扩散生成式推荐",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2605.10323",
+  "title": "Every Preference Has Its Strength: Injecting Ordinal Semantics into LLM-Based Recommenders",
+  "venue": "SIGIR 2026",
+  "venue_evidence": "Accepted at SIGIR 2026",
+  "year": "2026",
+  "why": "把序数语义/偏好强度注入 LLM 推荐器",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2605.04559",
+  "title": "Beyond Static Best-of-N: Bayesian List-wise Alignment for LLM-based Recommendation",
+  "venue": "SIGIR 2026",
+  "venue_evidence": "Accepted by SIGIR 2026. 11 pages, 8 figures",
+  "year": "2026",
+  "why": "贝叶斯 listwise 对齐替代静态 Best-of-N，优化 LLM 推荐",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2604.27599",
+  "title": "One Pass, Any Order: Position-Invariant Listwise Reranking for LLM-Based Recommendation",
+  "venue": "SIGIR 2026",
+  "venue_evidence": "Accepted at SIGIR 2026",
+  "year": "2026",
+  "why": "位置无关的 listwise 重排，LLM 单次前向完成排序",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2604.26231",
+  "title": "ProMax: Exploring the Potential of LLM-derived Profiles with Distribution Shaping for Recommender Systems",
+  "venue": "SIGIR 2026",
+  "venue_evidence": "11 pages, 8 figures, accepted by SIGIR 2026",
+  "year": "2026",
+  "why": "用 LLM 生成用户画像并做分布塑形增强推荐",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2604.07825",
+  "title": "Filling the Gaps: Selective Knowledge Augmentation for LLM Recommenders",
+  "venue": "SIGIR 2026",
+  "venue_evidence": "Accepted to SIGIR 2026 full papers track",
+  "year": "2026",
+  "why": "选择性知识增强，补全 LLM 推荐器的知识缺口",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2511.18740",
+  "title": "Multimodal Large Language Models with Adaptive Preference Optimization for Sequential Recommendation",
+  "venue": "SIGIR 2026",
+  "venue_evidence": "Accepted by SIGIR 2026 (Full Paper)",
+  "year": "2026",
+  "why": "多模态 LLM + 自适应偏好优化做序列推荐",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2511.15141",
+  "title": "ItemRAG: Item-Based Retrieval-Augmented Generation for LLM-Based Recommendation",
+  "venue": "SIGIR 2026",
+  "venue_evidence": "Published as a conference paper at SIGIR 2026 (short)",
+  "year": "2026",
+  "why": "基于 item 的检索增强生成（RAG）用于 LLM 推荐",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2508.00570",
+  "title": "SPRINT: Scalable and Predictive Intent Refinement for LLM-Enhanced Session-based Recommendation",
+  "venue": "SIGIR 2026",
+  "venue_evidence": "SIGIR'26",
+  "year": "2026",
+  "why": "LLM 增强会话推荐中的意图精炼",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2605.28175",
+  "title": "Mixture-of-Experts Knowledge Graph Retrieval-Augmented Generation for Multi-Agent LLM-based Recommendation",
+  "venue": "KDD 2026",
+  "venue_evidence": "Accepted by KDD 2026 Research Track",
+  "year": "2026",
+  "why": "多智能体 LLM 推荐中引入 MoE 知识图谱 RAG，缓解参数化知识局限",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2602.22647",
+  "title": "Vectorizing the Trie: Efficient Constrained Decoding for LLM-based Generative Retrieval on Accelerators",
+  "venue": "KDD 2026",
+  "venue_evidence": "KDD 2026 camera-ready",
+  "year": "2026",
+  "why": "Trie 向量化的约束解码，加速 LLM 生成式检索/推荐",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2601.08148",
+  "title": "Enriching Semantic Profiles into Knowledge Graph for Recommender Systems Using Large Language Models",
+  "venue": "KDD 2026",
+  "venue_evidence": "Accepted at KDD 2026",
+  "year": "2026",
+  "why": "用 LLM 把语义画像注入知识图谱以增强推荐",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2503.06238",
+  "title": "Token-Efficient Item Representation via Images for LLM Recommender Systems",
+  "venue": "ICLR 2026",
+  "venue_evidence": "ICLR 2026",
+  "year": "2026",
+  "why": "以图像作为高效 item 表示输入 LLM 推荐系统",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2604.07851",
+  "title": "ReRec: Reasoning-Augmented LLM-based Recommendation Assistant via Reinforcement Fine-tuning",
+  "venue": "ACL 2026",
+  "venue_evidence": "Accepted by ACL 2026",
+  "year": "2026",
+  "why": "强化微调赋予 LLM 推荐助手推理能力",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2508.18142",
+  "title": "Mirroring Users: Towards Building Preference-aligned User Simulator with User Feedback in Recommendation",
+  "venue": "ACL 2026",
+  "venue_evidence": "ACL 2026 Main. Github: https://github.com/Joinn99/UserMirrorer",
+  "year": "2026",
+  "why": "构建偏好对齐的用户模拟器辅助推荐",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2506.02261",
+  "title": "What Makes LLMs Effective Sequential Recommenders? A Study on Preference Intensity and Temporal Context",
+  "venue": "ACL 2026",
+  "venue_evidence": "Accepted The 64th Annual Meeting of the Association for Computational Linguistics (ACL 2026)",
+  "year": "2026",
+  "why": "剖析偏好强度与时间上下文如何影响 LLM 序列推荐效果",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2502.18754",
+  "title": "AgentSociety Challenge: Designing LLM Agents for User Modeling and Recommendation on Web Platforms",
+  "venue": "WWW 2025",
+  "venue_evidence": "8 pages, 10 figures, in Proceedings of the ACM Web Conference 2025 (WWW '25)",
+  "year": "2025",
+  "why": "Web 平台上 LLM Agent 用户建模与推荐的竞赛基准",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2501.17630",
+  "title": "Uncertainty Quantification and Decomposition for LLM-based Recommendation",
+  "venue": "WWW 2025",
+  "venue_evidence": "WWW 2025",
+  "year": "2025",
+  "why": "LLM 推荐的不确定性量化与分解",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2412.09243",
+  "title": "SPRec: Self-Play to Debias LLM-based Recommendation",
+  "venue": "WWW 2025",
+  "venue_evidence": "Accepted by WWW 2025",
+  "year": "2025",
+  "why": "自博弈去偏，缓解 LLM 推荐中的流行度/位置偏差",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2411.00331",
+  "title": "Beyond Utility: Evaluating LLM as Recommender",
+  "venue": "WWW 2025",
+  "venue_evidence": "13 pages, 7 figures, WWW'25",
+  "year": "2025",
+  "why": "把 LLM 作为推荐器的多维度评测框架",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2502.02061",
+  "title": "Reason4Rec: Deliberative User Preference Alignment of Large Language Models for Recommendation",
+  "venue": "TKDE 2025",
+  "venue_evidence": "Accepted to IEEE TKDE",
+  "year": "2025",
+  "why": "面向推荐的审慎式用户偏好对齐（Reason4Rec）",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2310.19488",
+  "title": "CoLLM: Integrating Collaborative Embeddings into Large Language Models for Recommendation",
+  "venue": "TKDE 2025",
+  "venue_evidence": "Accepted by IEEE TKDE 2025 (add new LLM backbone Qwen2-1.5B and NDCG metric)",
+  "year": "2025",
+  "why": "将协同嵌入注入 LLM 的推荐模型（CoLLM）",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2504.20859",
+  "title": "X-Cross: Dynamic Integration of Language Models for Cross-Domain Sequential Recommendation",
+  "venue": "SIGIR 2025",
+  "venue_evidence": "Accepted for publication in SIGIR '25",
+  "year": "2025",
+  "why": "跨域序列推荐中的语言模型动态融合（X-Cross）",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2504.18383",
+  "title": "Bridge the Domains: Large Language Models Enhanced Cross-domain Sequential Recommendation",
+  "venue": "SIGIR 2025",
+  "venue_evidence": "accepted by SIGIR'25",
+  "year": "2025",
+  "why": "LLM 增强的跨域序列推荐",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2503.07377",
+  "title": "Process-Supervised LLM Recommenders via Flow-guided Tuning",
+  "venue": "SIGIR 2025",
+  "venue_evidence": "Accepted by SIGIR 2025",
+  "year": "2025",
+  "why": "流引导的过程监督微调 LLM 推荐器",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2412.04107",
+  "title": "Pre-train, Align, and Disentangle: Empowering Sequential Recommendation with Large Language Models",
+  "venue": "SIGIR 2025",
+  "venue_evidence": "accepted to SIGIR 2025",
+  "year": "2025",
+  "why": "预训练-对齐-解耦三阶段赋能 LLM 序列推荐",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2408.06276",
+  "title": "Review-driven Personalized Preference Reasoning with Large Language Models for Recommendation",
+  "venue": "SIGIR 2025",
+  "venue_evidence": "Accepted to SIGIR 2025",
+  "year": "2025",
+  "why": "评论驱动的个性化偏好推理推荐",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2408.05676",
+  "title": "Efficiency Unleashed: Inference Acceleration for LLM-based Recommender Systems with Speculative Decoding",
+  "venue": "SIGIR 2025",
+  "venue_evidence": "Accepted by SIGIR'25",
+  "year": "2025",
+  "why": "推测解码加速 LLM 推荐系统推理",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2505.16994",
+  "title": "R$^2$ec: Towards Large Recommender Models with Reasoning",
+  "venue": "NeurIPS 2025",
+  "venue_evidence": "Accepted by Neurips 2025",
+  "year": "2025",
+  "why": "统一大推荐模型内蕴推理能力（R2ec）",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2503.05493",
+  "title": "Can LLMs Outshine Conventional Recommenders? A Comparative Evaluation",
+  "venue": "NeurIPS 2025",
+  "venue_evidence": "NeurIPS 2025 DB Track Accepted Paper",
+  "year": "2025",
+  "why": "LLM 与传统推荐器的系统性对比评测",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2506.21579",
+  "title": "LLM2Rec: Large Language Models Are Powerful Embedding Models for Sequential Recommendation",
+  "venue": "KDD 2025",
+  "venue_evidence": "KDD 2025",
+  "year": "2025",
+  "why": "证明 LLM 可作为序列推荐的高质量嵌入模型",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2506.04015",
+  "title": "GORACS: Group-level Optimal Transport-guided Coreset Selection for LLM-based Recommender Systems",
+  "venue": "KDD 2025",
+  "venue_evidence": "Accepted by KDD 2025",
+  "year": "2025",
+  "why": "最优传输引导的核心集选择，提升 LLM 推荐系统训练效率",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2502.13909",
+  "title": "Lost in Sequence: Do Large Language Models Understand Sequential Recommendation?",
+  "venue": "KDD 2025",
+  "venue_evidence": "KDD 2025 Research Track",
+  "year": "2025",
+  "why": "诊断 LLM 是否真正理解序列推荐",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2501.02226",
+  "title": "Knowledge Graph Retrieval-Augmented Generation for LLM-based Recommendation",
+  "venue": "ACL 2025",
+  "venue_evidence": "Accepted by ACL 2025 main conference",
+  "year": "2025",
+  "why": "知识图谱 RAG 增强 LLM 推荐",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2412.19302",
+  "title": "RecLM: Recommendation Instruction Tuning",
+  "venue": "ACL 2025",
+  "venue_evidence": "This paper is accepted by ACL 2025 main conference",
+  "year": "2025",
+  "why": "推荐指令微调（RecLM）",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2409.19925",
+  "title": "LLMEmb: Large Language Model Can Be a Good Embedding Generator for Sequential Recommendation",
+  "venue": "AAAI 2025",
+  "venue_evidence": "accepted by AAAI'25",
+  "year": "2025",
+  "why": "LLM 作为序列推荐的嵌入生成器（LLMEmb）",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2403.04260",
+  "title": "Can Small Language Models be Good Reasoners for Sequential Recommendation?",
+  "venue": "WWW 2024",
+  "venue_evidence": "Accepted by TheWebConf (WWW) 2024",
+  "year": "2024",
+  "why": "小语言模型作为序列推荐推理器（SLMReasoner）",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2406.10450",
+  "title": "TokenRec: Learning to Tokenize ID for LLM-based Generative Recommendation",
+  "venue": "TKDE 2024",
+  "venue_evidence": "Accepted by IEEE TKDE. Codes and data are available at https://github.com/Quhaoh233/TokenRec",
+  "year": "2024",
+  "why": "面向 LLM 生成式推荐的可学习 ID 分词（TokenRec）",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2406.11745",
+  "title": "Multi-Layer Ranking with Large Language Models for News Source Recommendation",
+  "venue": "SIGIR 2024",
+  "venue_evidence": "Accepted by the SIGIR 2024. arXiv admin note: text overlap with arXiv:2305.04825",
+  "year": "2024",
+  "why": "多层 LLM 排序用于新闻源推荐",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2403.18348",
+  "title": "Sequential Recommendation with Latent Relations based on Large Language Model",
+  "venue": "SIGIR 2024",
+  "venue_evidence": "Accepted by SIGIR 2024",
+  "year": "2024",
+  "why": "基于 LLM 挖掘潜在关系的序列推荐",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2401.17197",
+  "title": "Data-efficient Fine-tuning for LLM-based Recommendation",
+  "venue": "SIGIR 2024",
+  "venue_evidence": "Accepted by SIGIR 2024",
+  "year": "2024",
+  "why": "LLM 推荐的数据高效微调",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2310.10108",
+  "title": "On Generative Agents in Recommendation",
+  "venue": "SIGIR 2024",
+  "venue_evidence": "SIGIR 2024 perspective paper",
+  "year": "2024",
+  "why": "生成式智能体在推荐中的视角论文",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2306.11134",
+  "title": "OpenP5: An Open-Source Platform for Developing, Training, and Evaluating LLM-based Recommender Systems",
+  "venue": "SIGIR 2024",
+  "venue_evidence": "In SIGIR 2024 Resource & Reproducibility Track",
+  "year": "2024",
+  "why": "面向 LLM 推荐系统的开源训练评测平台（OpenP5）",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2404.11343",
+  "title": "Large Language Models meet Collaborative Filtering: An Efficient All-round LLM-based Recommender System",
+  "venue": "KDD 2024",
+  "venue_evidence": "KDD 2024",
+  "year": "2024",
+  "why": "LLM 与协同过滤结合的全能高效推荐器（ALL-IN-ONE）",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2408.00802",
+  "title": "Leveraging LLM Reasoning Enhances Personalized Recommender Systems",
+  "venue": "ACL 2024",
+  "venue_evidence": "To be published at ACL 2024",
+  "year": "2024",
+  "why": "利用 LLM 推理增强个性化推荐",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2402.14836",
+  "title": "Stealthy Attack on Large Language Model based Recommendation",
+  "venue": "ACL 2024",
+  "venue_evidence": "ACL 2024 Main",
+  "year": "2024",
+  "why": "针对 LLM 推荐系统的隐蔽后门攻击",
+  "org": ""
+ }
+]

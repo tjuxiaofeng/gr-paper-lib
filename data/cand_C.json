@@ -1,0 +1,857 @@
+[
+ {
+  "arxiv_id": "2408.08686v4",
+  "title": "MVIGER: Multi-View Variational Integration of Complementary Knowledge for Generative Recommender",
+  "venue": "SIGIR 2026",
+  "venue_evidence": "Proceedings of the 49th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '26), pp. 834-844, 2026",
+  "year": "2026",
+  "why": "generative recommendation/ranking",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2410.02939v2",
+  "title": "Inductive Generative Recommendation via Retrieval-based Speculation",
+  "venue": "AAAI 2026",
+  "venue_evidence": "Accepted to AAAI 2026 (oral)",
+  "year": "2026",
+  "why": "text retrieval / ranking；generative recommendation/ranking；constrained/autoregressive decoding",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2411.05572v3",
+  "title": "Why These Documents? Explainable Generative Retrieval with Hierarchical Category Paths",
+  "venue": "ACL 2026",
+  "venue_evidence": "Accepted to ACL 2026 findings",
+  "year": "2026",
+  "why": "generative retrieval / DSI；text retrieval / ranking；LLM",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2508.07050v3",
+  "title": "ReasonRank: Empowering Passage Ranking with Strong Reasoning Ability",
+  "venue": "ACL 2026",
+  "venue_evidence": "25 pages, accepted by ACL2026 main conference",
+  "year": "2026",
+  "why": "listwise reranking；text retrieval / ranking；LLM",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2509.16931v3",
+  "title": "Equip Pre-ranking with Target Attention by Residual Quantization",
+  "venue": "SIGIR 2026",
+  "venue_evidence": "5 pages, 2 figures, accepted by SIGIR 2026 Short Paper Track",
+  "year": "2026",
+  "why": "listwise reranking；industrial deployment",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2509.20904v3",
+  "title": "FORGE: Forming Semantic Identifiers for Generative Retrieval in Industrial Datasets",
+  "venue": "KDD 2026",
+  "venue_evidence": "Accepted by KDD 2026",
+  "year": "2026",
+  "why": "generative retrieval / DSI；semantic ID / item tokenization；text retrieval / ranking；industrial deployment",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2509.22046v2",
+  "title": "GoalRank: Group-Relative Optimization for a Large Ranking Model",
+  "venue": "ICLR 2026",
+  "venue_evidence": "to appear in ICLR 2026",
+  "year": "2026",
+  "why": "scaling law",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2509.25522v3",
+  "title": "Understanding Generative Recommendation with Semantic IDs from a Model-scaling View",
+  "venue": "KDD 2026",
+  "venue_evidence": "Accepted by KDD 2026",
+  "year": "2026",
+  "why": "semantic ID / item tokenization；scaling law；generative recommendation/ranking；LLM",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2510.10419v2",
+  "title": "ZeroGR: A Generalizable and Scalable Framework for Zero-Shot Generative Retrieval",
+  "venue": "ICLR 2026",
+  "venue_evidence": "ICLR 2026",
+  "year": "2026",
+  "why": "generative retrieval / DSI；text retrieval / ranking",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2510.21242v2",
+  "title": "Bi-Level Optimization for Generative Recommendation: Bridging Tokenization and Generation",
+  "venue": "SIGIR 2026",
+  "venue_evidence": "Accepted by SIGIR'26",
+  "year": "2026",
+  "why": "semantic ID / item tokenization；generative recommendation/ranking",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2510.26104v3",
+  "title": "OneTrans: Unified Feature Interaction and Sequence Modeling with One Transformer in Industrial Recommender",
+  "venue": "WWW 2026",
+  "venue_evidence": "Accepted at The Web Conference 2026 (WWW 2026). Camera-ready version forthcoming",
+  "year": "2026",
+  "why": "industrial deployment；scaling law",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2511.11653v3",
+  "title": "GroupRank: A Groupwise Paradigm for Effective and Efficient Passage Reranking with LLMs",
+  "venue": "ACL 2026",
+  "venue_evidence": "Accepted by ACL-Findings 2026",
+  "year": "2026",
+  "why": "listwise reranking；text retrieval / ranking；LLM",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2511.12081v2",
+  "title": "From Scaling to Structured Expressivity: Rethinking Transformers for CTR Prediction",
+  "venue": "KDD 2026",
+  "venue_evidence": "KDD 2026; The first four authors contributed equally to this work",
+  "year": "2026",
+  "why": "scaling law；CTR prediction；LLM",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2511.12518v3",
+  "title": "DualGR: Generative Retrieval with Long and Short-Term Interests Modeling",
+  "venue": "WWW 2026",
+  "venue_evidence": "Accepted by WWW 2026. Winner of the Best Short Paper Award",
+  "year": "2026",
+  "why": "generative retrieval / DSI；text retrieval / ranking；industrial deployment；constrained/autoregressive decoding",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2511.12922v1",
+  "title": "Tokenize Once, Recommend Anywhere: Unified Item Tokenization for Multi-domain LLM-based Recommendation",
+  "venue": "AAAI 2026",
+  "venue_evidence": "20 pages, 8 figures, 9 tables; Annual AAAI Conference on Artificial Intelligence (AAAI-26) (to appear) (Please cite our conference version.)",
+  "year": "2026",
+  "why": "semantic ID / item tokenization；mixture-of-experts；LLM",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2511.15122v2",
+  "title": "Multi-Aspect Cross-modal Quantization for Generative Recommendation",
+  "venue": "AAAI 2026",
+  "venue_evidence": "Accepted by AAAI 2026 (Oral)",
+  "year": "2026",
+  "why": "semantic ID / item tokenization；generative recommendation/ranking",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2511.18740v2",
+  "title": "Multimodal Large Language Models with Adaptive Preference Optimization for Sequential Recommendation",
+  "venue": "SIGIR 2026",
+  "venue_evidence": "Accepted by SIGIR 2026 (Full Paper)",
+  "year": "2026",
+  "why": "long-sequence modeling；LLM；sequential recommendation",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2512.12740v1",
+  "title": "FuXi-$γ$: Efficient Sequential Recommendation with Exponential-Power Temporal Encoder and Diagonal-Sparse Positional Mechanism",
+  "venue": "KDD 2026",
+  "venue_evidence": "Accepted by KDD 2026",
+  "year": "2026",
+  "why": "long-sequence modeling；sequential recommendation",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2512.13368v3",
+  "title": "BlossomRec: Block-level Fused Sparse Attention Mechanism for Sequential Recommendations",
+  "venue": "WWW 2026",
+  "venue_evidence": "Accepted by TheWebConf (WWW) 2026 (Oral)",
+  "year": "2026",
+  "why": "long-sequence modeling；sequential recommendation",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2601.14224v2",
+  "title": "Rerank Before You Reason: Analyzing Reranking Tradeoffs through Effective Token Cost in Deep Search Agents",
+  "venue": "ACL 2026",
+  "venue_evidence": "Findings of ACL 2026",
+  "year": "2026",
+  "why": "listwise reranking；text retrieval / ranking；scaling law",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2601.17836v1",
+  "title": "Unleashing the Potential of Sparse Attention on Long-term Behaviors for CTR Prediction",
+  "venue": "WWW 2026",
+  "venue_evidence": "WWW 2026: THE ACM WEB CONFERENCE",
+  "year": "2026",
+  "why": "industrial deployment；scaling law；long-sequence modeling；CTR prediction",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2601.19178v2",
+  "title": "CollectiveKV: Decoupling and Sharing Collaborative Information in Sequential Recommendation",
+  "venue": "ICLR 2026",
+  "venue_evidence": "Accepted by ICLR 2026",
+  "year": "2026",
+  "why": "long-sequence modeling；sequential recommendation",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2601.19711v3",
+  "title": "Differentiable Semantic ID for Generative Recommendation",
+  "venue": "SIGIR 2026",
+  "venue_evidence": "Accepted by SIGIR2026",
+  "year": "2026",
+  "why": "semantic ID / item tokenization；generative recommendation/ranking",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2602.07298v3",
+  "title": "Principled Synthetic Data Enables the First Scaling Laws for LLMs in Recommendation",
+  "venue": "ICML 2026",
+  "venue_evidence": "update according to icml reviewers feedback | ICML 2026",
+  "year": "2026",
+  "why": "scaling law；LLM",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2602.11719v2",
+  "title": "Uncertainty-aware Generative Recommendation",
+  "venue": "KDD 2026",
+  "venue_evidence": "Accepted by KDD 2026",
+  "year": "2026",
+  "why": "generative recommendation/ranking；constrained/autoregressive decoding",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2602.14110v2",
+  "title": "MixFormer: Co-Scaling Up Dense and Sequence in Industrial Recommenders",
+  "venue": "KDD 2026",
+  "venue_evidence": "Accepted by KDD 2026",
+  "year": "2026",
+  "why": "industrial deployment；scaling law",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2602.22647v2",
+  "title": "Vectorizing the Trie: Efficient Constrained Decoding for LLM-based Generative Retrieval on Accelerators",
+  "venue": "KDD 2026",
+  "venue_evidence": "KDD 2026 camera-ready | Proceedings of the 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining V.2 (KDD '26), 2026, pp. 8009-8020",
+  "year": "2026",
+  "why": "generative retrieval / DSI；text retrieval / ranking；industrial deployment；LLM",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2603.02730v4",
+  "title": "APAO: Bridging the Training-Inference Gap in Generative Recommendation via Adaptive Prefix-Aware Optimization",
+  "venue": "KDD 2026",
+  "venue_evidence": "Accepted by KDD'26",
+  "year": "2026",
+  "why": "generative recommendation/ranking；sequential recommendation；constrained/autoregressive decoding",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2603.02773v2",
+  "title": "Model Editing for New Document Integration in Generative Information Retrieval",
+  "venue": "WWW 2026",
+  "venue_evidence": "Accepted to The Web Conference (WWW) 2026",
+  "year": "2026",
+  "why": "generative retrieval / DSI；text retrieval / ranking",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2603.23183v2",
+  "title": "Reasoning over Semantic IDs Enhances Generative Recommendation",
+  "venue": "KDD 2026",
+  "venue_evidence": "Accepted by KDD 2026",
+  "year": "2026",
+  "why": "semantic ID / item tokenization；generative recommendation/ranking；LLM；sequential recommendation",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2603.25027v1",
+  "title": "Hyena Operator for Fast Sequential Recommendation",
+  "venue": "WWW 2026",
+  "venue_evidence": "11 pages, 5 figures, accepted by ACM Web Conference 2026 (WWW '26)",
+  "year": "2026",
+  "why": "scaling law；long-sequence modeling；sequential recommendation",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2604.10150v1",
+  "title": "Learning from Emptiness: De-biasing Listwise Rerankers with Content-Agnostic Probability Calibration",
+  "venue": "ACL 2026",
+  "venue_evidence": "ACL2026",
+  "year": "2026",
+  "why": "listwise reranking；text retrieval / ranking",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2604.13273v1",
+  "title": "Mitigating Collaborative Semantic ID Staleness in Generative Retrieval",
+  "venue": "SIGIR 2026",
+  "venue_evidence": "Accepted at SIGIR 2026. This version corresponds to the accepted manuscript",
+  "year": "2026",
+  "why": "generative retrieval / DSI；semantic ID / item tokenization；text retrieval / ranking",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2604.13468v2",
+  "title": "From Relevance to Authority: Authority-aware Generative Retrieval in Web Search Engines",
+  "venue": "ACL 2026",
+  "venue_evidence": "ACL 2026 (Industry Track)",
+  "year": "2026",
+  "why": "generative retrieval / DSI；text retrieval / ranking；industrial deployment；LLM",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2604.20858v1",
+  "title": "Mixture of Sequence: Theme-Aware Mixture-of-Experts for Long-Sequence Recommendation",
+  "venue": "WWW 2026",
+  "venue_evidence": "14 pages, 9 figures, The Web Conference 2026",
+  "year": "2026",
+  "why": "mixture-of-experts；long-sequence modeling；CTR prediction；sequential recommendation",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2604.23388v1",
+  "title": "A Parametric Memory Head for Continual Generative Retrieval",
+  "venue": "SIGIR 2026",
+  "venue_evidence": "12 pages, 3 figures, 3 tables; accepted to the 49th International ACM SIGIR Conference on Research and Development in Information Retrieval, July 20-24, 2026, Melbourne/Naarm, Australia",
+  "year": "2026",
+  "why": "generative retrieval / DSI；text retrieval / ranking；constrained/autoregressive decoding",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2604.23396v1",
+  "title": "Lost in Decoding? Reproducing and Stress-Testing the Look-Ahead Prior in Generative Retrieval",
+  "venue": "SIGIR 2026",
+  "venue_evidence": "12 pages, 5 figures, 9 tables; accepted to the 49th International ACM SIGIR Conference on Research and Development in Information Retrieval, July 20-24, 2026, Melbourne/Naarm, Australia | Proceedings of the 49th International ACM SIGIR Conf",
+  "year": "2026",
+  "why": "generative retrieval / DSI；text retrieval / ranking；industrial deployment；constrained/autoregressive decoding",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2604.27599v1",
+  "title": "One Pass, Any Order: Position-Invariant Listwise Reranking for LLM-Based Recommendation",
+  "venue": "SIGIR 2026",
+  "venue_evidence": "Accepted at SIGIR 2026 | Proceedings of the 49th International ACM SIGIR Conference on Research and Development in Information Retrieval, 2026, pp. 3625-3629",
+  "year": "2026",
+  "why": "listwise reranking；LLM",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2604.27790v1",
+  "title": "How Generative AI Disrupts Search: An Empirical Study of Google Search, Gemini, and AI Overviews",
+  "venue": "SIGIR 2026",
+  "venue_evidence": "Paper Accepted to ACM SIGIR 2026 (49th International ACM SIGIR Conference on Research and Development in Information Retrieval)",
+  "year": "2026",
+  "why": "生成式搜推相关",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2605.10530v1",
+  "title": "Personalized Deep Research: A User-Centric Framework, Dataset, and Hybrid Evaluation for Knowledge Discovery",
+  "venue": "SIGIR 2026",
+  "venue_evidence": "Accepted to SIGIR 2026",
+  "year": "2026",
+  "why": "text retrieval / ranking；LLM",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2605.11662v1",
+  "title": "HSUGA: LLM-Enhanced Recommendation with Hierarchical Semantic Understanding and Group-Aware Alignment",
+  "venue": "ACL 2026",
+  "venue_evidence": "Accepted by ACL 2026 Findings",
+  "year": "2026",
+  "why": "long-sequence modeling；LLM；sequential recommendation",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2605.11864v1",
+  "title": "Very Efficient Listwise Multimodal Reranking for Long Documents",
+  "venue": "ICML 2026",
+  "venue_evidence": "To appear in ICML 2026",
+  "year": "2026",
+  "why": "listwise reranking；text retrieval / ranking；LLM；constrained/autoregressive decoding",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2605.18920v2",
+  "title": "SynGR: Unleashing the Potential of Cross-Modal Synergy for Generative Recommendation",
+  "venue": "ICML 2026",
+  "venue_evidence": "Accepted by ICML 2026, 15 pages",
+  "year": "2026",
+  "why": "generative recommendation/ranking",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2605.20683v2",
+  "title": "Layer-wise Token Compression for Efficient Document Reranking",
+  "venue": "SIGIR 2026",
+  "venue_evidence": "SIGIR2026 short paper",
+  "year": "2026",
+  "why": "listwise reranking；text retrieval / ranking；LLM",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2605.28175v2",
+  "title": "Mixture-of-Experts Knowledge Graph Retrieval-Augmented Generation for Multi-Agent LLM-based Recommendation",
+  "venue": "KDD 2026",
+  "venue_evidence": "Accepted by KDD 2026 Research Track",
+  "year": "2026",
+  "why": "text retrieval / ranking；mixture-of-experts；LLM",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2606.07317v2",
+  "title": "Gated Bidirectional Linear Attention for Generative Retrieval",
+  "venue": "SIGIR 2026",
+  "venue_evidence": "5 pages, 2 figures, 7 tables. Accepted at SIGIR 2026",
+  "year": "2026",
+  "why": "generative retrieval / DSI；text retrieval / ranking；constrained/autoregressive decoding",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2606.07546v1",
+  "title": "Beyond Item IDs: Scaling Short-Form-Video Recommendation via Semantic-Native Long Sequence Modeling",
+  "venue": "SIGIR 2026",
+  "venue_evidence": "this manuscript has been accepted by SIGIR 2026",
+  "year": "2026",
+  "why": "semantic ID / item tokenization；industrial deployment；scaling law；long-sequence modeling",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2607.12714v1",
+  "title": "Learning to Forget: Satiation-Aware Long-Sequence Transducers for Mitigating Post-Purchase Redundancy",
+  "venue": "SIGIR 2026",
+  "venue_evidence": "Proceedings of the 49th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '26), Industry Track, 2026",
+  "year": "2026",
+  "why": "industrial deployment；long-sequence modeling；sequential recommendation",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2607.28997v1",
+  "title": "Think2Go: Generative Next POI Recommendation with LLM Reasoning",
+  "venue": "KDD 2026",
+  "venue_evidence": "Accepted by KDD 2026 Research Track Cycle 1 (Oral presentation)",
+  "year": "2026",
+  "why": "semantic ID / item tokenization；scaling law；LLM",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2608.00750v1",
+  "title": "Hierarchical Residual Policy Optimization for Generative Recommendations",
+  "venue": "KDD 2026",
+  "venue_evidence": "12 pages, 6 figures, 10 tables. Accepted at KDD 2026 Research Track",
+  "year": "2026",
+  "why": "semantic ID / item tokenization；generative recommendation/ranking；constrained/autoregressive decoding",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2608.01315v1",
+  "title": "Collaborative Memory Augmentation for Generative Recommendation",
+  "venue": "KDD 2026",
+  "venue_evidence": "Accepted by KDD 2026 Research Track",
+  "year": "2026",
+  "why": "text retrieval / ranking；generative recommendation/ranking",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2609.12965v1",
+  "title": "Generative Retrieval for Unsupervised Text-Based Person Search",
+  "venue": "TPAMI 2026",
+  "venue_evidence": "17 pages, 10 figures. Accepted for publication in IEEE Transactions on Pattern Analysis and Machine Intelligence | IEEE Transactions on Pattern Analysis and Machine Intelligence, pp. 1-17, 2026",
+  "year": "2026",
+  "why": "generative retrieval / DSI；text retrieval / ranking",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2410.02604v3",
+  "title": "Long-Sequence Recommendation Models Need Decoupled Embeddings",
+  "venue": "ICLR 2025",
+  "venue_evidence": "ICLR 2025. First three authors contributed equally. Code is available at https://github.com/thuml/DARE",
+  "year": "2025",
+  "why": "long-sequence modeling",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2410.05165v3",
+  "title": "Efficient Inference for Large Language Model-based Generative Recommendation",
+  "venue": "ICLR 2025",
+  "venue_evidence": "Accepted by ICLR 2025",
+  "year": "2025",
+  "why": "industrial deployment；generative recommendation/ranking；LLM；constrained/autoregressive decoding",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2412.17593v2",
+  "title": "Leveraging Memory Retrieval to Enhance LLM-based Generative Recommendation",
+  "venue": "WWW 2025",
+  "venue_evidence": "Accepted by WWW'2025",
+  "year": "2025",
+  "why": "text retrieval / ranking；long-sequence modeling；generative recommendation/ranking；LLM",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2501.14268v1",
+  "title": "Pre-train and Fine-tune: Recommenders as Large Models",
+  "venue": "WWW 2025",
+  "venue_evidence": "Accepted by WWW2025",
+  "year": "2025",
+  "why": "industrial deployment",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2501.14269v2",
+  "title": "Hierarchical Time-Aware Mixture of Experts for Multi-Modal Sequential Recommendation",
+  "venue": "WWW 2025",
+  "venue_evidence": "Accepted to WWW 2025",
+  "year": "2025",
+  "why": "mixture-of-experts；sequential recommendation",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2502.03036v1",
+  "title": "FuXi-$α$: Scaling Recommendation Model with Feature Interaction Enhanced Transformer",
+  "venue": "WWW 2025",
+  "venue_evidence": "Accepted by WWW2025",
+  "year": "2025",
+  "why": "scaling law；LLM；sequential recommendation",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2502.06269v3",
+  "title": "UNGER: Generative Recommendation with A Unified Code via Semantic and Collaborative Integration",
+  "venue": "TOIS 2025",
+  "venue_evidence": "Accepted by TOIS 2025",
+  "year": "2025",
+  "why": "generative recommendation/ranking",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2502.13581v3",
+  "title": "ActionPiece: Contextually Tokenizing Action Sequences for Generative Recommendation",
+  "venue": "ICML 2025",
+  "venue_evidence": "ICML 2025 (Spotlight)",
+  "year": "2025",
+  "why": "generative recommendation/ranking；constrained/autoregressive decoding",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2502.16077v1",
+  "title": "ESANS: Effective and Semantic-Aware Negative Sampling for Large-Scale Retrieval Systems",
+  "venue": "WWW 2025",
+  "venue_evidence": "10 pages, 6 figures, Proceedings of the ACM Web Conference 2025",
+  "year": "2025",
+  "why": "text retrieval / ranking；industrial deployment",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2503.18941v2",
+  "title": "Exploring Training and Inference Scaling Laws in Generative Retrieval",
+  "venue": "SIGIR 2025",
+  "venue_evidence": "Accepted to SIGIR 2025",
+  "year": "2025",
+  "why": "generative retrieval / DSI；text retrieval / ranking；scaling law；LLM",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2503.21098v3",
+  "title": "Alleviating LLM-based Generative Retrieval Hallucination in Alipay Search",
+  "venue": "SIGIR 2025",
+  "venue_evidence": "Accepted by SIGIR 2025",
+  "year": "2025",
+  "why": "generative retrieval / DSI；text retrieval / ranking；LLM",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2504.01403v2",
+  "title": "Generative Retrieval and Alignment Model: A New Paradigm for E-commerce Retrieval",
+  "venue": "WWW 2025",
+  "venue_evidence": "Accepted by WWW2025",
+  "year": "2025",
+  "why": "generative retrieval / DSI；semantic ID / item tokenization；text retrieval / ranking；industrial deployment",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2504.05181v2",
+  "title": "Lightweight and Direct Document Relevance Optimization for Generative Information Retrieval",
+  "venue": "SIGIR 2025",
+  "venue_evidence": "12 pages, 3 figures. SIGIR '25 Proceedings of the 48th International ACM SIGIR Conference on Research and Development in Information Retrieval July 13--18, 2025 Padua, Italy. Code and pretrained models available at: https://github.com/kidis",
+  "year": "2025",
+  "why": "generative retrieval / DSI；text retrieval / ranking",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2504.07363v2",
+  "title": "Towards Distribution Matching between Collaborative and Language Spaces for Generative Recommendation",
+  "venue": "SIGIR 2025",
+  "venue_evidence": "Accepted by SIGIR2025",
+  "year": "2025",
+  "why": "generative recommendation/ranking",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2504.09935v1",
+  "title": "Constrained Auto-Regressive Decoding Constrains Generative Retrieval",
+  "venue": "SIGIR 2025",
+  "venue_evidence": "13 pages, 6 figures, 2 tables, accepted by SIGIR 2025 (Proceedings of the 48th International ACM SIGIR Conference on Research and Development in Information Retrieval)",
+  "year": "2025",
+  "why": "generative retrieval / DSI；text retrieval / ranking；LLM；constrained/autoregressive decoding",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2504.16454v1",
+  "title": "Killing Two Birds with One Stone: Unifying Retrieval and Ranking with a Single Generative Recommendation Model",
+  "venue": "SIGIR 2025",
+  "venue_evidence": "This paper has been accepted at SIGIR 2025",
+  "year": "2025",
+  "why": "text retrieval / ranking；generative recommendation/ranking",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2504.17519v1",
+  "title": "Replication and Exploration of Generative Retrieval over Dynamic Corpora",
+  "venue": "SIGIR 2025",
+  "venue_evidence": "Accepted at SIGIR 2025 (Proceedings of the 48th International ACM SIGIR Conference on Research and Development in Information Retrieval)",
+  "year": "2025",
+  "why": "generative retrieval / DSI；text retrieval / ranking",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2505.03484v1",
+  "title": "STAR-Rec: Making Peace with Length Variance and Pattern Diversity in Sequential Recommendation",
+  "venue": "SIGIR 2025",
+  "venue_evidence": "Accepted by SIGIR 2025",
+  "year": "2025",
+  "why": "mixture-of-experts；sequential recommendation",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2505.18512v2",
+  "title": "AcuRank: Uncertainty-Aware Adaptive Computation for Listwise Reranking",
+  "venue": "NeurIPS 2025",
+  "venue_evidence": "Accepted at NeurIPS 2025. The first two authors contributed equally. Author order is randomly determined via coin toss",
+  "year": "2025",
+  "why": "listwise reranking；text retrieval / ranking；LLM",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2506.01673v1",
+  "title": "GRAM: Generative Recommendation via Semantic-aware Multi-granular Late Fusion",
+  "venue": "ACL 2025",
+  "venue_evidence": "ACL 2025 (Main Conference)",
+  "year": "2025",
+  "why": "generative recommendation/ranking；LLM",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2507.04651v2",
+  "title": "FindRec: Stein-Guided Entropic Flow for Multi-Modal Sequential Recommendation",
+  "venue": "KDD 2025",
+  "venue_evidence": "Accepted by KDD 2025",
+  "year": "2025",
+  "why": "sequential recommendation",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2311.04694v3",
+  "title": "Evaluating Generative Ad Hoc Information Retrieval",
+  "venue": "SIGIR 2024",
+  "venue_evidence": "14 pages, 6 figures, 1 table. Published at SIGIR'24 perspective paper track",
+  "year": "2024",
+  "why": "generative retrieval / DSI；text retrieval / ranking；LLM",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2402.10866v2",
+  "title": "EcoRank: Budget-Constrained Text Re-ranking Using Large Language Models",
+  "venue": "ACL 2024",
+  "venue_evidence": "Accepted to Findings of ACL 24",
+  "year": "2024",
+  "why": "listwise reranking；LLM",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2402.15838v3",
+  "title": "ListT5: Listwise Reranking with Fusion-in-Decoder Improves Zero-shot Retrieval",
+  "venue": "ACL 2024",
+  "venue_evidence": "Accepted to ACL 2024 main (long)",
+  "year": "2024",
+  "why": "listwise reranking；text retrieval / ranking",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2403.12499v1",
+  "title": "Listwise Generative Retrieval Models via a Sequential Learning Process",
+  "venue": "TOIS 2024",
+  "venue_evidence": "Accepted by ACM Transactions on Information Systems",
+  "year": "2024",
+  "why": "generative retrieval / DSI；text retrieval / ranking",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2403.12566v1",
+  "title": "Context-based Fast Recommendation Strategy for Long User Behavior Sequence in Meituan Waimai",
+  "venue": "WWW 2024",
+  "venue_evidence": "9 pages, accepted by WWW 2024 Industry Track",
+  "year": "2024",
+  "why": "long-sequence modeling；sequential recommendation",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2404.14600v1",
+  "title": "Planning Ahead in Generative Retrieval: Guiding Autoregressive Generation through Simultaneous Decoding",
+  "venue": "SIGIR 2024",
+  "venue_evidence": "Accepted to SIGIR 2024",
+  "year": "2024",
+  "why": "generative retrieval / DSI；text retrieval / ranking；constrained/autoregressive decoding",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2405.06886v1",
+  "title": "Event GDR: Event-Centric Generative Document Retrieval",
+  "venue": "WWW 2024",
+  "venue_evidence": "Accepted to WWW 2024",
+  "year": "2024",
+  "why": "generative retrieval / DSI；text retrieval / ranking",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2405.10974v2",
+  "title": "Bottleneck-Minimal Indexing for Generative Document Retrieval",
+  "venue": "ICML 2024",
+  "venue_evidence": "Accepted for ICML 2024",
+  "year": "2024",
+  "why": "generative retrieval / DSI；text retrieval / ranking；constrained/autoregressive decoding",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2406.14017v2",
+  "title": "EAGER: Two-Stream Generative Recommender with Behavior-Semantic Collaboration",
+  "venue": "KDD 2024",
+  "venue_evidence": "Accepted by KDD 2024. Code available at https://reczoo.github.io/EAGER",
+  "year": "2024",
+  "why": "generative retrieval / DSI；text retrieval / ranking；generative recommendation/ranking；sequential recommendation",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2407.11504v1",
+  "title": "Bootstrapped Pre-training with Dynamic Identifier Prediction for Generative Retrieval",
+  "venue": "ACL 2024",
+  "venue_evidence": "Accepted by ACL Findings 2024",
+  "year": "2024",
+  "why": "generative retrieval / DSI；text retrieval / ranking；LLM",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2409.18409v1",
+  "title": "Generative Retrieval Meets Multi-Graded Relevance",
+  "venue": "NeurIPS 2024",
+  "venue_evidence": "Accepted by the NeurIPS 2024 (Spotlight)",
+  "year": "2024",
+  "why": "generative retrieval / DSI；text retrieval / ranking",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2210.02068v3",
+  "title": "Nonparametric Decoding for Generative Retrieval",
+  "venue": "ACL 2023",
+  "venue_evidence": "published at Findings of ACL 2023",
+  "year": "2023",
+  "why": "generative retrieval / DSI；text retrieval / ranking",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2304.03679v1",
+  "title": "T2Ranking: A large-scale Chinese Benchmark for Passage Ranking",
+  "venue": "SIGIR 2023",
+  "venue_evidence": "This Resource paper has been accepted by the 46th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2023)",
+  "year": "2023",
+  "why": "listwise reranking；text retrieval / ranking",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2304.14856v1",
+  "title": "A Unified Generative Retriever for Knowledge-Intensive Language Tasks via Prompt Learning",
+  "venue": "SIGIR 2023",
+  "venue_evidence": "Accepted by SIGIR 2023",
+  "year": "2023",
+  "why": "text retrieval / ranking；industrial deployment",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2305.02073v2",
+  "title": "Understanding Differential Search Index for Text Retrieval",
+  "venue": "ACL 2023",
+  "venue_evidence": "Accepted to Findings of ACL 2023",
+  "year": "2023",
+  "why": "generative retrieval / DSI；text retrieval / ranking",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2305.09313v1",
+  "title": "Hybrid and Collaborative Passage Reranking",
+  "venue": "ACL 2023",
+  "venue_evidence": "Accepted to Findings of ACL 2023 | In Findings of the Association for Computational Linguistics: ACL 2023, pages 14003-14021",
+  "year": "2023",
+  "why": "listwise reranking；text retrieval / ranking",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2305.09612v1",
+  "title": "Large Language Models are Built-in Autoregressive Search Engines",
+  "venue": "ACL 2023",
+  "venue_evidence": "Accepted to ACL 2023 Findings",
+  "year": "2023",
+  "why": "generative retrieval / DSI；text retrieval / ranking；LLM；constrained/autoregressive decoding",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2305.11161v1",
+  "title": "TOME: A Two-stage Approach for Model-based Retrieval",
+  "venue": "ACL 2023",
+  "venue_evidence": "ACL 2023",
+  "year": "2023",
+  "why": "generative retrieval / DSI；listwise reranking；text retrieval / ranking；scaling law",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2305.15115v1",
+  "title": "Semantic-Enhanced Differentiable Search Index Inspired by Learning Strategies",
+  "venue": "KDD 2023",
+  "venue_evidence": "Accepted by KDD 2023",
+  "year": "2023",
+  "why": "generative retrieval / DSI；text retrieval / ranking",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2305.16675v1",
+  "title": "Multiview Identifiers Enhanced Generative Retrieval",
+  "venue": "ACL 2023",
+  "venue_evidence": "ACL 2023 Main Conference",
+  "year": "2023",
+  "why": "generative retrieval / DSI；text retrieval / ranking",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2310.14304v2",
+  "title": "One Model for All: Large Language Models are Domain-Agnostic Recommendation Systems",
+  "venue": "TOIS 2023",
+  "venue_evidence": "27 pages, 15 figures, 7 tables, Accepted by TOIS",
+  "year": "2023",
+  "why": "LLM；sequential recommendation",
+  "org": ""
+ },
+ {
+  "arxiv_id": "2202.06991v3",
+  "title": "Transformer Memory as a Differentiable Search Index",
+  "venue": "NeurIPS 2022",
+  "venue_evidence": "NeurIPS 2022",
+  "year": "2022",
+  "why": "generative retrieval / DSI；text retrieval / ranking",
+  "org": ""
+ }
+]
