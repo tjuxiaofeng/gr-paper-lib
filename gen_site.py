@@ -512,7 +512,7 @@ HTML = '''<!DOCTYPE html>
 <title>生成式推荐论文库</title>
 <style>
   *{box-sizing:border-box}
-  html{scrollbar-gutter:stable}
+  html{overflow-y:scroll;scrollbar-gutter:stable}
   body{margin:0;font-family:-apple-system,"PingFang SC","Microsoft YaHei",Helvetica,Arial,sans-serif;
        background:#f4f6fa;color:#1f2a44;-webkit-font-smoothing:antialiased}
   a{color:#2f6fed;text-decoration:none}
@@ -547,7 +547,7 @@ HTML = '''<!DOCTYPE html>
   select:focus,input:focus{border-color:#8fb0f5;box-shadow:0 0 0 3px rgba(79,124,243,.12)}
   #q{flex:1;min-width:200px}
   .pcount{color:#7a869f;font-size:12px;margin:8px 2px}
-  table{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden;
+  table{width:100%;table-layout:fixed;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden;
         box-shadow:0 1px 3px rgba(20,40,90,.07)}
   th,td{text-align:left;padding:10px 12px;font-size:13px;border-bottom:1px solid #eef1f7;vertical-align:top}
   th{background:#f7f9fd;color:#4a5878;font-weight:600;white-space:nowrap}
@@ -557,7 +557,7 @@ HTML = '''<!DOCTYPE html>
   .tag{display:inline-block;font-size:11px;padding:2px 9px;border-radius:20px;
        background:#eaf0ff;color:#2f6fed;white-space:nowrap}
   .yr{color:#7a869f}
-  .note{color:#43506b;font-size:12.5px;line-height:1.55;min-width:220px}
+  .note{color:#43506b;font-size:12.5px;line-height:1.55}
   tr.hide{display:none}
   tr.prow{cursor:pointer}
   tr.prow .ttl::before{content:"▸";display:inline-block;width:14px;color:#a7b2cc;font-size:11px}
@@ -610,7 +610,7 @@ HTML = '''<!DOCTYPE html>
   </div>
 
   <div class="filters">
-    <input id="q" placeholder="搜索标题 / 说明 / 机构 / 分类 / 作者 ..." autocomplete="off">
+    <input id="q" placeholder="搜索标题 / 关键词 / 机构 / 分类 / 作者 ..." autocomplete="off">
     <select id="f_task">__OPT_TASK__</select>
     <select id="f_type">__OPT_TYPE__</select>
     <select id="f_cat">__OPT_CAT__</select>
@@ -620,6 +620,10 @@ HTML = '''<!DOCTYPE html>
   <div class="pcount" id="cnt">共 __NPAPERS__ 篇</div>
 
   <table>
+    <colgroup>
+      <col style="width:30%"><col style="width:9%"><col style="width:5%"><col style="width:6%">
+      <col style="width:8%"><col style="width:13%"><col style="width:22%"><col style="width:7%">
+    </colgroup>
     <thead><tr><th>标题</th><th>机构</th><th>年份</th><th>任务</th><th>学术/工业</th><th>分类</th><th>说明</th><th>链接</th></tr></thead>
     <tbody id="tb">__ROWS__</tbody>
   </table>
