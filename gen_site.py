@@ -386,7 +386,8 @@ def stacked_svg(key='cat', groups=None, cmap=None, counts=None):
                  % (cx, padT + plotH - acc - 5, sum(1 for p in papers if p['year'] == y)))
     legend = ''.join(
         '<span class="lg"><i style="background:%s"></i>%s <b>%d</b></span>'
-        % (cmap.get(c, '#8a8f9e'), esc(c), counts.get(c, 0)) for c in cs)
+        % (cmap.get(c, '#8a8f9e'), esc(c), counts.get(c, 0))
+        for c in cs if counts.get(c, 0) > 0)
     return ('<svg viewBox="0 0 %d %d" class="chart" preserveAspectRatio="xMidYMid meet">%s</svg>'
             '<div class="legend">%s</div>' % (W, H, ''.join(g), legend))
 
@@ -430,9 +431,10 @@ def donut_svg():
               % (cx, cy + 2, tot, cx, cy + 18))
     legend = ''.join(
         '<span class="lg"><i style="background:%s"></i>%s <b>%d</b></span>'
-        % (CAT_COLOR[c], esc(c), cat_count.get(c, 0)) for c in cs)
-    return ('<svg viewBox="0 0 %d %d" class="chart">%s%s</svg>'
-            '<div class="legend">%s</div>' % (W, H, ''.join(segs), center, legend))
+        % (CAT_COLOR[c], esc(c), cat_count.get(c, 0))
+        for c in cs if cat_count.get(c, 0) > 0)
+    return ('<svg viewBox="0 0 %d %d" class="chart" style="max-width:%dpx;margin:0 auto">%s%s</svg>'
+            '<div class="legend">%s</div>' % (W, H, W, ''.join(segs), center, legend))
 
 # ---------------------------------------------------------------- 表格（静态）
 def row_html(p):
