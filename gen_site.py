@@ -484,6 +484,7 @@ opt_year = options(years_sorted, '全部年份')
 
 # 统计卡（年份跨度按升序取端点）
 yr_span = ('%s–%s' % (years_asc[0], years_asc[-1])) if years_asc else '-'
+year_span_txt = ('%s 至 %s' % (years_asc[0], years_asc[-1])) if years_asc else '未知'
 stat_html = (
     '<div><b>%d</b><span>篇论文</span></div>'
     '<div><b>%d</b><span>个分类</span></div>'
@@ -592,8 +593,7 @@ HTML = '''<!DOCTYPE html>
 <div class="wrap">
   <div class="hero">
     <h1>生成式推荐论文库</h1>
-    <div class="sub">按 GR pipeline 阶段组织：物品语义化 → 生成式骨干 → 检索/排序 → LLM4Rec → 长序列 → 工业落地 → 多模态 → 基础设施 → CTR 工程<br>
-      数据源 gr_doc/paper/index.md · 共 __NPAPERS__ 篇 PDF，点表格右侧 PDF 阅读，<b>点任意一行可展开中英摘要</b></div>
+    <div class="sub">统计 __NPAPERS__ 篇论文，__YEARSPAN__，定期更新。</div>
     <div class="stat">__STAT__</div>
   </div>
 
@@ -701,6 +701,7 @@ HTML = (HTML
         .replace('__ROWS__', rows)
         .replace('__PATHS__', paths_section)
         .replace('__NPAPERS__', str(len(papers)))
+        .replace('__YEARSPAN__', year_span_txt)
         .replace('__DATA__', data))
 
 # 预览裁剪（仅自查用，不影响默认 full 输出）
