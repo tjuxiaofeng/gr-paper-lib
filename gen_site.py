@@ -447,11 +447,11 @@ def row_html(p):
     cc = CAT_COLOR.get(p['cat'], '#4f7cf3')
     return ('<tr class="prow" data-cat="%s" data-org="%s" data-year="%s" data-task="%s" data-type="%s" data-s="%s">'
             '<td><div class="ttl">%s</div></td>'
-            '<td class="nowrap">%s</td>'
+            '<td>%s</td>'
             '<td class="yr">%s</td>'
             '<td><span class="tag" style="color:%s;background:%s22">%s</span></td>'
             '<td><span class="tag" style="color:%s;background:%s22">%s</span></td>'
-            '<td><span class="tag" style="color:%s;background:%s22">%s</span></td>'
+            '<td><span class="tag tagc" style="color:%s;background:%s22">%s</span></td>'
             '<td class="note">%s</td>'
             '<td class="nowrap"><a href="%s" target="_blank" rel="noopener">PDF</a>%s</td>'
             '</tr>'
@@ -550,14 +550,16 @@ HTML = '''<!DOCTYPE html>
   .pcount{color:#7a869f;font-size:12px;margin:8px 2px}
   table{width:100%;table-layout:fixed;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden;
         box-shadow:0 1px 3px rgba(20,40,90,.07)}
-  th,td{text-align:left;padding:10px 12px;font-size:13px;border-bottom:1px solid #eef1f7;vertical-align:top}
+  th,td{text-align:left;padding:10px 12px;font-size:13px;border-bottom:1px solid #eef1f7;vertical-align:top;
+        overflow-wrap:anywhere}
   th{background:#f7f9fd;color:#4a5878;font-weight:600;white-space:nowrap}
   tr:hover td{background:#fafbff}
   td.nowrap{white-space:nowrap}
   .ttl{font-weight:600;color:#1f2a44;line-height:1.45}
   .tag{display:inline-block;font-size:11px;padding:2px 9px;border-radius:20px;
        background:#eaf0ff;color:#2f6fed;white-space:nowrap}
-  .yr{color:#7a869f}
+  .tagc{white-space:normal;overflow-wrap:anywhere;max-width:100%}
+  .yr{color:#7a869f;white-space:nowrap}
   .note{color:#43506b;font-size:12.5px;line-height:1.55}
   tr.hide{display:none}
   tr.prow{cursor:pointer}
@@ -621,8 +623,8 @@ HTML = '''<!DOCTYPE html>
 
   <table>
     <colgroup>
-      <col style="width:30%"><col style="width:9%"><col style="width:5%"><col style="width:6%">
-      <col style="width:8%"><col style="width:13%"><col style="width:22%"><col style="width:7%">
+      <col style="width:25%"><col style="width:9%"><col style="width:6%"><col style="width:7%">
+      <col style="width:8%"><col style="width:16%"><col style="width:22%"><col style="width:7%">
     </colgroup>
     <thead><tr><th>标题</th><th>机构</th><th>年份</th><th>任务</th><th>学术/工业</th><th>分类</th><th>说明</th><th>链接</th></tr></thead>
     <tbody id="tb">__ROWS__</tbody>
