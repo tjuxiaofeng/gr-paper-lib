@@ -10,7 +10,7 @@
 
 ## 📚 目录
 
-- [1. Item Tokenization / Semantic ID](#1-item-tokenization-semantic-id)
+- [1. 物品语义化](#1-物品语义化)
 - [2. 生成式骨干 与 Scaling](#2-生成式骨干-与-scaling)
 - [3. 生成式检索 / 排序方法](#3-生成式检索-排序方法)
 - [4. LLM4Rec 与对齐](#4-llm4rec-与对齐)
@@ -23,7 +23,7 @@
 
 ---
 
-## 1. Item Tokenization / Semantic ID
+## 1. 物品语义化
 
 | 文件 | 机构 | 年份 | 一句话价值 |
 |---|---|---|---|
