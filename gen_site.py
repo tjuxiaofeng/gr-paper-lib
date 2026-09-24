@@ -510,7 +510,7 @@ HTML = '''<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>生成式推荐论文库</title>
+<title>生成式搜推论文库</title>
 <style>
   *{box-sizing:border-box}
   html{overflow-y:scroll;scrollbar-gutter:stable}
@@ -594,7 +594,7 @@ HTML = '''<!DOCTYPE html>
 <body>
 <div class="wrap">
   <div class="hero">
-    <h1>生成式推荐论文库</h1>
+    <h1>生成式搜推论文库</h1>
     <div class="sub">统计 __NPAPERS__ 篇论文，__YEARSPAN__，定期更新。</div>
     <div class="stat">__STAT__</div>
   </div>
