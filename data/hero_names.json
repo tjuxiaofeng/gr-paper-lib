@@ -1,303 +1,7 @@
 [
 {
-"t": "BeamFusion",
-"pid": 1
-},
-{
-"t": "IDGenRec",
-"pid": 4
-},
-{
-"t": "FORGE",
-"pid": 7
-},
-{
-"t": "EAGER",
-"pid": 8
-},
-{
-"t": "TokenRec",
-"pid": 9
-},
-{
-"t": "ActionPiece",
-"pid": 20
-},
-{
-"t": "MVIGER",
-"pid": 23
-},
-{
-"t": "APAO",
-"pid": 26
-},
-{
-"t": "UNGER",
-"pid": 27
-},
-{
-"t": "GRAM",
-"pid": 29
-},
-{
-"t": "FineSID",
-"pid": 32
-},
-{
-"t": "GrIS",
-"pid": 33
-},
-{
 "t": "HSTU",
 "pid": 39
-},
-{
-"t": "RankMixer",
-"pid": 40
-},
-{
-"t": "TokenMixer",
-"pid": 43
-},
-{
-"t": "CCFormer",
-"pid": 44
-},
-{
-"t": "INFNet",
-"pid": 45
-},
-{
-"t": "HHFT",
-"pid": 46
-},
-{
-"t": "RecFormer",
-"pid": 47
-},
-{
-"t": "EST",
-"pid": 48
-},
-{
-"t": "HyFormer",
-"pid": 50
-},
-{
-"t": "DiffGRM",
-"pid": 57
-},
-{
-"t": "OneTrans",
-"pid": 60
-},
-{
-"t": "FuXi",
-"pid": 62
-},
-{
-"t": "MixFormer",
-"pid": 64
-},
-{
-"t": "STAR",
-"pid": 67
-},
-{
-"t": "SPRINT",
-"pid": 68
-},
-{
-"t": "OneLA",
-"pid": 69
-},
-{
-"t": "HELIX",
-"pid": 73
-},
-{
-"t": "GenRank",
-"pid": 74
-},
-{
-"t": "PinRec",
-"pid": 76
-},
-{
-"t": "GraphRAG",
-"pid": 82
-},
-{
-"t": "ZeroGR",
-"pid": 90
-},
-{
-"t": "TOME",
-"pid": 94
-},
-{
-"t": "DeGRe",
-"pid": 95
-},
-{
-"t": "NewsQuote",
-"pid": 98
-},
-{
-"t": "ReasonRank",
-"pid": 99
-},
-{
-"t": "GenIR",
-"pid": 101
-},
-{
-"t": "AcuRank",
-"pid": 110
-},
-{
-"t": "ListT5",
-"pid": 112
-},
-{
-"t": "T2Ranking",
-"pid": 116
-},
-{
-"t": "VARG",
-"pid": 120
-},
-{
-"t": "GPT4Rec",
-"pid": 126
-},
-{
-"t": "TALLRec",
-"pid": 127
-},
-{
-"t": "LLaRA",
-"pid": 128
-},
-{
-"t": "LoRA",
-"pid": 133
-},
-{
-"t": "RecGPT",
-"pid": 134
-},
-{
-"t": "SLMRec",
-"pid": 135
-},
-{
-"t": "E4SRec",
-"pid": 138
-},
-{
-"t": "RecRanker",
-"pid": 139
-},
-{
-"t": "Think2Go",
-"pid": 141
-},
-{
-"t": "OpenP5",
-"pid": 142
-},
-{
-"t": "AlphaFuse",
-"pid": 143
-},
-{
-"t": "RAIE",
-"pid": 147
-},
-{
-"t": "FeDecider",
-"pid": 148
-},
-{
-"t": "AgentDR",
-"pid": 151
-},
-{
-"t": "ProMax",
-"pid": 154
-},
-{
-"t": "ItemRAG",
-"pid": 156
-},
-{
-"t": "ReRec",
-"pid": 160
-},
-{
-"t": "SPRec",
-"pid": 165
-},
-{
-"t": "Reason4Rec",
-"pid": 167
-},
-{
-"t": "CoLLM",
-"pid": 168
-},
-{
-"t": "GFlowNet",
-"pid": 171
-},
-{
-"t": "LLM2Rec",
-"pid": 175
-},
-{
-"t": "GORACS",
-"pid": 176
-},
-{
-"t": "RecLM",
-"pid": 179
-},
-{
-"t": "LLMEmb",
-"pid": 180
-},
-{
-"t": "GoalRank",
-"pid": 188
-},
-{
-"t": "INTEGER",
-"pid": 191
-},
-{
-"t": "ReMem",
-"pid": 192
-},
-{
-"t": "AgentWebRec",
-"pid": 193
-},
-{
-"t": "MATE",
-"pid": 194
-},
-{
-"t": "LONGER",
-"pid": 195
-},
-{
-"t": "KuaFu",
-"pid": 200
-},
-{
-"t": "MuSeR",
-"pid": 202
 },
 {
 "t": "OneRec",
@@ -316,28 +20,76 @@
 "pid": 209
 },
 {
-"t": "GenRec",
-"pid": 212
+"t": "RankMixer",
+"pid": 40
 },
 {
-"t": "DualGR",
-"pid": 213
+"t": "TokenMixer",
+"pid": 43
 },
 {
-"t": "SIGMA",
-"pid": 214
+"t": "OneTrans",
+"pid": 60
 },
 {
-"t": "GRP",
-"pid": 218
+"t": "MixFormer",
+"pid": 64
+},
+{
+"t": "CCFormer",
+"pid": 44
+},
+{
+"t": "HHFT",
+"pid": 46
+},
+{
+"t": "HyFormer",
+"pid": 50
+},
+{
+"t": "EST",
+"pid": 48
+},
+{
+"t": "RecFormer",
+"pid": 47
+},
+{
+"t": "LONGER",
+"pid": 195
+},
+{
+"t": "KuaFu",
+"pid": 200
+},
+{
+"t": "MuSeR",
+"pid": 202
 },
 {
 "t": "UNIQUE",
 "pid": 221
 },
 {
+"t": "GRP",
+"pid": 218
+},
+{
+"t": "GenRec",
+"pid": 212
+},
+{
+"t": "SIGMA",
+"pid": 214
+},
+{
 "t": "AlignRec",
 "pid": 222
+},
+{
+"t": "OpticalRec",
+"pid": 229
 },
 {
 "t": "SynGR",
@@ -348,51 +100,159 @@
 "pid": 228
 },
 {
-"t": "OpticalRec",
-"pid": 229
+"t": "PinRec",
+"pid": 76
 },
 {
-"t": "TokenFormer",
-"pid": 234
+"t": "GenRank",
+"pid": 74
 },
 {
-"t": "MambaVision",
-"pid": 235
+"t": "HELIX",
+"pid": 73
+},
+{
+"t": "SPRINT",
+"pid": 68
+},
+{
+"t": "OneLA",
+"pid": 69
+},
+{
+"t": "FuXi",
+"pid": 62
+},
+{
+"t": "STAR",
+"pid": 67
+},
+{
+"t": "DiffGRM",
+"pid": 57
+},
+{
+"t": "GRAM",
+"pid": 29
+},
+{
+"t": "UNGER",
+"pid": 27
+},
+{
+"t": "APAO",
+"pid": 26
+},
+{
+"t": "MVIGER",
+"pid": 23
+},
+{
+"t": "TokenRec",
+"pid": 9
+},
+{
+"t": "IDGenRec",
+"pid": 4
+},
+{
+"t": "EAGER",
+"pid": 8
+},
+{
+"t": "ActionPiece",
+"pid": 20
+},
+{
+"t": "FORGE",
+"pid": 7
+},
+{
+"t": "FineSID",
+"pid": 32
+},
+{
+"t": "GrIS",
+"pid": 33
+},
+{
+"t": "TALLRec",
+"pid": 127
+},
+{
+"t": "LLaRA",
+"pid": 128
+},
+{
+"t": "RecGPT",
+"pid": 134
+},
+{
+"t": "SLMRec",
+"pid": 135
+},
+{
+"t": "E4SRec",
+"pid": 138
+},
+{
+"t": "RecRanker",
+"pid": 139
+},
+{
+"t": "CoLLM",
+"pid": 168
+},
+{
+"t": "LLM2Rec",
+"pid": 175
+},
+{
+"t": "RecLM",
+"pid": 179
+},
+{
+"t": "ItemRAG",
+"pid": 156
+},
+{
+"t": "ReRec",
+"pid": 160
+},
+{
+"t": "Reason4Rec",
+"pid": 167
+},
+{
+"t": "INTEGER",
+"pid": 191
+},
+{
+"t": "ReMem",
+"pid": 192
+},
+{
+"t": "MATE",
+"pid": 194
 },
 {
 "t": "DeepSeek",
 "pid": 237
 },
 {
-"t": "DeepSeekMoE",
-"pid": 238
-},
-{
-"t": "RASTP",
-"pid": 242
-},
-{
-"t": "BlossomRec",
-"pid": 244
-},
-{
-"t": "CollectiveKV",
-"pid": 246
-},
-{
 "t": "ReAct",
 "pid": 249
 },
 {
-"t": "PPM",
-"pid": 251
+"t": "MambaVision",
+"pid": 235
 },
 {
-"t": "MEDA",
-"pid": 252
+"t": "TokenFormer",
+"pid": 234
 },
 {
-"t": "ESANS",
-"pid": 255
+"t": "AlphaFuse",
+"pid": 143
 }
 ]

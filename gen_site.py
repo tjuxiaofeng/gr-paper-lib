@@ -786,7 +786,7 @@ HTML = '''<!DOCTYPE html>
   function resize(){
     var r = cv.parentElement.getBoundingClientRect();
     W = r.width; H = r.height; cx = W * 0.70; cy = H * 0.5;
-    R = Math.max(55, Math.min(W * 0.40, H * 0.48));
+    R = Math.max(55, Math.min(W * 0.43, H * 0.50));
     cv.width = Math.round(W * DPR); cv.height = Math.round(H * DPR);
     ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
     ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
@@ -804,7 +804,7 @@ HTML = '''<!DOCTYPE html>
   });
   var FONT = '-apple-system,"PingFang SC",Helvetica,Arial,sans-serif';
   function frame(){
-    ang += 0.0034;
+    ang += 0.0011;
     ctx.clearRect(0, 0, W, H);
     var ca = Math.cos(ang), sa = Math.sin(ang), ct = Math.cos(0.36), st = Math.sin(0.36);
     for (var i = 0; i < pts.length; i++){
@@ -825,7 +825,7 @@ HTML = '''<!DOCTYPE html>
     var order = pts.slice().sort(function(a,b){ return b.z - a.z; });
     for (var i = 0; i < order.length; i++){
       var p = order[i], hot = (p === hov);
-      var fs = Math.round(11 + 7 * p.per) + (hot ? 3 : 0);
+      var fs = Math.round(9 + 4.5 * p.per) + (hot ? 2 : 0);
       ctx.font = (hot ? '800 ' : '600 ') + fs + 'px ' + FONT;
       if (hot){ ctx.shadowColor = 'rgba(130,175,255,.95)'; ctx.shadowBlur = 16; ctx.fillStyle = '#ffffff'; }
       else { ctx.shadowBlur = 0; ctx.fillStyle = 'rgba(203,220,255,' + Math.min(0.14 + p.per*0.52, 0.82).toFixed(3) + ')'; }
