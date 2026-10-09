@@ -507,13 +507,13 @@ def row_html(p):
             'data-type="%s" data-s="%s" data-title="%s" data-notes="%s" data-authors="%s" '
             'data-arxiv="%s" data-added="%s">'
             '<td data-l="标题"><div class="ttl">%s%s</div></td>'
-            '<td data-l="机构">%s</td>'
-            '<td data-l="年份" class="yr">%s</td>'
-            '<td data-l="任务"><span class="tag" style="color:%s;background:%s22">%s</span></td>'
-            '<td data-l="学术/工业"><span class="tag" style="color:%s;background:%s22">%s</span></td>'
-            '<td data-l="分类"><span class="tag tagc" style="color:%s;background:%s22">%s</span></td>'
+            '<td data-l="机构" class="ctr">%s</td>'
+            '<td data-l="年份" class="yr ctr">%s</td>'
+            '<td data-l="任务" class="ctr"><span class="tag" style="color:%s;background:%s22">%s</span></td>'
+            '<td data-l="学术/工业" class="ctr"><span class="tag" style="color:%s;background:%s22">%s</span></td>'
+            '<td data-l="分类" class="ctr"><span class="tag tagc" style="color:%s;background:%s22">%s</span></td>'
             '<td data-l="说明" class="note">%s</td>'
-            '<td data-l="链接" class="links">%s</td>'
+            '<td data-l="链接" class="links ctr">%s</td>'
             '</tr>'
             % (p['pid'], esc(p['cat']), esc(orgkey), esc(p['year']), esc(p['task']),
                esc(p['type']), esc(blob), esc(p['title']), esc(p['note']), esc(au),
@@ -621,6 +621,7 @@ HTML = '''<!DOCTYPE html>
   table.maintbl th{text-align:center}
   tr:hover td{background:#fafbff}
   td.nowrap{white-space:nowrap}
+  td.ctr{text-align:center}
   td.links{white-space:normal;line-height:1.85}
   td.links a,td.links .nolink{display:block;white-space:nowrap}
   .ttl{font-weight:600;color:#1f2a44;line-height:1.45}
