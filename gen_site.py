@@ -513,7 +513,7 @@ def row_html(p):
             '<td data-l="学术/工业"><span class="tag" style="color:%s;background:%s22">%s</span></td>'
             '<td data-l="分类"><span class="tag tagc" style="color:%s;background:%s22">%s</span></td>'
             '<td data-l="说明" class="note">%s</td>'
-            '<td data-l="链接" class="nowrap">%s</td>'
+            '<td data-l="链接" class="links">%s</td>'
             '</tr>'
             % (p['pid'], esc(p['cat']), esc(orgkey), esc(p['year']), esc(p['task']),
                esc(p['type']), esc(blob), esc(p['title']), esc(p['note']), esc(au),
@@ -620,6 +620,8 @@ HTML = '''<!DOCTYPE html>
   th{background:#f7f9fd;color:#4a5878;font-weight:600;white-space:nowrap}
   tr:hover td{background:#fafbff}
   td.nowrap{white-space:nowrap}
+  td.links{white-space:normal}
+  td.links a{white-space:nowrap}
   .ttl{font-weight:600;color:#1f2a44;line-height:1.45}
   .tag{display:inline-block;font-size:11px;padding:2px 9px;border-radius:20px;
        background:#eaf0ff;color:#2f6fed;white-space:nowrap}
@@ -730,7 +732,7 @@ HTML = '''<!DOCTYPE html>
   <table>
     <colgroup>
       <col style="width:25%"><col style="width:8%"><col style="width:5%"><col style="width:6%">
-      <col style="width:7%"><col style="width:15%"><col style="width:25%"><col style="width:9%">
+      <col style="width:7%"><col style="width:15%"><col style="width:22%"><col style="width:12%">
     </colgroup>
     <thead><tr>
       <th class="sortable" data-sort="title">标题 <span class="arw"></span></th>
@@ -889,19 +891,29 @@ HTML = '''<!DOCTYPE html>
       apply();
     });
   });
-  function copyBib(btn){
-    var tr = btn.closest('tr.prow');
+  function bibtex(tr){
+    var NL = String.fromCharCode(10);
     var t = tr.getAttribute('data-title') || '', au = tr.getAttribute('data-authors') || '';
     var y = tr.getAttribute('data-year') || '', u = tr.getAttribute('data-arxiv') || '';
-    var ep = (u.match(/arxiv\.org\/abs\/([\d.]+)/) || [])[1] || '';
-    var key = ((au.split(',')[0] || 'anon').trim().split(' ').pop() || 'anon') + y +
-              (t.split(' ')[0] || '').replace(/[^A-Za-z0-9]/g, '');
-    var s = '@misc{' + key + ',\\n  title={' + t + '},\\n';
-    if (au) s += '  author={' + au + '},\\n';
-    s += '  year={' + y + '},\\n';
-    if (ep) s += '  eprint={' + ep + '},\\n  archivePrefix={arXiv},\\n';
-    if (u) s += '  url={' + u + '},\\n';
-    s += '}';
+    var ep = '', k = u.indexOf('arxiv.org/abs/');
+    if (k >= 0) ep = u.slice(k + 14).replace(/[^0-9.]/g, '');
+    var auGS = (au ? au.split(',') : []).map(function(x){
+        x = x.trim(); if (!x) return '';
+        if (/^et al/i.test(x)) return 'others';
+        var p = x.split(' '), last = p.pop();
+        return p.length ? last + ', ' + p.join(' ') : last;
+      }).filter(Boolean).join(' and ');
+    var SUR = ((au.split(',')[0] || 'anon').trim().split(' ').pop() || 'anon').replace(/[^A-Za-z]/g, '').toLowerCase();
+    var W = (t.split(' ')[0] || '').replace(/[^A-Za-z]/g, '').toLowerCase();
+    var L = ['@' + (ep ? 'article' : 'misc') + '{' + SUR + y + W + ',', '  title={' + t + '},'];
+    if (auGS) L.push('  author={' + auGS + '},');
+    if (ep) L.push('  journal={arXiv preprint arXiv:' + ep + '},');
+    else if (u) L.push('  url={' + u + '},');
+    L.push('  year={' + y + '}');
+    return L.join(NL) + NL + '}';
+  }
+  function copyBib(btn){
+    var s = bibtex(btn.closest('tr.prow'));
     var done = function(){ btn.textContent = '已复制✓'; setTimeout(function(){ btn.textContent='BibTeX'; }, 1200); };
     if (navigator.clipboard && navigator.clipboard.writeText){
       navigator.clipboard.writeText(s).then(done, function(){ window.prompt('复制 BibTeX:', s); });
