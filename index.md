@@ -2,7 +2,7 @@
 
 > 📌 本目录按 **生成式推荐（GR）pipeline 阶段** 组织：从 Semantic ID → 生成式骨干 → 检索/排序 → LLM4Rec → 长序列 → 工业落地 → 多模态 → 基础设施 → CTR 工程。
 >
-> 📅 最后更新：2026-09-24
+> 📅 最后更新：2026-10-09
 >
 > 🎯 选取标准：大厂工业界实践 + Top 高校研究 + GR 方向奠基/代表工作
 
@@ -57,6 +57,15 @@
 | `UNGER: Generative Recommendation with A Unified Code via Semantic and Collaborative Integration.pdf` | 华为 / 华科 | 2025 | 推荐 | 工业 | generative recommendation, unified code, semantic and collaborative integration, quantization, knowledge distillation |
 | `Towards Distribution Matching between Collaborative and Language Spaces for Generative Recommendation.pdf` | 安徽大学 / The University of Queensland | 2025 | 推荐 | 学术 | generative recommendation, distribution matching, pre-trained language models, probabilistic meta-network, cross-space alignment |
 | `GRAM: Generative Recommendation via Semantic-aware Multi-granular Late Fusion.pdf` | Samsung | 2025 | 推荐 | 学术 | generative recommendation, multi-granular late fusion, semantic-to-lexical translation, LLM, item relationships |
+| `What Makes a Good Semantic ID for Generative Recommendation? A Reproducibility Study.pdf` | 山东大学 / Glasgow / Leiden | 2026 | 推荐 | 学术 | semantic ID, SID 设计空间, reproducibility, generative recommendation, 评估 |
+| `Rethinking Semantic ID Construction for Generative Recommendation: SimHash with Parallel Decoding and Semantic Alignment.pdf` | UIC / Amazon | 2026 | 推荐 | 工业 | semantic ID, SimHash, parallel decoding, semantic alignment, SID construction |
+| `FineSID: Scalable and Efficient Semantic Identifier Learning for Generative Recommendation.pdf` | 清华 / 华为 / 中科大 | 2026 | 推荐 | 工业 | semantic identifier, scalable SID learning, soft assignment, generative recommendation, efficiency |
+| `Neither Black nor White: Balancing Semantic and Collaborative Signals with Graph-Informed Semantic IDs (GrIS).pdf` | 华为爱尔兰 | 2026 | 推荐 | 工业 | semantic IDs, collaborative signals, graph-informed, SID construction, generative recommendation |
+| `From Interests to Semantic IDs: Retrieval-Grounded Credit Assignment for Generative Recommendation.pdf` | Emory / Microsoft / Cornell | 2026 | 推荐 | 工业 | semantic IDs, reasoning, credit assignment, retrieval-grounded, generative recommendation |
+| `Addressing Cross-Stage Decoupling of Semantic and Collaborative Signals in Generative Recommendation.pdf` | 快手 | 2026 | 推荐 | 工业 | generative recommendation, semantic tokens, collaborative signals, cross-stage decoupling, alignment |
+| `Can Generative Retrievers Learn Semantic IDs Without Forgetting How to Speak?.pdf` | University of Glasgow | 2026 | 搜索 | 学术 | generative retrieval, semantic IDs, catastrophic forgetting, language ability, continual learning |
+| `Do Multilingual Encoders Produce Language-Consistent Semantic IDs?.pdf` | Amazon / Rutgers | 2026 | 推荐 | 工业 | semantic IDs, multilingual encoder, language consistency, generative retrieval, cross-lingual |
+| `Exploring Bottom-Up Clustering for Creating Semantic IDs.pdf` | Cornell | 2026 | 搜索 | 学术 | semantic IDs, bottom-up clustering, generative retrieval, identifier construction, codebook |
 
 ## 2. 生成式骨干 与 Scaling
 
@@ -91,6 +100,12 @@
 | `FuXi-$α$: Scaling Recommendation Model with Feature Interaction Enhanced Transformer.pdf` | 中科大 / 华为 | 2025 | 推荐 | 工业 | scaling law, feature interaction, Adaptive Multi-channel Self-attention, Multi-stage FFN, sequential recommendation |
 | `Killing Two Birds with One Stone: Unifying Retrieval and Ranking with a Single Generative Recommendation Model.pdf` | 中科大 / 华为 | 2025 | 推荐 | 工业 | generative recommendation, unifying retrieval and ranking, ranking-driven enhancer, gradient-guided adaptive weighter, sequence generation |
 | `STAR-Rec: Making Peace with Length Variance and Pattern Diversity in Sequential Recommendation.pdf` | 香港城市大学 / 南科大 | 2025 | 推荐 | 学术 | sequential recommendation, state-space modeling, mixture-of-experts, preference-aware attention, length variance |
+| `SPRINT: Single-Step Generative Recommendation via Average Probability Velocity.pdf` | UTS / NYU Abu Dhabi / UCSD | 2026 | 推荐 | 学术 | single-step generation, average probability velocity, semantic IDs, decoding speed, generative recommendation |
+| `OneLA: Scaling Linear-Attention Decoding to Large Beams in Generative Recommendation.pdf` | 港大 / 快手 | 2026 | 推荐 | 工业 | linear attention, large-beam decoding, generative recommendation, inference scaling, serving |
+| `Beyond the Beam: Constructive Repair and Candidate Completion for Generative Recommendation.pdf` | 北京理工 / 清华 / SMU | 2026 | 推荐 | 学术 | beam search, constructive repair, candidate completion, constrained decoding, generative recommendation |
+| `Disentangling Paradigm, Identifier, and Decoding in Generative Retrieval.pdf` | Artefact Research Center | 2026 | 搜索 | 学术 | generative retrieval, diffusion decoder, identifier design, decoding, disentangled study |
+| `Training with Missed Targets in Generative Recommendation: Separating Supervision from Probability Competition.pdf` | 浙大 | 2026 | 推荐 | 学术 | missed targets, reranker training, supervision vs probability competition, generative recommendation |
+| `HELIX: Purified and Unified - Rethinking Feature Interaction and Sequence Modeling for Large-Scale Recommendation.pdf` | 字节（国际电商） | 2026 | 推荐 | 工业 | feature interaction, sequence modeling, unified architecture, scaling-law slope, large-scale recommendation |
 
 ## 3. 生成式检索 / 排序方法
 
@@ -141,6 +156,12 @@
 | `T2Ranking: A large-scale Chinese Benchmark for Passage Ranking.pdf` | 清华 / 中关村实验室 | 2023 | 搜索 | 学术 | passage ranking, Chinese benchmark, graded relevance, passage retrieval, re-ranking |
 | `A Unified Generative Retriever for Knowledge-Intensive Language Tasks via Prompt Learning.pdf` | 中科院 / 国科大 | 2023 | 搜索 | 学术 | generative retriever, knowledge-intensive language tasks, prompt learning, n-gram identifier, multi-task |
 | `Multiview Identifiers Enhanced Generative Retrieval.pdf` | 港理工 / Microsoft | 2023 | 搜索 | 工业 | generative retrieval, multiview identifiers, synthetic identifiers, docid, passage ranking |
+| `Generative End-to-end Ad Retrieval at Douyin.pdf` | 字节 / 抖音 | 2026 | 推荐 | 工业 | generative retrieval, end-to-end ad retrieval, representation collapse, Douyin, industrial |
+| `VARG: Value-Aware and Ranking-Aligned Generative Retrieval for Dynamic E-commerce Search.pdf` | 阿里 / 南开 | 2026 | 搜索 | 工业 | generative retrieval, value-aware, ranking-aligned, e-commerce search, recall+pre-rank |
+| `Residual Trajectory Distillation for Generative Retrieval.pdf` | 北京航空 / 美团 | 2026 | 搜索 | 学术 | generative retrieval, residual quantization, semantic IDs, trajectory distillation, SID training |
+| `Learning Multiresolution Relevance for Hierarchical Generative Retrieval.pdf` | 北京航空 / 美团 | 2026 | 搜索 | 工业 | hierarchical generative retrieval, multiresolution relevance, semantic identifiers, tree decoding, ranking |
+| `Learning Better Reasoning for Generative Recommendation with Semantic IDs.pdf` | Emory / Microsoft / Cornell | 2026 | 推荐 | 工业 | generative recommendation, reasoning, semantic IDs, reinforcement learning, next-item generation |
+| `Decision-Oriented Recommendation Reranking: An Empirical Study of Jev.pdf` | SMU / Meta | 2026 | 推荐 | 工业 | recommendation reranking, decision-oriented model, Jev, LLM reranker, quality-efficiency tradeoff |
 
 ## 4. LLM4Rec 与对齐
 
@@ -212,6 +233,10 @@
 | `GoalRank: Group-Relative Optimization for a Large Ranking Model.pdf` | 快手 / 国科大 | 2025 | 推荐 | 工业 | group-relative optimization, generator-only ranking, one-stage ranking, scaling law, reward model |
 | `Uncertainty-aware Generative Recommendation.pdf` | 中科大 | 2026 | 推荐 | 学术 | generative recommendation, uncertainty, preference optimization, confidence alignment, risk-aware |
 | `One Model for All: Large Language Models are Domain-Agnostic Recommendation Systems.pdf` | 武大 | 2023 | 推荐 | 学术 | domain-agnostic recommendation, LLM, multi-domain, cold-start, item representation |
+| `Adapting Generative Recommenders for Multi-Turn Interaction.pdf` | 台大 / JHU | 2026 | 推荐 | 学术 | multi-turn interaction, generative recommender, user intent correction, conversation, INTEGER |
+| `ReMem: Rethinking Perception and Memory in Long-Context Recommendation Agents.pdf` | 港理工 / NTU | 2026 | 推荐 | 学术 | recommendation agents, perception, memory, long-context, RecAgents |
+| `AgentWebRec: Compact Evidence Fusion over the Agent Web for Personalized Recommendation.pdf` | 北航 / 港科大 | 2026 | 推荐 | 学术 | LLM agent, agent web, evidence fusion, personalized recommendation, privacy |
+| `MATE: Adaptive Long- and Short-Term User Memory for LLM-Based Recommendation.pdf` | Yonsei | 2026 | 推荐 | 学术 | LLM-based recommendation, user memory, long-short term, adaptive memory, personalization |
 
 ## 5. 长序列建模
 
@@ -222,6 +247,9 @@
 | `Mixture of Sequence: Theme-Aware Mixture-of-Experts for Long-Sequence Recommendation.pdf` | Meta | 2026 | 推荐 | 工业 | mixture-of-experts, long-sequence recommendation, theme-aware routing, multi-scale fusion, session hopping |
 | `Long-Sequence Recommendation Models Need Decoupled Embeddings.pdf` | 清华 / 腾讯 | 2024 | 推荐 | 工业 | long-sequence recommendation, decoupled embeddings, attention, representation, embedding dimension |
 | `Context-based Fast Recommendation Strategy for Long User Behavior Sequence in Meituan Waimai.pdf` | 北邮 / 美团 | 2024 | 推荐 | 工业 | long user behavior sequence, context-based recommendation, prototype, temporal graph, CTR prediction |
+| `KuaFu: Compressing Long User Behavior into Understanding at Billion Scale.pdf` | 腾讯 | 2026 | 推荐 | 工业 | long user behavior, billion-scale, behavior compression, user understanding, industrial |
+| `DP-Rec: Towards Dynamic Patching for Efficient Long-Sequence Recommendation.pdf` | Capital One | 2026 | 推荐 | 工业 | long-sequence recommendation, dynamic patching, adaptive computation, efficiency, transformer |
+| `MuSeR: Scalable Long-sequence Recommendation with Multi-interest Modeling.pdf` | 百度 / 香港城市大学 / 香港中文大学 | 2026 | 推荐 | 工业 | long-sequence recommendation, multi-interest modeling, scalability, industrial A/B, user behavior |
 
 ## 6. 工业落地系统
 
@@ -241,6 +269,11 @@
 | `SIGMA: A Semantic-Grounded Instruction-Driven Generative Multi-Task Recommender at AliExpress.pdf` | 阿里国际 | 2026 | 推荐 | 工业 | generative recommendation, instruction-following, multi-task recommendation, item tokenization, semantic grounding |
 | `Beyond Item IDs: Scaling Short-Form-Video Recommendation via Semantic-Native Long Sequence Modeling.pdf` | Google | 2026 | 推荐 | 工业 | semantic ID, long sequence modeling, short-form video recommendation, Global-Aware Compression Transformer, cold-start |
 | `From Modularity to Unity: Towards Industrial-Scale Generative Recommendation.pdf` | 京东 | 2026 | 推荐 | 工业 | generative recommendation, unified ranking framework, causal behavior multi-task attention, gradient interference, dual-encoder tokenization |
+| `X-Rec Technical Report.pdf` | 字节 | 2026 | 推荐 | 工业 | generative recommendation, technical report, U2I/I2I paradigms, industrial system, scaling |
+| `GRP v0.1 Technical Report.pdf` | Snap | 2026 | 推荐 | 工业 | generative recommendation platform, retrieval+ranking, serving, industrial cascade, technical report |
+| `KUAISHOU Explorer LLM-Rec Challenge 2026: Reasoning Generative Recommendation.pdf` | 快手 | 2026 | 推荐 | 工业 | challenge, reasoning generative recommendation, benchmark, LLM-Rec, competition |
+| `OneTrans-V2: Unifying Retrieval, Pre-rank, and Fine-rank with One Transformer in Industrial Recommender.pdf` | 字节 | 2026 | 推荐 | 工业 | unified transformer, retrieval+pre-rank+fine-rank, industrial recommender, cascade, sequence encoding |
+| `UNIQUE: A Unified Retrieval and Ranking System for Large-Scale Feed Recommendation.pdf` | 北航 / 百度 | 2026 | 推荐 | 工业 | unified retrieval+ranking, feed recommendation, industrial, latency, cascading |
 
 ## 7. 多模态推荐
 
@@ -253,6 +286,9 @@
 | `SynGR: Unleashing the Potential of Cross-Modal Synergy for Generative Recommendation.pdf` | 北航 | 2026 | 推荐 | 学术 | generative recommendation, cross-modal synergy, multimodal, synergistic information, item semantics |
 | `Hierarchical Time-Aware Mixture of Experts for Multi-Modal Sequential Recommendation.pdf` | 中科大 / 南航 | 2025 | 推荐 | 学术 | multi-modal sequential recommendation, mixture of experts, temporal embedding, multi-task learning, contrastive learning |
 | `FindRec: Stein-Guided Entropic Flow for Multi-Modal Sequential Recommendation.pdf` | 香港城市大学 / 北航 | 2025 | 推荐 | 学术 | multi-modal sequential recommendation, information disentanglement, Stein kernel, cross-modal expert routing, Mamba |
+| `OpticalRec: Unified Optical Vision-Language Representation for Multimodal Recommendation.pdf` | UCSD / 阿里 / UIUC / 港理工 / 港中文 / TAMU | 2026 | 推荐 | 工业 | multimodal recommendation, vision-language, optical representation, unified encoding, item semantics |
+| `Efficient Multimodal Generative Recommendation with Latent Narrative Reasoning.pdf` | 腾讯微信 / 港理工 | 2026 | 推荐 | 工业 | multimodal generative recommendation, latent narrative reasoning, semantic IDs, episodic content, efficiency |
+| `AdaM-Rec: Adaptive Modality Routing for Multimodal Recommendation.pdf` | Queensland / 阿里 / 东南 / Adelaide | 2026 | 推荐 | 工业 | multimodal recommendation, adaptive modality routing, dynamic fusion, MoE, efficiency |
 
 ## 8. 基础设施 / 基础模型
 
@@ -275,6 +311,8 @@
 | `CollectiveKV: Decoupling and Sharing Collaborative Information in Sequential Recommendation.pdf` | 华为 / 清华 | 2026 | 通用 | 工业 | KV cache, sequential recommendation, cross-user KV sharing, collaborative signals, inference latency |
 | `Hyena Operator for Fast Sequential Recommendation.pdf` | 武汉理工 / 武汉纺织大学 | 2026 | 通用 | 学术 | sequential recommendation, Hyena operator, polynomial-based kernel parameterization, gated convolutions, Legendre orthogonal polynomials |
 | `Efficient Inference for Large Language Model-based Generative Recommendation.pdf` | 新加坡国立 / 清华 | 2024 | 通用 | 学术 | generative recommendation, speculative decoding, top-K verification, draft model alignment, inference acceleration |
+| `ReAct: Synergizing Reasoning and Acting in Language Models.pdf` | Princeton / Google | 2022 | 通用 | 学术 | ReAct, reasoning+acting, tool use, LLM agents, prompting |
+| `Tree of Thoughts: Deliberate Problem Solving with Large Language Models.pdf` | Princeton / Google DeepMind | 2023 | 通用 | 学术 | tree of thoughts, deliberate search, planning, LLM reasoning, self-evaluation |
 
 ## 9. CTR 训练 / 工程
 
@@ -285,6 +323,10 @@
 | `Multi-Epoch learning with Data Augmentation for Deep Click-Through Rate Prediction.pdf` | 快手 | 2024 | 推荐 | 工业 | multi-epoch learning, data augmentation, embedding overfitting, CTR prediction, catastrophic forgetting |
 | `Pre-train and Fine-tune: Recommenders as Large Models.pdf` | 香港中文大学 / 阿里 | 2025 | 推荐 | 工业 | fine-tuning, information bottleneck, information-aware adaptive kernel, pre-trained recommender, multi-domain |
 | `ESANS: Effective and Semantic-Aware Negative Sampling for Large-Scale Retrieval Systems.pdf` | 阿里国际 | 2025 | 推荐 | 工业 | negative sampling, embedding-based retrieval, dense interpolation, semantic-aware clustering, false negatives |
+| `Cut Binary Cross Entropy: Efficient Large-Vocabulary Loss and Gradient Kernels for Sequential Recommendation.pdf` | Google Cloud | 2026 | 推荐 | 工业 | large-vocabulary loss, cut BCE, gradient kernels, sequential recommendation, efficiency |
+| `Optimizing Effective Training Time for Large-Scale Recommendation Systems.pdf` | Meta | 2026 | 推荐 | 工业 | training time, lifecycle overhead, accelerator utilization, large-scale recommendation, infrastructure |
+| `Calibrating Reproduced Claims in Recommender Systems.pdf` | University of Gothenburg | 2026 | 推荐 | 学术 | reproducibility, claim calibration, evaluation, recommender systems, empirical study |
+| `Generate What You Can Trust: Content Credibility in Generative Recommenders.pdf` | UTS / NYU Abu Dhabi | 2026 | 推荐 | 学术 | content credibility, generative recommendation, semantic IDs, trustworthiness, reliability |
 
 ---
 
