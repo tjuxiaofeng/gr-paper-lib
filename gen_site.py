@@ -523,7 +523,7 @@ def row_html(p):
                tc, tc, esc(p['task']),
                yc, yc, esc(p['type']),
                cc, cc, esc(p['cat']),
-               esc(p['note']), ' · '.join(links)))
+               esc(p['note']), ''.join(links)))
 
 # 明细清单排序：年份倒序(2026 最上) → 分类顺序
 _cat_idx = {c: i for i, c in enumerate(cats_present)}
@@ -620,8 +620,8 @@ HTML = '''<!DOCTYPE html>
   th{background:#f7f9fd;color:#4a5878;font-weight:600;white-space:nowrap}
   tr:hover td{background:#fafbff}
   td.nowrap{white-space:nowrap}
-  td.links{white-space:normal}
-  td.links a{white-space:nowrap}
+  td.links{white-space:normal;line-height:1.85}
+  td.links a,td.links .nolink{display:block;white-space:nowrap}
   .ttl{font-weight:600;color:#1f2a44;line-height:1.45}
   .tag{display:inline-block;font-size:11px;padding:2px 9px;border-radius:20px;
        background:#eaf0ff;color:#2f6fed;white-space:nowrap}
@@ -732,7 +732,7 @@ HTML = '''<!DOCTYPE html>
   <table>
     <colgroup>
       <col style="width:25%"><col style="width:8%"><col style="width:5%"><col style="width:6%">
-      <col style="width:7%"><col style="width:15%"><col style="width:22%"><col style="width:12%">
+      <col style="width:7%"><col style="width:15%"><col style="width:24%"><col style="width:10%">
     </colgroup>
     <thead><tr>
       <th class="sortable" data-sort="title">标题 <span class="arw"></span></th>
