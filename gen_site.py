@@ -184,6 +184,12 @@ LATEST_ADD = max(ADDED.values()) if ADDED else ''
 for p in papers:
     p['added'] = ADDED.get(p['file'], '')
 
+# hero 旋转名字云用的模型/方法缩写（data/hero_names.json: [{t,pid}]）
+try:
+    HERO = json.load(open(os.path.join(DATA, 'hero_names.json'), encoding='utf-8'))
+except Exception:
+    HERO = []
+
 # 机构归一：把同一实体的不同写法/子品牌/地区合并（用于展示、筛选、图表的机构维度）
 ORG_MERGE = {
     # 公司子品牌 / 地区分部
@@ -580,21 +586,34 @@ HTML = '''<!DOCTYPE html>
   *{box-sizing:border-box}
   html{overflow-y:scroll;scrollbar-gutter:stable}
   body{margin:0;font-family:-apple-system,"PingFang SC","Microsoft YaHei",Helvetica,Arial,sans-serif;
-       background:#f4f6fa;color:#1f2a44;-webkit-font-smoothing:antialiased}
+       background:#eef2f9;background:linear-gradient(180deg,#f7f9fd,#e9eef8 55%,#eef2f9);
+       background-attachment:fixed;color:#1f2a44;-webkit-font-smoothing:antialiased}
   a{color:#2f6fed;text-decoration:none}
   a:hover{text-decoration:underline}
   .wrap{max-width:1320px;margin:0 auto;padding:22px 20px 60px}
-  .hero{background:#2b3a67;background:-webkit-linear-gradient(135deg,#2b3a67,#3f5aa6);
-        background:linear-gradient(135deg,#2b3a67,#3f5aa6);color:#fff;border-radius:14px;padding:26px 28px}
-  .hero h1{margin:0 0 6px;font-size:26px;font-weight:700}
-  .hero .sub{opacity:.86;font-size:13px;line-height:1.6}
-  .stat{display:flex;gap:30px;margin-top:18px;flex-wrap:wrap}
-  .stat b{font-size:30px;font-weight:700;display:block;line-height:1.15}
+  .hero{position:relative;overflow:hidden;border-radius:16px;min-height:304px;
+        background:radial-gradient(130% 135% at 84% 16%, #3d5ba8 0%, #22325e 46%, #111c3a 100%);
+        color:#fff;box-shadow:0 14px 34px -14px rgba(18,34,74,.55)}
+  #heroCanvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+  .hero-inner{position:relative;z-index:1;padding:26px 30px;max-width:58%}
+  .hero h1{margin:0 0 8px;font-size:29px;font-weight:800;letter-spacing:.5px;
+           text-shadow:0 2px 14px rgba(10,20,50,.6)}
+  .hero .sub{opacity:.84;font-size:13.5px;line-height:1.6}
+  .hero .herohint{margin-top:16px;font-size:12px;color:#a7bcf0;opacity:.95}
+  .stat{display:flex;gap:30px;margin-top:20px;flex-wrap:wrap}
+  .stat b{font-size:30px;font-weight:800;display:block;line-height:1.15}
   .stat span{font-size:12px;opacity:.82}
+  @media(max-width:760px){
+    .hero{min-height:250px}
+    .hero-inner{max-width:100%;padding:22px 20px}
+    .hero h1{font-size:24px}
+  }
   .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
   .grid.three{grid-template-columns:1fr 1fr 1fr}
   @media(max-width:900px){.grid,.grid.three{grid-template-columns:1fr}}
-  .card{background:#fff;border-radius:12px;padding:16px 18px;box-shadow:0 1px 3px rgba(20,40,90,.07)}
+  .card{background:#fff;border-radius:12px;padding:16px 18px;box-shadow:0 1px 3px rgba(20,40,90,.07);
+        border:1px solid #eaeef7;transition:box-shadow .18s ease, transform .18s ease}
+  .card:hover{box-shadow:0 10px 26px -12px rgba(20,40,90,.28)}
   .card h3{margin:0 0 14px;font-size:14px;color:#33415c;font-weight:600}
   .bar{display:flex;align-items:center;gap:8px;margin:6px 0;font-size:12px}
   .bar .lbl{width:158px;flex:0 0 158px;color:#4a5878;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -702,9 +721,13 @@ HTML = '''<!DOCTYPE html>
 <body>
 <div class="wrap">
   <div class="hero">
-    <h1>生成式搜推论文库</h1>
-    <div class="sub">统计 __NPAPERS__ 篇论文，__YEARSPAN__，定期更新。</div>
-    <div class="stat">__STAT__</div>
+    <canvas id="heroCanvas" aria-hidden="true"></canvas>
+    <div class="hero-inner">
+      <h1>生成式搜推论文库</h1>
+      <div class="sub">统计 __NPAPERS__ 篇论文 · __YEARSPAN__ · 定期更新</div>
+      <div class="stat">__STAT__</div>
+      <div class="herohint">悬停 / 点击右侧漂浮的模型名 → 跳到对应论文</div>
+    </div>
   </div>
 
   <div class="grid three">
@@ -749,6 +772,76 @@ HTML = '''<!DOCTYPE html>
 
   __PATHS__
 </div>
+<script>
+(function(){
+  var cv = document.getElementById('heroCanvas'); if (!cv) return;
+  var names = __HERODATA__; if (!names || !names.length) return;
+  var ctx = cv.getContext('2d'), DPR = Math.min(window.devicePixelRatio || 1, 2);
+  var W = 0, H = 0, cx = 0, cy = 0, R = 0, pts = [], N = names.length, raf = 0, ang = 0, mx = -1, my = -1, hov = null;
+  for (var i = 0; i < N; i++){
+    var y = 1 - (i + 0.5) * 2 / N, rad = Math.sqrt(Math.max(0, 1 - y*y)),
+        th = Math.PI * (1 + Math.sqrt(5)) * i;
+    pts.push({x: Math.cos(th)*rad, y: y, z: Math.sin(th)*rad, m: names[i]});
+  }
+  function resize(){
+    var r = cv.parentElement.getBoundingClientRect();
+    W = r.width; H = r.height; cx = W * 0.70; cy = H * 0.5;
+    R = Math.max(55, Math.min(W * 0.40, H * 0.48));
+    cv.width = Math.round(W * DPR); cv.height = Math.round(H * DPR);
+    ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+    ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  }
+  resize(); window.addEventListener('resize', resize);
+  cv.addEventListener('mousemove', function(e){ var r = cv.getBoundingClientRect(); mx = e.clientX - r.left; my = e.clientY - r.top; });
+  cv.addEventListener('mouseleave', function(){ mx = my = -1; });
+  cv.addEventListener('click', function(){
+    if (!hov) return;
+    var row = document.getElementById('row-' + hov.m.pid); if (!row) return;
+    var clr = document.getElementById('clr');
+    if (clr && row.classList.contains('hide')) clr.click();
+    row.scrollIntoView({behavior:'smooth', block:'center'});
+    row.classList.add('flash'); setTimeout(function(){ row.classList.remove('flash'); }, 1500);
+  });
+  var FONT = '-apple-system,"PingFang SC",Helvetica,Arial,sans-serif';
+  function frame(){
+    ang += 0.0034;
+    ctx.clearRect(0, 0, W, H);
+    var ca = Math.cos(ang), sa = Math.sin(ang), ct = Math.cos(0.36), st = Math.sin(0.36);
+    for (var i = 0; i < pts.length; i++){
+      var p = pts[i];
+      var x = p.x*ca - p.z*sa, z = p.x*sa + p.z*ca, y = p.y;
+      var y2 = y*ct - z*st, z2 = y*st + z*ct;
+      var per = 1.7 / (1.7 + z2);
+      p.px = cx + x*R*per; p.py = cy + y2*R*per; p.z = z2; p.per = per;
+    }
+    hov = null; var best = 1e9;
+    if (mx >= 0){
+      for (var i = 0; i < pts.length; i++){
+        var p = pts[i], d = (p.px-mx)*(p.px-mx) + (p.py-my)*(p.py-my);
+        if (d < best && d < 24*24){ best = d; hov = p; }
+      }
+    }
+    cv.style.cursor = hov ? 'pointer' : 'default';
+    var order = pts.slice().sort(function(a,b){ return b.z - a.z; });
+    for (var i = 0; i < order.length; i++){
+      var p = order[i], hot = (p === hov);
+      var fs = Math.round(11 + 7 * p.per) + (hot ? 3 : 0);
+      ctx.font = (hot ? '800 ' : '600 ') + fs + 'px ' + FONT;
+      if (hot){ ctx.shadowColor = 'rgba(130,175,255,.95)'; ctx.shadowBlur = 16; ctx.fillStyle = '#ffffff'; }
+      else { ctx.shadowBlur = 0; ctx.fillStyle = 'rgba(203,220,255,' + Math.min(0.14 + p.per*0.52, 0.82).toFixed(3) + ')'; }
+      ctx.fillText(p.m.t, p.px, p.py);
+      ctx.shadowBlur = 0;
+    }
+    raf = requestAnimationFrame(frame);
+  }
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  frame();
+  if (reduce) cancelAnimationFrame(raf);
+  document.addEventListener('visibilitychange', function(){
+    if (document.hidden){ cancelAnimationFrame(raf); raf = 0; } else if (!raf){ frame(); }
+  });
+})();
+</script>
 <script>
 (function(){
   var PAPERS = __DATA__;
@@ -951,7 +1044,8 @@ HTML = (HTML
         .replace('__PATHS__', paths_section)
         .replace('__NPAPERS__', str(len(papers)))
         .replace('__YEARSPAN__', year_span_txt)
-        .replace('__DATA__', data))
+        .replace('__DATA__', data)
+        .replace('__HERODATA__', json.dumps(HERO, ensure_ascii=False)))
 
 # 预览裁剪（仅自查用，不影响默认 full 输出）
 if MODE == 'sheets':
