@@ -618,6 +618,7 @@ HTML = '''<!DOCTYPE html>
   th,td{text-align:left;padding:10px 12px;font-size:13px;border-bottom:1px solid #eef1f7;vertical-align:top;
         overflow-wrap:anywhere}
   th{background:#f7f9fd;color:#4a5878;font-weight:600;white-space:nowrap}
+  table.maintbl th{text-align:center}
   tr:hover td{background:#fafbff}
   td.nowrap{white-space:nowrap}
   td.links{white-space:normal;line-height:1.85}
@@ -729,7 +730,7 @@ HTML = '''<!DOCTYPE html>
   </div>
   <div class="pcount" id="cnt">共 __NPAPERS__ 篇</div>
 
-  <table>
+  <table class="maintbl">
     <colgroup>
       <col style="width:25%"><col style="width:8%"><col style="width:5%"><col style="width:6%">
       <col style="width:7%"><col style="width:15%"><col style="width:24%"><col style="width:10%">
