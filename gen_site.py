@@ -173,6 +173,17 @@ for p in papers:
 for p in papers:
     p['catShort'] = re.sub(r'[（(].*?[)）]', '', p['cat']).strip()
 
+# 稳定 id（供阅读路径跳转）+ 新增批次日期（data/added.json: file -> "YYYY-MM-DD"）
+for _i, p in enumerate(papers):
+    p['pid'] = _i
+try:
+    ADDED = json.load(open(os.path.join(DATA, 'added.json'), encoding='utf-8'))
+except Exception:
+    ADDED = {}
+LATEST_ADD = max(ADDED.values()) if ADDED else ''
+for p in papers:
+    p['added'] = ADDED.get(p['file'], '')
+
 # ---------------------------------------------------------------- 摘要（英文 + 中文）
 ABS_EN, ABS_ZH = {}, {}
 try:
@@ -279,8 +290,9 @@ def rich(text):
         nm = m.group(1)
         p = match_paper(nm)
         if p:
-            out.append('<a class="plink" href="./%s" target="_blank" rel="noopener" '
-                       'title="%s">%s</a>' % (quote(p['file']), esc(p['title']), esc(nm)))
+            out.append('<a class="plink jump" href="#row-%d" data-pid="%d" title="定位到表格中该行：%s">%s</a>'
+                       '<a class="pdfmini" href="./%s" target="_blank" rel="noopener" title="打开 PDF">↗</a>'
+                       % (p['pid'], p['pid'], esc(p['title']), esc(nm), quote(p['file'])))
         else:
             out.append('<span class="pchip">%s</span>' % esc(nm))
         pos = m.end()
@@ -327,11 +339,11 @@ paths_section = (
     '<div class="paths">'
     '<h2 class="secttl">阅读路径建议</h2>'
     '<div class="psub">按目标挑一条主线，2–3 小时可覆盖核心工作；'
-    '论文名可直接点击打开 PDF（未匹配到的以粗体展示）</div>'
+    '点论文名可<b>定位到下方表格对应行</b>（会高亮），点其右侧 ↗ 打开 PDF</div>'
     + path_grid + '</div>') if path_blocks else ''
 
 # ---------------------------------------------------------------- 条形图
-def bars_html(obj, n, max_label=170, colors=None, order=None):
+def bars_html(obj, n, max_label=170, colors=None, order=None, facet=None):
     if order:
         ent = [(k, obj[k]) for k in order if k in obj][:n]
     else:
@@ -348,10 +360,12 @@ def bars_html(obj, n, max_label=170, colors=None, order=None):
             col = colors[i % len(colors)]
         else:
             col = '#4f7cf3'
+        fac = (' data-facet="%s" data-val="%s"' % (esc(facet), esc(k))) if facet else ''
+        cls = 'bar clickable' if facet else 'bar'
         out.append(
-            '<div class="bar"><div class="lbl" title="%s">%s</div>'
+            '<div class="%s"%s><div class="lbl" title="%s">%s</div>'
             '<div class="track"><div class="fill" style="width:%.1f%%;background:%s"></div></div>'
-            '<div class="val">%d</div></div>' % (esc(k), esc(k), w, col, v))
+            '<div class="val">%d</div></div>' % (cls, fac, esc(k), esc(k), w, col, v))
     return ''.join(out)
 
 # ---------------------------------------------------------------- 堆叠柱状图
@@ -390,10 +404,11 @@ def stacked_svg(key='cat', groups=None, cmap=None, counts=None):
                 continue
             h = v / mx * plotH
             yy = padT + plotH - acc - h
-            g.append('<rect x="%.1f" y="%.1f" width="%.1f" height="%.1f" fill="%s">'
-                     '<title>%s · %s: %d</title></rect>'
+            g.append('<rect x="%.1f" y="%.1f" width="%.1f" height="%.1f" fill="%s" '
+                     'data-facet="%s" data-val="%s" data-year="%s">'
+                     '<title>%s · %s: %d（点击筛选）</title></rect>'
                      % (x, yy, bw, max(h - 1.2, 1), cmap.get(c, '#8a8f9e'),
-                        esc(y), esc(c), v))
+                        esc(key), esc(c), esc(y), esc(y), esc(c), v))
             acc += h
         g.append('<text x="%.1f" y="%d" font-size="11" fill="#6b7794" text-anchor="middle">%s</text>'
                  % (cx, H - 12, esc(y)))
@@ -438,8 +453,9 @@ def donut_svg():
             d = ('M %f %f A %d %d 0 %d 1 %f %f L %f %f A %d %d 0 %d 0 %f %f Z'
                  % (p0[0], p0[1], R, R, large, p1[0], p1[1],
                     q1[0], q1[1], r, r, large, q0[0], q0[1]))
-        segs.append('<path d="%s" fill="%s"><title>%s: %d (%.1f%%)</title></path>'
-                    % (d, CAT_COLOR[c], esc(c), v, v * 100.0 / tot))
+        segs.append('<path d="%s" fill="%s" data-facet="cat" data-val="%s">'
+                    '<title>%s: %d (%.1f%%)（点击筛选）</title></path>'
+                    % (d, CAT_COLOR[c], esc(c), esc(c), v, v * 100.0 / tot))
         a0 = a1
     center = ('<text x="%d" y="%d" text-anchor="middle" font-size="26" font-weight="700" fill="#2b3a67">%d</text>'
               '<text x="%d" y="%d" text-anchor="middle" font-size="11" fill="#8894ae">篇论文</text>'
@@ -454,29 +470,42 @@ def donut_svg():
 # ---------------------------------------------------------------- 表格（静态）
 def row_html(p):
     pdf = './' + quote(p['file'])
-    arx = (' · <a href="%s" target="_blank" rel="noopener">arXiv</a>' % esc(p['arxiv'])) if p['arxiv'] else ''
+    links = ['<a href="%s" target="_blank" rel="noopener">PDF</a>' % esc(pdf)]
+    if p['arxiv']:
+        links.append('<a href="%s" target="_blank" rel="noopener">arXiv</a>' % esc(p['arxiv']))
+    else:
+        links.append('<span class="nolink" title="未登记在线链接">无链接</span>')
+    links.append('<a href="#" class="bibbtn" title="复制 BibTeX">BibTeX</a>')
     blob = (p['title'] + ' ' + p['note'] + ' ' + p['org'] + ' ' + p['cat'] + ' '
             + p['task'] + ' ' + p['type']).lower()
     orgkey = '|' + '|'.join(p['orgUnits']) + '|'
+    au = AUTHORS.get(p['file'], '')
     tc = TASK_COLOR.get(p['task'], '#8a8f9e')
     yc = TYPE_COLOR.get(p['type'], '#8a8f9e')
     cc = CAT_COLOR.get(p['cat'], '#4f7cf3')
-    return ('<tr class="prow" data-cat="%s" data-org="%s" data-year="%s" data-task="%s" data-type="%s" data-s="%s">'
-            '<td><div class="ttl">%s</div></td>'
-            '<td>%s</td>'
-            '<td class="yr">%s</td>'
-            '<td><span class="tag" style="color:%s;background:%s22">%s</span></td>'
-            '<td><span class="tag" style="color:%s;background:%s22">%s</span></td>'
-            '<td><span class="tag tagc" style="color:%s;background:%s22">%s</span></td>'
-            '<td class="note">%s</td>'
-            '<td class="nowrap"><a href="%s" target="_blank" rel="noopener">PDF</a>%s</td>'
+    newb = ('<span class="newbadge" title="本批新增 %s">NEW</span> ' % esc(p['added'])
+            if (p['added'] and p['added'] == LATEST_ADD) else '')
+    return ('<tr class="prow" id="row-%d" data-cat="%s" data-org="%s" data-year="%s" data-task="%s" '
+            'data-type="%s" data-s="%s" data-title="%s" data-notes="%s" data-authors="%s" '
+            'data-arxiv="%s" data-added="%s">'
+            '<td data-l="标题"><div class="ttl">%s%s</div></td>'
+            '<td data-l="机构">%s</td>'
+            '<td data-l="年份" class="yr">%s</td>'
+            '<td data-l="任务"><span class="tag" style="color:%s;background:%s22">%s</span></td>'
+            '<td data-l="学术/工业"><span class="tag" style="color:%s;background:%s22">%s</span></td>'
+            '<td data-l="分类"><span class="tag tagc" style="color:%s;background:%s22">%s</span></td>'
+            '<td data-l="说明" class="note">%s</td>'
+            '<td data-l="链接" class="nowrap">%s</td>'
             '</tr>'
-            % (esc(p['cat']), esc(orgkey), esc(p['year']), esc(p['task']), esc(p['type']), esc(blob),
-               esc(p['title']), esc(p['org']), esc(p['year']),
+            % (p['pid'], esc(p['cat']), esc(orgkey), esc(p['year']), esc(p['task']),
+               esc(p['type']), esc(blob), esc(p['title']), esc(p['note']), esc(au),
+               esc(p['arxiv'] or ''), esc(p['added']),
+               newb, esc(p['title']),
+               esc(p['org']), esc(p['year']),
                tc, tc, esc(p['task']),
                yc, yc, esc(p['type']),
                cc, cc, esc(p['cat']),
-               esc(p['note']), esc(pdf), arx))
+               esc(p['note']), ' · '.join(links)))
 
 # 明细清单排序：年份倒序(2026 最上) → 分类顺序
 _cat_idx = {c: i for i, c in enumerate(cats_present)}
@@ -507,13 +536,15 @@ stat_html = (
     '<div><b>%s</b><span>年份跨度</span></div>'
     '<div><b>%d</b><span>家机构</span></div>'
     % (len(papers), len(cats_present), esc(yr_span), org_named))
+newtoggle = (('<label class="sw" title="只看最近一批新增 · %s"><input type="checkbox" id="fnew">只看新增</label>'
+              % esc(LATEST_ADD)) if LATEST_ADD else '')
 
 charts = {
-    'cat': bars_html(cat_count, 20, colors=[CAT_COLOR[c] for c in cats_present]),
-    'year': bars_html(year_count, 20, order=years_sorted),
-    'org': bars_html(org_count, 12, colors=ORG_COLOR),
-    'tt': ('<div class="minihd">任务</div>' + bars_html(task_count, 10, colors=TASK_COLOR)
-           + '<div class="minihd">学术 / 工业</div>' + bars_html(type_count, 10, colors=TYPE_COLOR)),
+    'cat': bars_html(cat_count, 20, colors=[CAT_COLOR[c] for c in cats_present], facet='cat'),
+    'year': bars_html(year_count, 20, order=years_sorted, facet='year'),
+    'org': bars_html(org_count, 12, colors=ORG_COLOR, facet='org'),
+    'tt': ('<div class="minihd">任务</div>' + bars_html(task_count, 10, colors=TASK_COLOR, facet='task')
+           + '<div class="minihd">学术 / 工业</div>' + bars_html(type_count, 10, colors=TYPE_COLOR, facet='type')),
 }
 
 # 供 JS 增强用的轻量数据集（页面静态内容已完整，JS 关闭也能看全）
@@ -605,6 +636,45 @@ HTML = '''<!DOCTYPE html>
   .ptbl th{background:#f7f9fd;color:#4a5878;font-weight:600;white-space:nowrap}
   .ptbl tr:hover td{background:#fafbff}
   @media print{body{background:#fff}.card,table{box-shadow:none;border:1px solid #e6eaf3}}
+  /* 图表可点联动 */
+  .bar.clickable{cursor:pointer;border-radius:6px;padding:1px 5px;margin-left:-5px}
+  .bar.clickable:hover{background:#f2f6ff}
+  .chart [data-facet]{cursor:pointer}
+  .chart [data-facet]:hover{opacity:.82}
+  /* 吸顶表头 + 排序 */
+  thead th{position:sticky;top:0;z-index:3;box-shadow:inset 0 -1px 0 #e6ebf5}
+  th.sortable{cursor:pointer;user-select:none}
+  th.sortable:hover{color:#2f6fed}
+  th .arw{color:#aab4c8;font-size:10px}
+  /* 高亮 / 新增标记 / 链接 */
+  mark{background:#fff2a8;color:inherit;padding:0 1px;border-radius:2px}
+  .newbadge{display:inline-block;font-size:10px;font-weight:700;color:#fff;background:#e0603c;
+            border-radius:4px;padding:1px 5px;margin-right:6px;vertical-align:1.5px}
+  .nolink{color:#b3bccd}
+  .bibbtn{color:#8a94ad;font-size:12px}
+  .prow.flash td{background:#fff6d2 !important}
+  .prow.flash td{transition:background .5s}
+  .pdfmini{font-size:11px;color:#9aa5bd;margin-left:3px;border-bottom:none}
+  .pdfmini:hover{color:#2f6fed}
+  /* 只看新增 开关 + 清空 */
+  .filters label.sw{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:#4a5878;
+                    padding:8px 11px;border:1px solid #d6dced;border-radius:8px;background:#fff;cursor:pointer}
+  .filters label.sw input{margin:0}
+  #clr{font-size:13px;padding:8px 13px;border:1px solid #d6dced;border-radius:8px;background:#fff;
+       color:#4a5878;cursor:pointer}
+  #clr:hover{border-color:#8fb0f5;color:#2f6fed}
+  /* 窄屏：表格 -> 卡片 */
+  @media(max-width:700px){
+    .wrap{padding:14px 12px 40px}
+    thead{display:none}
+    table,tbody,tr,td{display:block;width:auto;table-layout:auto}
+    tr.prow{padding:8px 12px 10px;border-bottom:8px solid #eef1f7}
+    tr.prow td{border:0;padding:2px 0;display:flex;gap:8px;overflow-wrap:anywhere}
+    tr.prow td::before{content:attr(data-l);flex:0 0 60px;color:#95a0b8;font-size:11px;padding-top:2px}
+    td.nowrap{white-space:normal}
+    tr.absrow td{display:block;padding:0}
+    tr.absrow td::before{display:none}
+  }
 </style>
 </head>
 <body>
@@ -628,12 +698,14 @@ HTML = '''<!DOCTYPE html>
   </div>
 
   <div class="filters">
-    <input id="q" placeholder="搜索标题 / 关键词 / 机构 / 分类 / 作者 ..." autocomplete="off">
+    <input id="q" placeholder="搜索标题 / 关键词 / 机构 / 分类 / 作者 …（按 / 聚焦）" autocomplete="off">
     <select id="f_task">__OPT_TASK__</select>
     <select id="f_type">__OPT_TYPE__</select>
     <select id="f_cat">__OPT_CAT__</select>
     <select id="f_org">__OPT_ORG__</select>
     <select id="f_year">__OPT_YEAR__</select>
+    __NEWTOGGLE__
+    <button id="clr" type="button" title="清空全部筛选（Esc）">清空</button>
   </div>
   <div class="pcount" id="cnt">共 __NPAPERS__ 篇</div>
 
@@ -642,7 +714,14 @@ HTML = '''<!DOCTYPE html>
       <col style="width:25%"><col style="width:8%"><col style="width:5%"><col style="width:6%">
       <col style="width:7%"><col style="width:15%"><col style="width:25%"><col style="width:9%">
     </colgroup>
-    <thead><tr><th>标题</th><th>机构</th><th>年份</th><th>任务</th><th>学术/工业</th><th>分类</th><th>说明</th><th>链接</th></tr></thead>
+    <thead><tr>
+      <th class="sortable" data-sort="title">标题 <span class="arw"></span></th>
+      <th class="sortable" data-sort="org">机构 <span class="arw"></span></th>
+      <th class="sortable" data-sort="year">年份 <span class="arw"></span></th>
+      <th class="sortable" data-sort="task">任务 <span class="arw"></span></th>
+      <th class="sortable" data-sort="type">学术/工业 <span class="arw"></span></th>
+      <th class="sortable" data-sort="cat">分类 <span class="arw"></span></th>
+      <th>说明</th><th>链接</th></tr></thead>
     <tbody id="tb">__ROWS__</tbody>
   </table>
 
@@ -651,49 +730,167 @@ HTML = '''<!DOCTYPE html>
 <script>
 (function(){
   var PAPERS = __DATA__;
-  var q = document.getElementById('q'),
-      ftask = document.getElementById('f_task'),
-      ftype = document.getElementById('f_type'),
-      fc = document.getElementById('f_cat'),
-      fo = document.getElementById('f_org'),
-      fy = document.getElementById('f_year'),
-      tb = document.getElementById('tb'),
-      cnt = document.getElementById('cnt');
-  var rows = tb.getElementsByTagName('tr');
-  var total = 0;
-  for (var k = 0; k < rows.length; k++){ if (!rows[k].classList.contains('absrow')) total++; }
-  function apply(){
-    var s = (q.value || '').toLowerCase().trim(),
-        tk = ftask.value, ty = ftype.value,
-        c = fc.value, o = fo.value, y = fy.value, n = 0;
-    for (var i = 0; i < rows.length; i++){
-      var tr = rows[i];
-      if (tr.classList.contains('absrow')){ tr.classList.remove('show'); continue; }
-      var ok = (!s || (tr.getAttribute('data-s') || '').indexOf(s) !== -1)
-            && (!tk || tr.getAttribute('data-task') === tk)
-            && (!ty || tr.getAttribute('data-type') === ty)
-            && (!c || tr.getAttribute('data-cat') === c)
-            && (!o || (tr.getAttribute('data-org') || '').indexOf('|' + o + '|') !== -1)
-            && (!y || tr.getAttribute('data-year') === y);
-      tr.classList.remove('open');
-      if (ok){ tr.classList.remove('hide'); n++; } else { tr.classList.add('hide'); }
+  var q = document.getElementById('q'), ftask = document.getElementById('f_task'),
+      ftype = document.getElementById('f_type'), fc = document.getElementById('f_cat'),
+      fo = document.getElementById('f_org'), fy = document.getElementById('f_year'),
+      fnew = document.getElementById('fnew'), clr = document.getElementById('clr'),
+      tb = document.getElementById('tb'), cnt = document.getElementById('cnt');
+  var LATEST = "__LATEST__";
+  var FCTL = {cat: fc, org: fo, year: fy, task: ftask, type: ftype};
+  var pairs = [], total = 0;
+  (function(){
+    var trs = tb.getElementsByTagName('tr');
+    for (var i = 0; i < trs.length; i++){
+      var tr = trs[i];
+      if (!tr.classList.contains('prow')) continue;
+      var nx = tr.nextElementSibling;
+      pairs.push([tr, (nx && nx.classList.contains('absrow')) ? nx : null]);
     }
+    total = pairs.length;
+  })();
+
+  function readURL(){
+    try{
+      var u = new URLSearchParams(location.search);
+      if (u.get('q')) q.value = u.get('q');
+      ['task','type','cat','org','year'].forEach(function(k){ var v=u.get(k); if(v) FCTL[k].value=v; });
+      if (u.get('new')==='1' && fnew) fnew.checked = true;
+    }catch(e){}
+  }
+  function writeURL(){
+    try{
+      var u = new URLSearchParams();
+      if (q.value.trim()) u.set('q', q.value.trim());
+      ['task','type','cat','org','year'].forEach(function(k){ if(FCTL[k].value) u.set(k, FCTL[k].value); });
+      if (fnew && fnew.checked) u.set('new','1');
+      var s = u.toString();
+      history.replaceState(null, '', s ? ('?'+s) : location.pathname);
+    }catch(e){}
+  }
+  function escHtml(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+  function hlSpan(text, q){
+    if (!q) return escHtml(text);
+    var low = text.toLowerCase(), ql = q.toLowerCase(), out = '', i = 0;
+    while (true){
+      var k = low.indexOf(ql, i);
+      if (k < 0){ out += escHtml(text.slice(i)); break; }
+      out += escHtml(text.slice(i,k)) + '<mark>' + escHtml(text.slice(k, k+ql.length)) + '</mark>';
+      i = k + ql.length;
+    }
+    return out;
+  }
+  function mark(tr, s){
+    var tw = tr.querySelector('.ttl'), nw = tr.querySelector('.note');
+    var t1 = tr.getAttribute('data-title') || '', t2 = tr.getAttribute('data-notes') || '';
+    if (tw) tw.innerHTML = hlSpan(t1, s);
+    if (nw) nw.innerHTML = hlSpan(t2, s);
+  }
+  var sortKey = null, sortDir = 1;
+  function val(tr, k){
+    if (k === 'year') return parseInt(tr.getAttribute('data-year'), 10) || 0;
+    if (k === 'title') return (tr.getAttribute('data-title') || '').toLowerCase();
+    return (tr.getAttribute('data-' + k) || '').toLowerCase();
+  }
+  function order(){
+    var s = (q.value || '').toLowerCase().trim();
+    var vis = pairs.slice();
+    if (sortKey){
+      vis.sort(function(a,b){ var x=val(a[0],sortKey), y=val(b[0],sortKey);
+        if (x < y) return -sortDir; if (x > y) return sortDir; return 0; });
+    } else if (s){
+      vis.sort(function(a,b){
+        var ta=(a[0].getAttribute('data-title')||'').toLowerCase().indexOf(s)>=0?0:1;
+        var tb2=(b[0].getAttribute('data-title')||'').toLowerCase().indexOf(s)>=0?0:1;
+        return ta - tb2; });
+    } else { return; }
+    for (var i=0;i<vis.length;i++){ tb.appendChild(vis[i][0]); if (vis[i][1]) tb.appendChild(vis[i][1]); }
+  }
+  function apply(){
+    var s = (q.value || '').toLowerCase().trim(), n = 0, nw = fnew && fnew.checked;
+    for (var i=0;i<pairs.length;i++){
+      var tr=pairs[i][0], ab=pairs[i][1];
+      var ok = (!s || (tr.getAttribute('data-s')||'').indexOf(s) !== -1)
+            && (!ftask.value || tr.getAttribute('data-task') === ftask.value)
+            && (!ftype.value || tr.getAttribute('data-type') === ftype.value)
+            && (!fc.value   || tr.getAttribute('data-cat')  === fc.value)
+            && (!fo.value   || (tr.getAttribute('data-org')||'').indexOf('|'+fo.value+'|') !== -1)
+            && (!fy.value   || tr.getAttribute('data-year') === fy.value)
+            && (!nw || tr.getAttribute('data-added') === LATEST);
+      tr.classList.remove('open'); if (ab) ab.classList.remove('show');
+      if (ok){ tr.classList.remove('hide'); tr.style.display=''; n++; }
+      else { tr.classList.add('hide'); tr.style.display='none'; }
+      mark(tr, s);
+    }
+    order();
+    writeURL();
     cnt.textContent = '共 ' + n + ' 篇' + (n === total ? '' : '（已筛选，共 ' + total + ' 篇）');
   }
-  [q, ftask, ftype, fc, fo, fy].forEach(function(el){
-    el.addEventListener('input', apply);
-    el.addEventListener('change', apply);
+
+  [q,ftask,ftype,fc,fo,fy].forEach(function(el){ el.addEventListener('input',apply); el.addEventListener('change',apply); });
+  if (fnew) fnew.addEventListener('change', apply);
+  if (clr) clr.addEventListener('click', function(){
+    q.value=''; ftask.value=''; ftype.value=''; fc.value=''; fo.value=''; fy.value='';
+    if (fnew) fnew.checked=false; apply(); q.focus();
   });
-  tb.addEventListener('click', function(e){
-    if (e.target.closest('a')) return;
-    var tr = e.target.closest('tr');
-    if (!tr || tr.classList.contains('absrow')) return;
-    var nx = tr.nextElementSibling;
-    if (nx && nx.classList.contains('absrow')){
-      var open = nx.classList.toggle('show');
-      tr.classList.toggle('open', open);
+  document.addEventListener('keydown', function(e){
+    if (e.key === '/' && document.activeElement !== q){ e.preventDefault(); q.focus(); }
+    else if (e.key === 'Escape' && q.value){ q.value=''; apply(); }
+  });
+  document.addEventListener('click', function(e){
+    var seg = e.target.closest('[data-facet]');
+    if (seg){
+      var f = seg.getAttribute('data-facet'), v = seg.getAttribute('data-val'), yr = seg.getAttribute('data-year');
+      var ctl = FCTL[f]; if (!ctl) return;
+      var already = (ctl.value === v);
+      ctl.value = already ? '' : v;
+      if (yr && FCTL.year && f !== 'year'){ FCTL.year.value = (already && FCTL.year.value === yr) ? '' : yr; }
+      apply(); return;
     }
+    var b = e.target.closest('.bibbtn');
+    if (b){ e.preventDefault(); copyBib(b); return; }
+    if (e.target.closest('a')) return;
+    var tr = e.target.closest('tr.prow'); if (!tr) return;
+    var nx = tr.nextElementSibling;
+    if (nx && nx.classList.contains('absrow')){ var o = nx.classList.toggle('show'); tr.classList.toggle('open', o); }
   });
+  Array.prototype.forEach.call(document.querySelectorAll('a.jump'), function(a){
+    a.addEventListener('click', function(ev){
+      ev.preventDefault();
+      var tr = document.getElementById(a.getAttribute('href').slice(1)); if (!tr) return;
+      if (tr.classList.contains('hide')){ if (clr) clr.click(); }
+      tr.scrollIntoView({behavior:'smooth', block:'center'});
+      tr.classList.add('flash'); setTimeout(function(){ tr.classList.remove('flash'); }, 1400);
+    });
+  });
+  Array.prototype.forEach.call(document.querySelectorAll('th.sortable'), function(th){
+    th.addEventListener('click', function(){
+      var k = th.getAttribute('data-sort');
+      if (sortKey === k) sortDir = -sortDir; else { sortKey = k; sortDir = 1; }
+      Array.prototype.forEach.call(document.querySelectorAll('th.sortable .arw'), function(a){ a.textContent=''; });
+      th.querySelector('.arw').textContent = sortDir > 0 ? '▲' : '▼';
+      apply();
+    });
+  });
+  function copyBib(btn){
+    var tr = btn.closest('tr.prow');
+    var t = tr.getAttribute('data-title') || '', au = tr.getAttribute('data-authors') || '';
+    var y = tr.getAttribute('data-year') || '', u = tr.getAttribute('data-arxiv') || '';
+    var ep = (u.match(/arxiv\.org\/abs\/([\d.]+)/) || [])[1] || '';
+    var key = ((au.split(',')[0] || 'anon').trim().split(' ').pop() || 'anon') + y +
+              (t.split(' ')[0] || '').replace(/[^A-Za-z0-9]/g, '');
+    var s = '@misc{' + key + ',\\n  title={' + t + '},\\n';
+    if (au) s += '  author={' + au + '},\\n';
+    s += '  year={' + y + '},\\n';
+    if (ep) s += '  eprint={' + ep + '},\\n  archivePrefix={arXiv},\\n';
+    if (u) s += '  url={' + u + '},\\n';
+    s += '}';
+    var done = function(){ btn.textContent = '已复制✓'; setTimeout(function(){ btn.textContent='BibTeX'; }, 1200); };
+    if (navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(s).then(done, function(){ window.prompt('复制 BibTeX:', s); });
+    } else { window.prompt('复制 BibTeX:', s); }
+  }
+
+  readURL();
   apply();
 })();
 </script>
@@ -716,6 +913,8 @@ HTML = (HTML
         .replace('__OPT_CAT__', opt_cat)
         .replace('__OPT_ORG__', opt_org)
         .replace('__OPT_YEAR__', opt_year)
+        .replace('__NEWTOGGLE__', newtoggle)
+        .replace('__LATEST__', LATEST_ADD)
         .replace('__ROWS__', rows)
         .replace('__PATHS__', paths_section)
         .replace('__NPAPERS__', str(len(papers)))
