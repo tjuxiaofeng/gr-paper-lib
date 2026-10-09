@@ -184,6 +184,24 @@ LATEST_ADD = max(ADDED.values()) if ADDED else ''
 for p in papers:
     p['added'] = ADDED.get(p['file'], '')
 
+# 机构归一：把同一实体的不同写法/子品牌/地区合并（用于展示、筛选、图表的机构维度）
+ORG_MERGE = {
+    # 公司子品牌 / 地区分部
+    '阿里国际': '阿里', '华为爱尔兰': '华为', '腾讯微信': '腾讯',
+    '抖音': '字节', '字节（国际电商）': '字节',
+    'Google Cloud': 'Google', 'Google DeepMind': 'Google',
+    # 简称 / 中英文写法
+    '港中文': '香港中文大学', '港大': '香港大学', '港科大': '香港科技大学',
+    '北航': '北京航空', '华科': '华中科技',
+    'Glasgow': 'University of Glasgow', 'Leiden': 'Leiden University',
+    'Queensland': 'The University of Queensland', 'Yonsei': 'Yonsei University',
+}
+def _norm_org(s):
+    parts = [ORG_MERGE.get(x.strip(), x.strip()) for x in re.split(r'\s*/\s*', s)]
+    return ' / '.join(dict.fromkeys([x for x in parts if x]))
+for p in papers:
+    p['org'] = _norm_org(p['org'])
+
 # ---------------------------------------------------------------- 摘要（英文 + 中文）
 ABS_EN, ABS_ZH = {}, {}
 try:
